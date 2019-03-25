@@ -26,9 +26,9 @@ namespace Capstone.Home_all
                 myEmployee = myValue.First();
 
             Session.Add("Employee", myEmployee);
-            
-            if(myEmployee.FirstName == "Tariq")
-                Response.Redirect("")
+
+            if (myEmployee.FirstName == "Tariq")
+                Response.Redirect("");
 
 
             
