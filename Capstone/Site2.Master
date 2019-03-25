@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="General Manager Master.master.cs" Inherits="Capstone.General_Manager.General_Manager_Master" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Capstone.Site2" %>
 
 <!DOCTYPE html>
 
@@ -25,9 +25,6 @@
         }
         .auto-style5 {
             margin-left: 41px;
-        }
-        .auto-style9 {
-            margin-left: 90px;
         }
         .auto-style10 {
             width: 51px;
@@ -60,8 +57,7 @@
                         <asp:Image ID="Image1" runat="server" Height="139px" ImageUrl="~/images/xenel logo.png" Width="320px" CssClass="auto-style5" />
                     </td>
                     <td class="auto-style15">
-                        <asp:Button ID="Button1" runat="server" Height="52px" Text="Logout" Width="125px" CssClass="auto-style9" />
-                    </td>
+                        &nbsp;</td>
                     <td class="auto-style10">
                         &nbsp;</td>
                     <td>
@@ -96,4 +92,3 @@
     </form>
 </body>
 </html>
-

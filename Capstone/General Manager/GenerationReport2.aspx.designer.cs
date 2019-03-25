@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Capstone.Supervisor
+namespace Capstone.General_Manager
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm7
     {
     }
 }

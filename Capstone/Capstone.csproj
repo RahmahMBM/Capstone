@@ -133,8 +133,20 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Executive Secratary\HomePage.aspx" />
+    <Content Include="Executive Secratary\BookingForServiceProvider.aspx" />
+    <Content Include="Executive Secratary\SchedualOfBookedService.aspx" />
+    <Content Include="Executive Secratary\Evaluation1.aspx" />
+    <Content Include="Executive Secratary\Evaluation2.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="General Manager\Add users submenu.aspx" />
+    <Content Include="General Manager\Add employee submenu.aspx" />
+    <Content Include="General Manager\Add service provider submenu.aspx" />
+    <Content Include="General Manager\Add new service provider submenu.aspx" />
+    <Content Include="General Manager\GeneralManHomePage.aspx" />
+    <Content Include="General Manager\GenerateReport1.aspx" />
+    <Content Include="General Manager\GenerationReport2.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -144,7 +156,13 @@
     </Content>
     <Content Include="Executive Secratary\Executive Secretary Master.Master" />
     <Content Include="General Manager\General Manager Master.Master" />
+    <Content Include="Home all\Home all.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Home all\LoginPage.aspx" />
+    <Content Include="Home all\HomePage.aspx" />
+    <Content Include="Home all\AboutXenel.aspx" />
+    <Content Include="Home all\HelpPage.aspx" />
+    <Content Include="images\banner.jpg" />
     <Content Include="images\xenel logo.png" />
     <Content Include="images\xenel.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -176,8 +194,15 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Supervisor\WebForm1.aspx" />
-    <Content Include="Supervisor\WebForm2.aspx" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="HomePage.css" />
+    <Content Include="SuperviorHomePage.css" />
+    <Content Include="Supervisor\Booking For Service Provider.aspx" />
+    <Content Include="Supervisor\Service Provider Schedule.aspx" />
+    <Content Include="Supervisor\Schedule of specific date.aspx" />
+    <Content Include="Supervisor\Modify Service Provider Submenu.aspx" />
+    <Content Include="Supervisor\Edit Booking Submenu.aspx" />
+    <Content Include="Supervisor\SupervisorHomePage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -216,6 +241,41 @@
     <Compile Include="Executive Secratary\Executive Secretary Master.Master.designer.cs">
       <DependentUpon>Executive Secretary Master.Master</DependentUpon>
     </Compile>
+    <Compile Include="Executive Secratary\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Executive Secratary\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Executive Secratary\BookingForServiceProvider.aspx.cs">
+      <DependentUpon>BookingForServiceProvider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Executive Secratary\BookingForServiceProvider.aspx.designer.cs">
+      <DependentUpon>BookingForServiceProvider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Executive Secratary\SchedualOfBookedService.aspx.cs">
+      <DependentUpon>SchedualOfBookedService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Executive Secratary\SchedualOfBookedService.aspx.designer.cs">
+      <DependentUpon>SchedualOfBookedService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Executive Secratary\Evaluation1.aspx.cs">
+      <DependentUpon>Evaluation1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Executive Secratary\Evaluation1.aspx.designer.cs">
+      <DependentUpon>Evaluation1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Executive Secratary\Evaluation2.aspx.cs">
+      <DependentUpon>Evaluation2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Executive Secratary\Evaluation2.aspx.designer.cs">
+      <DependentUpon>Evaluation2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="General Manager\General Manager Master.Master.cs">
       <DependentUpon>General Manager Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,8 +283,92 @@
     <Compile Include="General Manager\General Manager Master.Master.designer.cs">
       <DependentUpon>General Manager Master.Master</DependentUpon>
     </Compile>
+    <Compile Include="General Manager\Add users submenu.aspx.cs">
+      <DependentUpon>Add users submenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\Add users submenu.aspx.designer.cs">
+      <DependentUpon>Add users submenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\Add employee submenu.aspx.cs">
+      <DependentUpon>Add employee submenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\Add employee submenu.aspx.designer.cs">
+      <DependentUpon>Add employee submenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\Add service provider submenu.aspx.cs">
+      <DependentUpon>Add service provider submenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\Add service provider submenu.aspx.designer.cs">
+      <DependentUpon>Add service provider submenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\Add new service provider submenu.aspx.cs">
+      <DependentUpon>Add new service provider submenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\Add new service provider submenu.aspx.designer.cs">
+      <DependentUpon>Add new service provider submenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\GeneralManHomePage.aspx.cs">
+      <DependentUpon>GeneralManHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\GeneralManHomePage.aspx.designer.cs">
+      <DependentUpon>GeneralManHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\GenerateReport1.aspx.cs">
+      <DependentUpon>GenerateReport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\GenerateReport1.aspx.designer.cs">
+      <DependentUpon>GenerateReport1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\GenerationReport2.aspx.cs">
+      <DependentUpon>GenerationReport2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\GenerationReport2.aspx.designer.cs">
+      <DependentUpon>GenerationReport2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home all\Home all.Master.cs">
+      <DependentUpon>Home all.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home all\Home all.Master.designer.cs">
+      <DependentUpon>Home all.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home all\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home all\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home all\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home all\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home all\AboutXenel.aspx.cs">
+      <DependentUpon>AboutXenel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home all\AboutXenel.aspx.designer.cs">
+      <DependentUpon>AboutXenel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home all\HelpPage.aspx.cs">
+      <DependentUpon>HelpPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home all\HelpPage.aspx.designer.cs">
+      <DependentUpon>HelpPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -247,6 +391,13 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
     <Compile Include="Supervisor\Master Supervisor.Master.cs">
       <DependentUpon>Master Supervisor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,19 +405,47 @@
     <Compile Include="Supervisor\Master Supervisor.Master.designer.cs">
       <DependentUpon>Master Supervisor.Master</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Supervisor\Booking For Service Provider.aspx.cs">
+      <DependentUpon>Booking For Service Provider.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Supervisor\Booking For Service Provider.aspx.designer.cs">
+      <DependentUpon>Booking For Service Provider.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Supervisor\Service Provider Schedule.aspx.cs">
+      <DependentUpon>Service Provider Schedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Supervisor\Service Provider Schedule.aspx.designer.cs">
+      <DependentUpon>Service Provider Schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Schedule of specific date.aspx.cs">
+      <DependentUpon>Schedule of specific date.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Schedule of specific date.aspx.designer.cs">
+      <DependentUpon>Schedule of specific date.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Modify Service Provider Submenu.aspx.cs">
+      <DependentUpon>Modify Service Provider Submenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Modify Service Provider Submenu.aspx.designer.cs">
+      <DependentUpon>Modify Service Provider Submenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\Edit Booking Submenu.aspx.cs">
+      <DependentUpon>Edit Booking Submenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\Edit Booking Submenu.aspx.designer.cs">
+      <DependentUpon>Edit Booking Submenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor\SupervisorHomePage.aspx.cs">
+      <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supervisor\SupervisorHomePage.aspx.designer.cs">
+      <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -277,11 +456,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Home all\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
