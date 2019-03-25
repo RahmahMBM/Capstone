@@ -5,15 +5,13 @@
 }
 
 #menu ul li {
-
-    background-color:ButtonHighlight;
-    border: solid 1px white ;
-    width: 315px; 
-    height:35px;
-    text-align:center;
-    line-height:35px;
-    float:left; 
-    
+    background-color: #FF00FF;
+    border: solid 1px white;
+    width: 315px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    float: left;
 }
 
 #menu ul li a {
