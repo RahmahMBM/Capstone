@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Capstone.Supervisor {
+namespace Capstone.SupervisorFolder {
     
     
     public partial class Master_Supervisor {

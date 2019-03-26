@@ -54,6 +54,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -157,6 +158,14 @@
     <Content Include="Executive Secratary\Executive Secretary Master.Master" />
     <Content Include="General Manager\General Manager Master.Master" />
     <Content Include="Home all\Home all.Master" />
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home all\LoginPage.aspx" />
     <Content Include="Home all\HomePage.aspx" />
@@ -197,17 +206,17 @@
     <Content Include="StyleSheet1.css" />
     <Content Include="HomePage.css" />
     <Content Include="SuperviorHomePage.css" />
-    <Content Include="Supervisor\Booking For Service Provider.aspx" />
-    <Content Include="Supervisor\Service Provider Schedule.aspx" />
-    <Content Include="Supervisor\Schedule of specific date.aspx" />
-    <Content Include="Supervisor\Modify Service Provider Submenu.aspx" />
-    <Content Include="Supervisor\Edit Booking Submenu.aspx" />
-    <Content Include="Supervisor\SupervisorHomePage.aspx" />
+    <Content Include="SupervisorFolder\Booking For Service Provider.aspx" />
+    <Content Include="SupervisorFolder\Service Provider Schedule.aspx" />
+    <Content Include="SupervisorFolder\Schedule of specific date.aspx" />
+    <Content Include="SupervisorFolder\Modify Service Provider Submenu.aspx" />
+    <Content Include="SupervisorFolder\Edit Booking Submenu.aspx" />
+    <Content Include="SupervisorFolder\SupervisorHomePage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="Supervisor\Master Supervisor.Master" />
+    <Content Include="SupervisorFolder\Master Supervisor.Master" />
     <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +235,11 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -398,53 +412,53 @@
     <Compile Include="Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\Master Supervisor.Master.cs">
+    <Compile Include="SupervisorFolder\Master Supervisor.Master.cs">
       <DependentUpon>Master Supervisor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\Master Supervisor.Master.designer.cs">
+    <Compile Include="SupervisorFolder\Master Supervisor.Master.designer.cs">
       <DependentUpon>Master Supervisor.Master</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\Booking For Service Provider.aspx.cs">
+    <Compile Include="SupervisorFolder\Booking For Service Provider.aspx.cs">
       <DependentUpon>Booking For Service Provider.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\Booking For Service Provider.aspx.designer.cs">
+    <Compile Include="SupervisorFolder\Booking For Service Provider.aspx.designer.cs">
       <DependentUpon>Booking For Service Provider.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\Service Provider Schedule.aspx.cs">
+    <Compile Include="SupervisorFolder\Service Provider Schedule.aspx.cs">
       <DependentUpon>Service Provider Schedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\Service Provider Schedule.aspx.designer.cs">
+    <Compile Include="SupervisorFolder\Service Provider Schedule.aspx.designer.cs">
       <DependentUpon>Service Provider Schedule.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\Schedule of specific date.aspx.cs">
+    <Compile Include="SupervisorFolder\Schedule of specific date.aspx.cs">
       <DependentUpon>Schedule of specific date.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\Schedule of specific date.aspx.designer.cs">
+    <Compile Include="SupervisorFolder\Schedule of specific date.aspx.designer.cs">
       <DependentUpon>Schedule of specific date.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\Modify Service Provider Submenu.aspx.cs">
+    <Compile Include="SupervisorFolder\Modify Service Provider Submenu.aspx.cs">
       <DependentUpon>Modify Service Provider Submenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\Modify Service Provider Submenu.aspx.designer.cs">
+    <Compile Include="SupervisorFolder\Modify Service Provider Submenu.aspx.designer.cs">
       <DependentUpon>Modify Service Provider Submenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\Edit Booking Submenu.aspx.cs">
+    <Compile Include="SupervisorFolder\Edit Booking Submenu.aspx.cs">
       <DependentUpon>Edit Booking Submenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\Edit Booking Submenu.aspx.designer.cs">
+    <Compile Include="SupervisorFolder\Edit Booking Submenu.aspx.designer.cs">
       <DependentUpon>Edit Booking Submenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor\SupervisorHomePage.aspx.cs">
+    <Compile Include="SupervisorFolder\SupervisorHomePage.aspx.cs">
       <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Supervisor\SupervisorHomePage.aspx.designer.cs">
+    <Compile Include="SupervisorFolder\SupervisorHomePage.aspx.designer.cs">
       <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -467,6 +481,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

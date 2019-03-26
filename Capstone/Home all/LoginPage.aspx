@@ -168,7 +168,7 @@
         <td class="auto-style28">&nbsp;</td>
         <td class="auto-style20">&nbsp;</td>
         <td class="auto-style30">
-            <asp:Button ID="Button1" runat="server" BackColor="ControlLightLight" CssClass="auto-style20" Font-Bold="True" Font-Size="Medium" Text="Login" BorderColor="#CCCCCC" BorderStyle="Groove" ForeColor="Black" OnClick="Button1_Click" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="height: 26px" Text="Button" />
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>

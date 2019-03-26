@@ -13,30 +13,36 @@ namespace Capstone.Home_all
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        DataClasses1DataContext mycontext = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Employee myEmployee;
-            DataClassesDataCotext mycontext = new DataClassesDataCotext();
+           
+         
+    
+        }
+
+  
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
             var myValue = from value in mycontext.Employees
                           where (value.EmployeeCode == UsernameTextBox.Text) &&
-                          (value.Password == PasswordTextBox.Text)
+                          (value.EmployeePassword == PasswordTextBox.Text)
                           select value;
 
             if (myValue.Count() != 0)
-                myEmployee = myValue.First();
+            {
+                var myEmployee = myValue.First();
 
-            Session.Add("Employee", myEmployee);
+                Session.Add("Employee", myEmployee);
 
-            if (myEmployee.FirstName == "Tariq")
-                Response.Redirect("");
+                if (myEmployee.EmployeeType == "Manager")
+                    Response.Redirect("~\\General Manager\\GeneralManHomePage.aspx");
 
+                if (myEmployee.EmployeeType == "Executive Secratary")
+                    Response.Redirect("~\\Executive Secratary\\HomePage.aspx");
 
-            
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }
