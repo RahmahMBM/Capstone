@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="Add users submenu.aspx.cs" Inherits="Capstone.General_Manager.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../HomePage.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style19 {
             width: 100%;
@@ -94,16 +95,29 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style19">
-        <tr>
-            <td>
-                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem Text="Generate report" Value="Generate report"></asp:MenuItem>
-                        <asp:MenuItem Text="Update" Value="Update"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>
-                <br />
+         <br />
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="GenerateReport1.aspx">Generate Report</a>
+            </li>
+            <li>
+                <a href="#">Update</a>
+                    <ul>
+                        <li><a href="Add%20users%20submenu.aspx">Add New User</a></li>
+                        <li><a href="Add%20employee%20submenu.aspx">Add New Employee</a></li>
+                        <li><a href="Add%20service%20provider%20submenu.aspx">Add New Service Provider</a></li>
+                        <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add New Service</a></li>
+
+                    </ul>
+            </li>
+            
+        </ul>
+    </div>
+    <br />
+    <br />
+    <br />
                 <table class="auto-style19">
                     <tr>
                         <td class="auto-style24">

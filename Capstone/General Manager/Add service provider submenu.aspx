@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="Capstone.General_Manager.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <link href="../HomePage.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style19 {
             width: 100%;
@@ -76,17 +77,29 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style19">
-        <tr>
-            <td>
-                <br />
-                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem Text="Generate Report" Value="Generate Report"></asp:MenuItem>
-                        <asp:MenuItem Text="Update" Value="Update"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>
-                <br />
+      <br />
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="GenerateReport1.aspx">Generate Report</a>
+            </li>
+            <li>
+                <a href="#">Update</a>
+                    <ul>
+                        <li><a href="Add%20users%20submenu.aspx">Add New User</a></li>
+                        <li><a href="Add%20employee%20submenu.aspx">Add New Employee</a></li>
+                        <li><a href="Add%20service%20provider%20submenu.aspx">Add New Service Provider</a></li>
+                        <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add New Service</a></li>
+
+                    </ul>
+            </li>
+            
+        </ul>
+    </div>
+    <br />
+    <br />
+    <br />
                 <table class="auto-style19">
                     <tr>
                         <td class="auto-style23">
@@ -183,7 +196,7 @@
                         </td>
                         <td class="auto-style36"></td>
                         <td class="auto-style36">
-                            <asp:TextBox ID="TextBox6" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                            <asp:TextBox ID="TextBox6" runat="server" ></asp:TextBox>
                         </td>
                         <td class="auto-style36"></td>
                     </tr>
@@ -222,8 +235,8 @@
                         <td>&nbsp;</td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-    </table>
+            
+        
+    
 </asp:Content>
 

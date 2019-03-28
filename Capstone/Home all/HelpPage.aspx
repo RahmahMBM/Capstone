@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home all/Home all.Master" AutoEventWireup="true" CodeBehind="HelpPage.aspx.cs" Inherits="Capstone.Home_all.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../StyleSheet1.css" rel="stylesheet" />
+    <link href="../StyleSheet2.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="menu">
         <ul>
             <li>
-                <a>Home</a>
+                 <a href="HomePage.aspx">Home</a> 
             </li>
             <li>
                 <a href="LoginPage.aspx">Login</a>

@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home all/Home all.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Capstone.Home_all.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <link href="../StyleSheet1.css" rel="stylesheet" />
+    <link href="../StyleSheet2.css" rel="stylesheet" />
+
     <style type="text/css">
         .auto-style19 {
             width: 615px;

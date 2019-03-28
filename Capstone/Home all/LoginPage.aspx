@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home all/Home all.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="Capstone.Home_all.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../StyleSheet1.css" rel="stylesheet" />
+    <link href="../StyleSheet2.css" rel="stylesheet" />
     <style type="text/css">
     .auto-style19 {
         width: 100%;
@@ -168,7 +168,7 @@
         <td class="auto-style28">&nbsp;</td>
         <td class="auto-style20">&nbsp;</td>
         <td class="auto-style30">
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="height: 26px" Text="Button" />
+            <asp:Button ID="Button2" runat="server" BackColor="#CCCCCC" CssClass="auto-style20" OnClick="Button2_Click" style="height: 26px" Text="Login" />
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>

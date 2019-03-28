@@ -1,23 +1,25 @@
 ﻿body {
 } 
 #menu ul{
-    list-style:none;
+    list-style: none;
+   
 }
 
-#menu ul li {
-    background-color: #FF00FF;
-    border: solid 1px white;
-    width: 315px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    float: left;
-}
+    #menu ul li {
+        background-color: ButtonHighlight;
+        border: solid 1px white;
+        width: 315px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        float: right;
+    }
 
 #menu ul li a {
-    text-decoration:none;
-    color:black;
-    display:block;
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: #FFFFFF;
 }
     #menu ul li a:hover {
         background-color: #91012C;
