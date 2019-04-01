@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SupervisorFolder/Master Supervisor.Master" AutoEventWireup="true" CodeBehind="Edit Booking Submenu.aspx.cs" Inherits="Capstone.SupervisorFolder.WebForm5" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SupervisorFolder/MasterSupervisor.Master" AutoEventWireup="true" CodeBehind="Edit Booking Submenu.aspx.cs" Inherits="Capstone.SupervisorFolder.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style19 {

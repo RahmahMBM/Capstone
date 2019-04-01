@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="Add new service provider submenu.aspx.cs" Inherits="Capstone.General_Manager.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../HomePage.css" rel="stylesheet" />
+    <link href="../HomePage2.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style19 {
             width: 100%;
@@ -56,6 +56,14 @@
 
                     </ul>
             </li>
+             <li>
+                <a>View</a>
+                <ul>
+                    <li><a>Employees</a></li>
+                    <li><a>System Users</a></li>
+                    <li><a>Services</a></li>
+                </ul>
+            </li>
             
         </ul>
     </div>
@@ -80,6 +88,8 @@
                         <td class="auto-style26"></td>
                         <td class="auto-style27">
                             <asp:DropDownList ID="DropDownList1" runat="server" Height="35px" Width="168px">
+                                <asp:ListItem>Business</asp:ListItem>
+                                <asp:ListItem>Personal</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         <td class="auto-style27"></td>
@@ -88,7 +98,7 @@
                         <td class="auto-style20">&nbsp;</td>
                         <td class="auto-style21">&nbsp;</td>
                         <td>
-                            <asp:Button ID="Button2" runat="server" CssClass="auto-style28" Height="37px" Text="ADD" Width="81px" />
+                            <asp:Button ID="Button2" runat="server" CssClass="auto-style28" Height="37px" Text="ADD" Width="81px" OnClick="Button2_Click" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>

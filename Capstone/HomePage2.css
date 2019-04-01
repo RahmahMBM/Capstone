@@ -1,9 +1,9 @@
 ﻿body {
 }
-*{
-    margin:0px;
-    padding:0px;
 
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 #menu ul {
@@ -13,14 +13,13 @@
     #menu ul li {
         background-color: ButtonHighlight;
         border: solid 1px white;
-        width: 100px;
+        width: 380px;
         height: 35px;
         text-align: center;
         line-height: 35px;
-        float:right;
+        float: left;
         position: relative;
-        
-       
+        margin-left:50px;
     }
 
         #menu ul li a {
@@ -34,16 +33,17 @@
                 color: white;
             }
 
-    #menu ul ul{
-          position:absolute;
-          display:none;
-            }
+    #menu ul ul {
+        position: absolute;
+        display: none;
+    }
+
     #menu ul li > ul li {
         background-color: ButtonHighlight;
         color: black;
         border: solid 1px white;
     }
 
-    #menu ul li:hover >ul {
+    #menu ul li:hover > ul {
         display: block;
     }
