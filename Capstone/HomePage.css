@@ -13,13 +13,13 @@
     #menu ul li {
         background-color: ButtonHighlight;
         border: solid 1px white;
-        width: 100px;
+        width: 450px;
         height: 35px;
         text-align: center;
         line-height: 35px;
-        float:right;
+        float:left;
         position: relative;
-        
+        margin-left:150px;
        
     }
 

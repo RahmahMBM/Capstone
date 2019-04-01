@@ -10,6 +10,6 @@
 namespace Capstone.SupervisorFolder {
     
     
-    public partial class SupervisorHomePage {
+    public partial class WebForm6 {
     }
 }

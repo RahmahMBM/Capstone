@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Capstone.SupervisorFolder {
+namespace CapstoneSupervisorFolder {
     
     
     public partial class WebForm2 {

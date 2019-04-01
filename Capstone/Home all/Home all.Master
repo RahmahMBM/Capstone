@@ -13,7 +13,7 @@
             background-color: #000000;
         }
         .auto-style2 {
-            width: 1133px;
+            width: 1196px;
         }
         .auto-style4 {
             width: 100%;
@@ -40,6 +40,23 @@
             width: 1580px;
             font-size: small;
         }
+        .auto-style19 {
+            width: 100%;
+        }
+        .auto-style20 {
+            width: 262px;
+            height: 27px;
+            color: #FFFFFF;
+        }
+        .auto-style21 {
+            width: 188px;
+            height: 27px;
+            color: #FFFFFF;
+        }
+        .auto-style22 {
+            height: 27px;
+            color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +72,18 @@
                 <tr>
                     <td class="auto-style2">
                         <asp:Image ID="Image1" runat="server" Height="139px" ImageUrl="~/images/xenel logo.png" Width="320px" CssClass="auto-style5" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <table class="auto-style19">
+                            <tr>
+                                <td class="auto-style20">
+                                    <asp:Label ID="Label4" runat="server" Text="WELCOME:"></asp:Label>
+                                </td>
+                                <td class="auto-style21">&nbsp; &nbsp;<asp:Label ID="Label5" runat="server" Text="FNAME"></asp:Label>
+                                </td>
+                                <td class="auto-style22">&nbsp; &nbsp;<asp:Label ID="Label6" runat="server" Text="LNAME"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                     <td class="auto-style15">
                         &nbsp;</td>

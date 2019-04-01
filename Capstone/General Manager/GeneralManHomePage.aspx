@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="GeneralManHomePage.aspx.cs" Inherits="Capstone.General_Manager.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title> Generate Report Page</title>
-    <link href="../HomePage2.css" rel="stylesheet" />
+    <link href="../HomePage.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
@@ -20,14 +20,6 @@
                         <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add New Service</a></li>
 
                     </ul>
-            </li>
-             <li>
-                <a>View</a>
-                <ul>
-                    <li><a>Employees</a></li>
-                    <li><a>System Users</a></li>
-                    <li><a>Services</a></li>
-                </ul>
             </li>
             
         </ul>

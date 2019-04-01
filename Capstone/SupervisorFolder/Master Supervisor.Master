@@ -1,4 +1,4 @@
-﻿m<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/SupervisorFolder/MasterSupervisor.Master.cs" Inherits="Capstone.SupervisorFolder.MasterSupervisor" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master Supervisor.master.cs" Inherits="Capstone.SupervisorFolder.Master_Supervisor" %>
 
 <!DOCTYPE html>
 

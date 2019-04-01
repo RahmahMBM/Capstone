@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Capstone.SupervisorFolder
+namespace Capstone.Supervisor
 {
-    public partial class MasterSupervisor : System.Web.UI.MasterPage
+    public partial class Master_Supervisor : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

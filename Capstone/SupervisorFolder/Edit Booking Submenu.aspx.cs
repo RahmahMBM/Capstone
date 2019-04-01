@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Capstone.SupervisorFolder
+namespace Capstone.Supervisor
 {
     public partial class WebForm5 : System.Web.UI.Page
     {

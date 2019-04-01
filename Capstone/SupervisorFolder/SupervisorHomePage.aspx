@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SupervisorFolder/MasterSupervisor.Master" AutoEventWireup="true" CodeBehind="SupervisorHomePage.aspx.cs" Inherits="Capstone.SupervisorFolder.SupervisorHomePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SupervisorFolder/Master Supervisor.Master" AutoEventWireup="true" CodeBehind="SupervisorHomePage.aspx.cs" Inherits="Capstone.SupervisorFolder.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../SuperviorHomePage.css" rel="stylesheet" />
 </asp:Content>
