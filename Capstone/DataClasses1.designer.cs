@@ -22,7 +22,7 @@ namespace Capstone
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Xenel")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="TEST")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -42,12 +42,12 @@ namespace Capstone
     partial void InsertCriteria(Criteria instance);
     partial void UpdateCriteria(Criteria instance);
     partial void DeleteCriteria(Criteria instance);
-    partial void InsertEmployee(Employee instance);
-    partial void UpdateEmployee(Employee instance);
-    partial void DeleteEmployee(Employee instance);
     partial void InsertDriver(Driver instance);
     partial void UpdateDriver(Driver instance);
     partial void DeleteDriver(Driver instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
     partial void InsertEvaluation(Evaluation instance);
     partial void UpdateEvaluation(Evaluation instance);
     partial void DeleteEvaluation(Evaluation instance);
@@ -75,16 +75,16 @@ namespace Capstone
     partial void InsertServiceProvider(ServiceProvider instance);
     partial void UpdateServiceProvider(ServiceProvider instance);
     partial void DeleteServiceProvider(ServiceProvider instance);
+    partial void InsertSupervisor(Supervisor instance);
+    partial void UpdateSupervisor(Supervisor instance);
+    partial void DeleteSupervisor(Supervisor instance);
     partial void InsertSupervisorAssign(SupervisorAssign instance);
     partial void UpdateSupervisorAssign(SupervisorAssign instance);
     partial void DeleteSupervisorAssign(SupervisorAssign instance);
-    partial void InsertSupervisorEmployee(SupervisorEmployee instance);
-    partial void UpdateSupervisorEmployee(SupervisorEmployee instance);
-    partial void DeleteSupervisorEmployee(SupervisorEmployee instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["XenelConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TESTConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -145,19 +145,19 @@ namespace Capstone
 			}
 		}
 		
-		public System.Data.Linq.Table<Employee> Employees
-		{
-			get
-			{
-				return this.GetTable<Employee>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Driver> Drivers
 		{
 			get
 			{
 				return this.GetTable<Driver>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Employee> Employees
+		{
+			get
+			{
+				return this.GetTable<Employee>();
 			}
 		}
 		
@@ -233,19 +233,19 @@ namespace Capstone
 			}
 		}
 		
+		public System.Data.Linq.Table<Supervisor> Supervisors
+		{
+			get
+			{
+				return this.GetTable<Supervisor>();
+			}
+		}
+		
 		public System.Data.Linq.Table<SupervisorAssign> SupervisorAssigns
 		{
 			get
 			{
 				return this.GetTable<SupervisorAssign>();
-			}
-		}
-		
-		public System.Data.Linq.Table<SupervisorEmployee> SupervisorEmployees
-		{
-			get
-			{
-				return this.GetTable<SupervisorEmployee>();
 			}
 		}
 	}
@@ -703,7 +703,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CertificateType", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CertificateType", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string CertificateType
 		{
 			get
@@ -942,7 +942,7 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaType", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaType", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string CriteriaType
 		{
 			get
@@ -1025,480 +1025,6 @@ namespace Capstone
 		{
 			this.SendPropertyChanging();
 			entity.Criteria = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
-	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _EID;
-		
-		private string _EmployeeCode;
-		
-		private string _FirstName;
-		
-		private string _LastName;
-		
-		private string _NationalID;
-		
-		private string _PhoneNumber;
-		
-		private System.DateTime _DateOfBirth;
-		
-		private string _Email;
-		
-		private string _EmployeePassword;
-		
-		private string _EmployeeAddress;
-		
-		private char _Gender;
-		
-		private string _EmployeeType;
-		
-		private string _JobDescription;
-		
-		private EntitySet<Certificate> _Certificates;
-		
-		private EntityRef<ExeSecratary> _ExeSecratary;
-		
-		private EntityRef<Genmanager> _Genmanager;
-		
-		private EntityRef<SupervisorEmployee> _SupervisorEmployee;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEIDChanging(int value);
-    partial void OnEIDChanged();
-    partial void OnEmployeeCodeChanging(string value);
-    partial void OnEmployeeCodeChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    partial void OnNationalIDChanging(string value);
-    partial void OnNationalIDChanged();
-    partial void OnPhoneNumberChanging(string value);
-    partial void OnPhoneNumberChanged();
-    partial void OnDateOfBirthChanging(System.DateTime value);
-    partial void OnDateOfBirthChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnEmployeePasswordChanging(string value);
-    partial void OnEmployeePasswordChanged();
-    partial void OnEmployeeAddressChanging(string value);
-    partial void OnEmployeeAddressChanged();
-    partial void OnGenderChanging(char value);
-    partial void OnGenderChanged();
-    partial void OnEmployeeTypeChanging(string value);
-    partial void OnEmployeeTypeChanged();
-    partial void OnJobDescriptionChanging(string value);
-    partial void OnJobDescriptionChanged();
-    #endregion
-		
-		public Employee()
-		{
-			this._Certificates = new EntitySet<Certificate>(new Action<Certificate>(this.attach_Certificates), new Action<Certificate>(this.detach_Certificates));
-			this._ExeSecratary = default(EntityRef<ExeSecratary>);
-			this._Genmanager = default(EntityRef<Genmanager>);
-			this._SupervisorEmployee = default(EntityRef<SupervisorEmployee>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int EID
-		{
-			get
-			{
-				return this._EID;
-			}
-			set
-			{
-				if ((this._EID != value))
-				{
-					this.OnEIDChanging(value);
-					this.SendPropertyChanging();
-					this._EID = value;
-					this.SendPropertyChanged("EID");
-					this.OnEIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeCode", DbType="Char(4) NOT NULL", CanBeNull=false)]
-		public string EmployeeCode
-		{
-			get
-			{
-				return this._EmployeeCode;
-			}
-			set
-			{
-				if ((this._EmployeeCode != value))
-				{
-					this.OnEmployeeCodeChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeCode = value;
-					this.SendPropertyChanged("EmployeeCode");
-					this.OnEmployeeCodeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string FirstName
-		{
-			get
-			{
-				return this._FirstName;
-			}
-			set
-			{
-				if ((this._FirstName != value))
-				{
-					this.OnFirstNameChanging(value);
-					this.SendPropertyChanging();
-					this._FirstName = value;
-					this.SendPropertyChanged("FirstName");
-					this.OnFirstNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string LastName
-		{
-			get
-			{
-				return this._LastName;
-			}
-			set
-			{
-				if ((this._LastName != value))
-				{
-					this.OnLastNameChanging(value);
-					this.SendPropertyChanging();
-					this._LastName = value;
-					this.SendPropertyChanged("LastName");
-					this.OnLastNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NationalID", DbType="Char(10) NOT NULL", CanBeNull=false)]
-		public string NationalID
-		{
-			get
-			{
-				return this._NationalID;
-			}
-			set
-			{
-				if ((this._NationalID != value))
-				{
-					this.OnNationalIDChanging(value);
-					this.SendPropertyChanging();
-					this._NationalID = value;
-					this.SendPropertyChanged("NationalID");
-					this.OnNationalIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="VarChar(10)")]
-		public string PhoneNumber
-		{
-			get
-			{
-				return this._PhoneNumber;
-			}
-			set
-			{
-				if ((this._PhoneNumber != value))
-				{
-					this.OnPhoneNumberChanging(value);
-					this.SendPropertyChanging();
-					this._PhoneNumber = value;
-					this.SendPropertyChanged("PhoneNumber");
-					this.OnPhoneNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOfBirth", DbType="Date NOT NULL")]
-		public System.DateTime DateOfBirth
-		{
-			get
-			{
-				return this._DateOfBirth;
-			}
-			set
-			{
-				if ((this._DateOfBirth != value))
-				{
-					this.OnDateOfBirthChanging(value);
-					this.SendPropertyChanging();
-					this._DateOfBirth = value;
-					this.SendPropertyChanged("DateOfBirth");
-					this.OnDateOfBirthChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeePassword", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string EmployeePassword
-		{
-			get
-			{
-				return this._EmployeePassword;
-			}
-			set
-			{
-				if ((this._EmployeePassword != value))
-				{
-					this.OnEmployeePasswordChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeePassword = value;
-					this.SendPropertyChanged("EmployeePassword");
-					this.OnEmployeePasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeAddress", DbType="VarChar(50)")]
-		public string EmployeeAddress
-		{
-			get
-			{
-				return this._EmployeeAddress;
-			}
-			set
-			{
-				if ((this._EmployeeAddress != value))
-				{
-					this.OnEmployeeAddressChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeAddress = value;
-					this.SendPropertyChanged("EmployeeAddress");
-					this.OnEmployeeAddressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="Char(1) NOT NULL")]
-		public char Gender
-		{
-			get
-			{
-				return this._Gender;
-			}
-			set
-			{
-				if ((this._Gender != value))
-				{
-					this.OnGenderChanging(value);
-					this.SendPropertyChanging();
-					this._Gender = value;
-					this.SendPropertyChanged("Gender");
-					this.OnGenderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeType", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
-		public string EmployeeType
-		{
-			get
-			{
-				return this._EmployeeType;
-			}
-			set
-			{
-				if ((this._EmployeeType != value))
-				{
-					this.OnEmployeeTypeChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeType = value;
-					this.SendPropertyChanged("EmployeeType");
-					this.OnEmployeeTypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobDescription", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
-		public string JobDescription
-		{
-			get
-			{
-				return this._JobDescription;
-			}
-			set
-			{
-				if ((this._JobDescription != value))
-				{
-					this.OnJobDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._JobDescription = value;
-					this.SendPropertyChanged("JobDescription");
-					this.OnJobDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Certificate", Storage="_Certificates", ThisKey="EID", OtherKey="EmployeeID")]
-		public EntitySet<Certificate> Certificates
-		{
-			get
-			{
-				return this._Certificates;
-			}
-			set
-			{
-				this._Certificates.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExeSecratary", Storage="_ExeSecratary", ThisKey="EID", OtherKey="ExeSID", IsUnique=true, IsForeignKey=false)]
-		public ExeSecratary ExeSecratary
-		{
-			get
-			{
-				return this._ExeSecratary.Entity;
-			}
-			set
-			{
-				ExeSecratary previousValue = this._ExeSecratary.Entity;
-				if (((previousValue != value) 
-							|| (this._ExeSecratary.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ExeSecratary.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._ExeSecratary.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("ExeSecratary");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Genmanager", Storage="_Genmanager", ThisKey="EID", OtherKey="GeneralManagerID", IsUnique=true, IsForeignKey=false)]
-		public Genmanager Genmanager
-		{
-			get
-			{
-				return this._Genmanager.Entity;
-			}
-			set
-			{
-				Genmanager previousValue = this._Genmanager.Entity;
-				if (((previousValue != value) 
-							|| (this._Genmanager.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Genmanager.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._Genmanager.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("Genmanager");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SupervisorEmployee", Storage="_SupervisorEmployee", ThisKey="EID", OtherKey="SupervisorID", IsUnique=true, IsForeignKey=false)]
-		public SupervisorEmployee SupervisorEmployee
-		{
-			get
-			{
-				return this._SupervisorEmployee.Entity;
-			}
-			set
-			{
-				SupervisorEmployee previousValue = this._SupervisorEmployee.Entity;
-				if (((previousValue != value) 
-							|| (this._SupervisorEmployee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SupervisorEmployee.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._SupervisorEmployee.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("SupervisorEmployee");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Certificates(Certificate entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = this;
-		}
-		
-		private void detach_Certificates(Certificate entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = null;
 		}
 	}
 	
@@ -1626,6 +1152,480 @@ namespace Capstone
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
+	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _EID;
+		
+		private string _EmployeeCode;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private string _NationalID;
+		
+		private string _PhoneNumber;
+		
+		private System.DateTime _DateOfBirth;
+		
+		private string _Email;
+		
+		private string _EmployeePassword;
+		
+		private string _EmployeeAddress;
+		
+		private char _Gender;
+		
+		private string _EmployeeType;
+		
+		private string _JobDescription;
+		
+		private EntitySet<Certificate> _Certificates;
+		
+		private EntityRef<ExeSecratary> _ExeSecratary;
+		
+		private EntityRef<Genmanager> _Genmanager;
+		
+		private EntityRef<Supervisor> _Supervisor;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEIDChanging(int value);
+    partial void OnEIDChanged();
+    partial void OnEmployeeCodeChanging(string value);
+    partial void OnEmployeeCodeChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnNationalIDChanging(string value);
+    partial void OnNationalIDChanged();
+    partial void OnPhoneNumberChanging(string value);
+    partial void OnPhoneNumberChanged();
+    partial void OnDateOfBirthChanging(System.DateTime value);
+    partial void OnDateOfBirthChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnEmployeePasswordChanging(string value);
+    partial void OnEmployeePasswordChanged();
+    partial void OnEmployeeAddressChanging(string value);
+    partial void OnEmployeeAddressChanged();
+    partial void OnGenderChanging(char value);
+    partial void OnGenderChanged();
+    partial void OnEmployeeTypeChanging(string value);
+    partial void OnEmployeeTypeChanged();
+    partial void OnJobDescriptionChanging(string value);
+    partial void OnJobDescriptionChanged();
+    #endregion
+		
+		public Employee()
+		{
+			this._Certificates = new EntitySet<Certificate>(new Action<Certificate>(this.attach_Certificates), new Action<Certificate>(this.detach_Certificates));
+			this._ExeSecratary = default(EntityRef<ExeSecratary>);
+			this._Genmanager = default(EntityRef<Genmanager>);
+			this._Supervisor = default(EntityRef<Supervisor>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int EID
+		{
+			get
+			{
+				return this._EID;
+			}
+			set
+			{
+				if ((this._EID != value))
+				{
+					this.OnEIDChanging(value);
+					this.SendPropertyChanging();
+					this._EID = value;
+					this.SendPropertyChanged("EID");
+					this.OnEIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeCode", DbType="Char(4) NOT NULL", CanBeNull=false)]
+		public string EmployeeCode
+		{
+			get
+			{
+				return this._EmployeeCode;
+			}
+			set
+			{
+				if ((this._EmployeeCode != value))
+				{
+					this.OnEmployeeCodeChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeCode = value;
+					this.SendPropertyChanged("EmployeeCode");
+					this.OnEmployeeCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this.OnFirstNameChanging(value);
+					this.SendPropertyChanging();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this.OnLastNameChanging(value);
+					this.SendPropertyChanging();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NationalID", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string NationalID
+		{
+			get
+			{
+				return this._NationalID;
+			}
+			set
+			{
+				if ((this._NationalID != value))
+				{
+					this.OnNationalIDChanging(value);
+					this.SendPropertyChanging();
+					this._NationalID = value;
+					this.SendPropertyChanged("NationalID");
+					this.OnNationalIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(10)")]
+		public string PhoneNumber
+		{
+			get
+			{
+				return this._PhoneNumber;
+			}
+			set
+			{
+				if ((this._PhoneNumber != value))
+				{
+					this.OnPhoneNumberChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneNumber = value;
+					this.SendPropertyChanged("PhoneNumber");
+					this.OnPhoneNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOfBirth", DbType="Date NOT NULL")]
+		public System.DateTime DateOfBirth
+		{
+			get
+			{
+				return this._DateOfBirth;
+			}
+			set
+			{
+				if ((this._DateOfBirth != value))
+				{
+					this.OnDateOfBirthChanging(value);
+					this.SendPropertyChanging();
+					this._DateOfBirth = value;
+					this.SendPropertyChanged("DateOfBirth");
+					this.OnDateOfBirthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeePassword", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string EmployeePassword
+		{
+			get
+			{
+				return this._EmployeePassword;
+			}
+			set
+			{
+				if ((this._EmployeePassword != value))
+				{
+					this.OnEmployeePasswordChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeePassword = value;
+					this.SendPropertyChanged("EmployeePassword");
+					this.OnEmployeePasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeAddress", DbType="NVarChar(50)")]
+		public string EmployeeAddress
+		{
+			get
+			{
+				return this._EmployeeAddress;
+			}
+			set
+			{
+				if ((this._EmployeeAddress != value))
+				{
+					this.OnEmployeeAddressChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeAddress = value;
+					this.SendPropertyChanged("EmployeeAddress");
+					this.OnEmployeeAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="Char(1) NOT NULL")]
+		public char Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this.OnGenderChanging(value);
+					this.SendPropertyChanging();
+					this._Gender = value;
+					this.SendPropertyChanged("Gender");
+					this.OnGenderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeType", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string EmployeeType
+		{
+			get
+			{
+				return this._EmployeeType;
+			}
+			set
+			{
+				if ((this._EmployeeType != value))
+				{
+					this.OnEmployeeTypeChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeType = value;
+					this.SendPropertyChanged("EmployeeType");
+					this.OnEmployeeTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobDescription", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string JobDescription
+		{
+			get
+			{
+				return this._JobDescription;
+			}
+			set
+			{
+				if ((this._JobDescription != value))
+				{
+					this.OnJobDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._JobDescription = value;
+					this.SendPropertyChanged("JobDescription");
+					this.OnJobDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Certificate", Storage="_Certificates", ThisKey="EID", OtherKey="EmployeeID")]
+		public EntitySet<Certificate> Certificates
+		{
+			get
+			{
+				return this._Certificates;
+			}
+			set
+			{
+				this._Certificates.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExeSecratary", Storage="_ExeSecratary", ThisKey="EID", OtherKey="ExeSID", IsUnique=true, IsForeignKey=false)]
+		public ExeSecratary ExeSecratary
+		{
+			get
+			{
+				return this._ExeSecratary.Entity;
+			}
+			set
+			{
+				ExeSecratary previousValue = this._ExeSecratary.Entity;
+				if (((previousValue != value) 
+							|| (this._ExeSecratary.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ExeSecratary.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._ExeSecratary.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("ExeSecratary");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Genmanager", Storage="_Genmanager", ThisKey="EID", OtherKey="GeneralManagerID", IsUnique=true, IsForeignKey=false)]
+		public Genmanager Genmanager
+		{
+			get
+			{
+				return this._Genmanager.Entity;
+			}
+			set
+			{
+				Genmanager previousValue = this._Genmanager.Entity;
+				if (((previousValue != value) 
+							|| (this._Genmanager.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Genmanager.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._Genmanager.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("Genmanager");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Supervisor", Storage="_Supervisor", ThisKey="EID", OtherKey="SupervisorID", IsUnique=true, IsForeignKey=false)]
+		public Supervisor Supervisor
+		{
+			get
+			{
+				return this._Supervisor.Entity;
+			}
+			set
+			{
+				Supervisor previousValue = this._Supervisor.Entity;
+				if (((previousValue != value) 
+							|| (this._Supervisor.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Supervisor.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._Supervisor.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("Supervisor");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Certificates(Certificate entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_Certificates(Certificate entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
 		}
 	}
 	
@@ -3449,17 +3449,19 @@ namespace Capstone
 		
 		private string _ServiceProviderCode;
 		
-		private string _FirstName;
+		private string _SPFirstName;
 		
-		private string _LastName;
+		private string _SPLastName;
 		
-		private string _NationalID;
+		private string _SPNationalID;
 		
-		private string _PhoneNumber;
+		private string _SpPhoneNumber;
 		
-		private System.DateTime _DateOfBirth;
+		private System.DateTime _SPDateOfBirth;
 		
-		private string _Email;
+		private string _SPEmail;
+		
+		private string _SpPassword;
 		
 		private string _ServiceProviderAddress;
 		
@@ -3489,18 +3491,20 @@ namespace Capstone
     partial void OnServiceProviderIDChanged();
     partial void OnServiceProviderCodeChanging(string value);
     partial void OnServiceProviderCodeChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    partial void OnNationalIDChanging(string value);
-    partial void OnNationalIDChanged();
-    partial void OnPhoneNumberChanging(string value);
-    partial void OnPhoneNumberChanged();
-    partial void OnDateOfBirthChanging(System.DateTime value);
-    partial void OnDateOfBirthChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
+    partial void OnSPFirstNameChanging(string value);
+    partial void OnSPFirstNameChanged();
+    partial void OnSPLastNameChanging(string value);
+    partial void OnSPLastNameChanged();
+    partial void OnSPNationalIDChanging(string value);
+    partial void OnSPNationalIDChanged();
+    partial void OnSpPhoneNumberChanging(string value);
+    partial void OnSpPhoneNumberChanged();
+    partial void OnSPDateOfBirthChanging(System.DateTime value);
+    partial void OnSPDateOfBirthChanged();
+    partial void OnSPEmailChanging(string value);
+    partial void OnSPEmailChanged();
+    partial void OnSpPasswordChanging(string value);
+    partial void OnSpPasswordChanged();
     partial void OnServiceProviderAddressChanging(string value);
     partial void OnServiceProviderAddressChanged();
     partial void OnServiceProviderTypeChanging(string value);
@@ -3560,127 +3564,147 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string FirstName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SPFirstName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string SPFirstName
 		{
 			get
 			{
-				return this._FirstName;
+				return this._SPFirstName;
 			}
 			set
 			{
-				if ((this._FirstName != value))
+				if ((this._SPFirstName != value))
 				{
-					this.OnFirstNameChanging(value);
+					this.OnSPFirstNameChanging(value);
 					this.SendPropertyChanging();
-					this._FirstName = value;
-					this.SendPropertyChanged("FirstName");
-					this.OnFirstNameChanged();
+					this._SPFirstName = value;
+					this.SendPropertyChanged("SPFirstName");
+					this.OnSPFirstNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string LastName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SPLastName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string SPLastName
 		{
 			get
 			{
-				return this._LastName;
+				return this._SPLastName;
 			}
 			set
 			{
-				if ((this._LastName != value))
+				if ((this._SPLastName != value))
 				{
-					this.OnLastNameChanging(value);
+					this.OnSPLastNameChanging(value);
 					this.SendPropertyChanging();
-					this._LastName = value;
-					this.SendPropertyChanged("LastName");
-					this.OnLastNameChanged();
+					this._SPLastName = value;
+					this.SendPropertyChanged("SPLastName");
+					this.OnSPLastNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NationalID", DbType="Char(10) NOT NULL", CanBeNull=false)]
-		public string NationalID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SPNationalID", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string SPNationalID
 		{
 			get
 			{
-				return this._NationalID;
+				return this._SPNationalID;
 			}
 			set
 			{
-				if ((this._NationalID != value))
+				if ((this._SPNationalID != value))
 				{
-					this.OnNationalIDChanging(value);
+					this.OnSPNationalIDChanging(value);
 					this.SendPropertyChanging();
-					this._NationalID = value;
-					this.SendPropertyChanged("NationalID");
-					this.OnNationalIDChanged();
+					this._SPNationalID = value;
+					this.SendPropertyChanged("SPNationalID");
+					this.OnSPNationalIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="VarChar(10)")]
-		public string PhoneNumber
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SpPhoneNumber", DbType="NVarChar(10)")]
+		public string SpPhoneNumber
 		{
 			get
 			{
-				return this._PhoneNumber;
+				return this._SpPhoneNumber;
 			}
 			set
 			{
-				if ((this._PhoneNumber != value))
+				if ((this._SpPhoneNumber != value))
 				{
-					this.OnPhoneNumberChanging(value);
+					this.OnSpPhoneNumberChanging(value);
 					this.SendPropertyChanging();
-					this._PhoneNumber = value;
-					this.SendPropertyChanged("PhoneNumber");
-					this.OnPhoneNumberChanged();
+					this._SpPhoneNumber = value;
+					this.SendPropertyChanged("SpPhoneNumber");
+					this.OnSpPhoneNumberChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOfBirth", DbType="Date NOT NULL")]
-		public System.DateTime DateOfBirth
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SPDateOfBirth", DbType="Date NOT NULL")]
+		public System.DateTime SPDateOfBirth
 		{
 			get
 			{
-				return this._DateOfBirth;
+				return this._SPDateOfBirth;
 			}
 			set
 			{
-				if ((this._DateOfBirth != value))
+				if ((this._SPDateOfBirth != value))
 				{
-					this.OnDateOfBirthChanging(value);
+					this.OnSPDateOfBirthChanging(value);
 					this.SendPropertyChanging();
-					this._DateOfBirth = value;
-					this.SendPropertyChanged("DateOfBirth");
-					this.OnDateOfBirthChanged();
+					this._SPDateOfBirth = value;
+					this.SendPropertyChanged("SPDateOfBirth");
+					this.OnSPDateOfBirthChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string Email
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SPEmail", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string SPEmail
 		{
 			get
 			{
-				return this._Email;
+				return this._SPEmail;
 			}
 			set
 			{
-				if ((this._Email != value))
+				if ((this._SPEmail != value))
 				{
-					this.OnEmailChanging(value);
+					this.OnSPEmailChanging(value);
 					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
+					this._SPEmail = value;
+					this.SendPropertyChanged("SPEmail");
+					this.OnSPEmailChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderAddress", DbType="VarChar(1)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SpPassword", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string SpPassword
+		{
+			get
+			{
+				return this._SpPassword;
+			}
+			set
+			{
+				if ((this._SpPassword != value))
+				{
+					this.OnSpPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._SpPassword = value;
+					this.SendPropertyChanged("SpPassword");
+					this.OnSpPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderAddress", DbType="NVarChar(50)")]
 		public string ServiceProviderAddress
 		{
 			get
@@ -3700,7 +3724,7 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderType", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderType", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string ServiceProviderType
 		{
 			get
@@ -3953,6 +3977,137 @@ namespace Capstone
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Supervisor")]
+	public partial class Supervisor : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SupervisorID;
+		
+		private EntitySet<SupervisorAssign> _SupervisorAssigns;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSupervisorIDChanging(int value);
+    partial void OnSupervisorIDChanged();
+    #endregion
+		
+		public Supervisor()
+		{
+			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupervisorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int SupervisorID
+		{
+			get
+			{
+				return this._SupervisorID;
+			}
+			set
+			{
+				if ((this._SupervisorID != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSupervisorIDChanging(value);
+					this.SendPropertyChanging();
+					this._SupervisorID = value;
+					this.SendPropertyChanged("SupervisorID");
+					this.OnSupervisorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Supervisor_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="SupervisorID", OtherKey="supervisorID")]
+		public EntitySet<SupervisorAssign> SupervisorAssigns
+		{
+			get
+			{
+				return this._SupervisorAssigns;
+			}
+			set
+			{
+				this._SupervisorAssigns.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Supervisor", Storage="_Employee", ThisKey="SupervisorID", OtherKey="EID", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.Supervisor = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.Supervisor = this;
+						this._SupervisorID = value.EID;
+					}
+					else
+					{
+						this._SupervisorID = default(int);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_SupervisorAssigns(SupervisorAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.Supervisor = this;
+		}
+		
+		private void detach_SupervisorAssigns(SupervisorAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.Supervisor = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SupervisorAssign")]
 	public partial class SupervisorAssign : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3975,7 +4130,7 @@ namespace Capstone
 		
 		private EntityRef<ServiceB> _ServiceB;
 		
-		private EntityRef<SupervisorEmployee> _SupervisorEmployee;
+		private EntityRef<Supervisor> _Supervisor;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3998,7 +4153,7 @@ namespace Capstone
 			this._Booking = default(EntityRef<Booking>);
 			this._ServiceProvider = default(EntityRef<ServiceProvider>);
 			this._ServiceB = default(EntityRef<ServiceB>);
-			this._SupervisorEmployee = default(EntityRef<SupervisorEmployee>);
+			this._Supervisor = default(EntityRef<Supervisor>);
 			OnCreated();
 		}
 		
@@ -4033,7 +4188,7 @@ namespace Capstone
 			{
 				if ((this._supervisorID != value))
 				{
-					if (this._SupervisorEmployee.HasLoadedOrAssignedValue)
+					if (this._Supervisor.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -4220,26 +4375,26 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SupervisorEmployee_SupervisorAssign", Storage="_SupervisorEmployee", ThisKey="supervisorID", OtherKey="SupervisorID", IsForeignKey=true)]
-		public SupervisorEmployee SupervisorEmployee
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Supervisor_SupervisorAssign", Storage="_Supervisor", ThisKey="supervisorID", OtherKey="SupervisorID", IsForeignKey=true)]
+		public Supervisor Supervisor
 		{
 			get
 			{
-				return this._SupervisorEmployee.Entity;
+				return this._Supervisor.Entity;
 			}
 			set
 			{
-				SupervisorEmployee previousValue = this._SupervisorEmployee.Entity;
+				Supervisor previousValue = this._Supervisor.Entity;
 				if (((previousValue != value) 
-							|| (this._SupervisorEmployee.HasLoadedOrAssignedValue == false)))
+							|| (this._Supervisor.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._SupervisorEmployee.Entity = null;
+						this._Supervisor.Entity = null;
 						previousValue.SupervisorAssigns.Remove(this);
 					}
-					this._SupervisorEmployee.Entity = value;
+					this._Supervisor.Entity = value;
 					if ((value != null))
 					{
 						value.SupervisorAssigns.Add(this);
@@ -4249,7 +4404,7 @@ namespace Capstone
 					{
 						this._supervisorID = default(int);
 					}
-					this.SendPropertyChanged("SupervisorEmployee");
+					this.SendPropertyChanged("Supervisor");
 				}
 			}
 		}
@@ -4272,137 +4427,6 @@ namespace Capstone
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SupervisorEmployee")]
-	public partial class SupervisorEmployee : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _SupervisorID;
-		
-		private EntitySet<SupervisorAssign> _SupervisorAssigns;
-		
-		private EntityRef<Employee> _Employee;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnSupervisorIDChanging(int value);
-    partial void OnSupervisorIDChanged();
-    #endregion
-		
-		public SupervisorEmployee()
-		{
-			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
-			this._Employee = default(EntityRef<Employee>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupervisorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int SupervisorID
-		{
-			get
-			{
-				return this._SupervisorID;
-			}
-			set
-			{
-				if ((this._SupervisorID != value))
-				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnSupervisorIDChanging(value);
-					this.SendPropertyChanging();
-					this._SupervisorID = value;
-					this.SendPropertyChanged("SupervisorID");
-					this.OnSupervisorIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SupervisorEmployee_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="SupervisorID", OtherKey="supervisorID")]
-		public EntitySet<SupervisorAssign> SupervisorAssigns
-		{
-			get
-			{
-				return this._SupervisorAssigns;
-			}
-			set
-			{
-				this._SupervisorAssigns.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SupervisorEmployee", Storage="_Employee", ThisKey="SupervisorID", OtherKey="EID", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
-				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Employee.Entity = null;
-						previousValue.SupervisorEmployee = null;
-					}
-					this._Employee.Entity = value;
-					if ((value != null))
-					{
-						value.SupervisorEmployee = this;
-						this._SupervisorID = value.EID;
-					}
-					else
-					{
-						this._SupervisorID = default(int);
-					}
-					this.SendPropertyChanged("Employee");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_SupervisorAssigns(SupervisorAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.SupervisorEmployee = this;
-		}
-		
-		private void detach_SupervisorAssigns(SupervisorAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.SupervisorEmployee = null;
 		}
 	}
 }

@@ -10,7 +10,7 @@
 namespace Capstone.SupervisorFolder {
     
     
-    public partial class Master_Supervisor {
+    public partial class MasterSupervisor {
         
         /// <summary>
         /// head control.

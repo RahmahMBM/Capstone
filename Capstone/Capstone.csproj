@@ -148,6 +148,7 @@
     <Content Include="General Manager\GeneralManHomePage.aspx" />
     <Content Include="General Manager\GenerateReport1.aspx" />
     <Content Include="General Manager\GenerationReport2.aspx" />
+    <Content Include="General Manager\AddEmployee.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -171,6 +172,7 @@
     <Content Include="Home all\HomePage.aspx" />
     <Content Include="Home all\AboutXenel.aspx" />
     <Content Include="Home all\HelpPage.aspx" />
+    <Content Include="HomePage2.css" />
     <Content Include="images\banner.jpg" />
     <Content Include="images\xenel logo.png" />
     <Content Include="images\xenel.jpg" />
@@ -213,11 +215,12 @@
     <Content Include="SupervisorFolder\Modify Service Provider Submenu.aspx" />
     <Content Include="SupervisorFolder\Edit Booking Submenu.aspx" />
     <Content Include="SupervisorFolder\SupervisorHomePage.aspx" />
+    <Content Include="SupervisorFolder\WebForm7.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="SupervisorFolder\Master Supervisor.Master" />
+    <Content Include="SupervisorFolder\MasterSupervisor.Master" />
     <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -347,6 +350,13 @@
     <Compile Include="General Manager\GenerationReport2.aspx.designer.cs">
       <DependentUpon>GenerationReport2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="General Manager\AddEmployee.aspx.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\AddEmployee.aspx.designer.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -395,6 +405,7 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -413,12 +424,12 @@
     <Compile Include="Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
-    <Compile Include="SupervisorFolder\Master Supervisor.Master.cs">
-      <DependentUpon>Master Supervisor.Master</DependentUpon>
+    <Compile Include="SupervisorFolder\MasterSupervisor.Master.cs">
+      <DependentUpon>MasterSupervisor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SupervisorFolder\Master Supervisor.Master.designer.cs">
-      <DependentUpon>Master Supervisor.Master</DependentUpon>
+    <Compile Include="SupervisorFolder\MasterSupervisor.Master.designer.cs">
+      <DependentUpon>MasterSupervisor.Master</DependentUpon>
     </Compile>
     <Compile Include="SupervisorFolder\Booking For Service Provider.aspx.cs">
       <DependentUpon>Booking For Service Provider.aspx</DependentUpon>
@@ -462,8 +473,15 @@
     <Compile Include="SupervisorFolder\SupervisorHomePage.aspx.designer.cs">
       <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SupervisorFolder\WebForm7.aspx.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorFolder\WebForm7.aspx.designer.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
