@@ -195,6 +195,8 @@
             <td class="auto-style21">&nbsp;</td>
             <td>
                 <asp:Button ID="Button2" runat="server" CssClass="auto-style25" Height="44px" Text="Request" Width="84px" />
+            &nbsp;
+                <asp:Button ID="Button3" runat="server" Text="Button" />
             </td>
             <td>&nbsp;</td>
         </tr>
