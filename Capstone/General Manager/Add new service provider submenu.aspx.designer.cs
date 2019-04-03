@@ -22,13 +22,13 @@ namespace Capstone.General_Manager {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBox1 control.
+        /// serviceTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox serviceTextBox;
         
         /// <summary>
         /// Label4 control.
@@ -40,13 +40,13 @@ namespace Capstone.General_Manager {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DropDownListService control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListService;
         
         /// <summary>
         /// Button2 control.

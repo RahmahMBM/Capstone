@@ -77,7 +77,7 @@
                         </td>
                         <td class="auto-style23"></td>
                         <td class="auto-style24">
-                            <asp:TextBox ID="TextBox1" runat="server" Height="69px" Width="252px"></asp:TextBox>
+                            <asp:TextBox ID="serviceTextBox" runat="server" Height="69px" Width="252px"></asp:TextBox>
                         </td>
                         <td class="auto-style24"></td>
                     </tr>
@@ -87,7 +87,7 @@
                         </td>
                         <td class="auto-style26"></td>
                         <td class="auto-style27">
-                            <asp:DropDownList ID="DropDownList1" runat="server" Height="35px" Width="168px">
+                            <asp:DropDownList ID="DropDownListService" runat="server" Height="35px" Width="168px">
                                 <asp:ListItem>Business</asp:ListItem>
                                 <asp:ListItem>Personal</asp:ListItem>
                             </asp:DropDownList>

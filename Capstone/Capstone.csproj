@@ -159,6 +159,14 @@
     <Content Include="Executive Secratary\Executive Secretary Master.Master" />
     <Content Include="General Manager\General Manager Master.Master" />
     <Content Include="Home all\Home all.Master" />
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home all\LoginPage.aspx" />
     <Content Include="Home all\HomePage.aspx" />
@@ -207,7 +215,6 @@
     <Content Include="SupervisorFolder\Modify Service Provider Submenu.aspx" />
     <Content Include="SupervisorFolder\Edit Booking Submenu.aspx" />
     <Content Include="SupervisorFolder\SupervisorHomePage.aspx" />
-    <Content Include="SupervisorFolder\WebForm7.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -231,6 +238,11 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -459,12 +471,6 @@
     </Compile>
     <Compile Include="SupervisorFolder\SupervisorHomePage.aspx.designer.cs">
       <DependentUpon>SupervisorHomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SupervisorFolder\WebForm7.aspx.cs">
-      <DependentUpon>WebForm7.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SupervisorFolder\WebForm7.aspx.designer.cs">
-      <DependentUpon>WebForm7.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

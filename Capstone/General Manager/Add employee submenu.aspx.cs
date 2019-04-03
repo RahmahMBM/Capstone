@@ -21,24 +21,8 @@ namespace Capstone.General_Manager
 
         protected void TextBox6_TextChanged(object sender, EventArgs e)
         {
-            // if(IsPostBack)
-            // {
-            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["XenelConnectionString"].ConnectionString);
-            //con.Open();
-            //string checkuser = "select count(*) from Employee where EmployeeCode='" + CodeTextBox.Text + "'";
-            //SqlCommand com = new SqlCommand(checkuser, con);
-
-            //int temproray = Convert.ToInt32(com.ExecuteScalar().ToString());
-            //if(temproray==1)
-            //{
-            //    Response.Write("User already EXISTS ");
-            //}
-
-
-
-
-            //con.Close();
-            // }
+            
+         
 
         }
 
@@ -76,13 +60,9 @@ namespace Capstone.General_Manager
                     myctx.ExeSecrataries.InsertOnSubmit(mysec);
                     myctx.SubmitChanges();
                 }
-                if (em.EmployeeType == "Service Provider")
-                {
-                    ServiceProvider mysec = new ServiceProvider();
-                    mysec.ServiceProviderID = em.EID;
-                    myctx.ServiceProviders.InsertOnSubmit(mysec);
-                    myctx.SubmitChanges();
-                }
+            
+
+               
 
                 if (em.EmployeeType == "Supervisor")
                 {
@@ -92,60 +72,63 @@ namespace Capstone.General_Manager
                     myctx.SubmitChanges();
                 }
 
-
-
-                ServiceProvider mySP = new ServiceProvider();
-                mySP.ServiceProviderCode = CodeTextBox.Text;
-                mySP.SPFirstName = FirstNameTextBox.Text;
-                mySP.SPLastName = LastNameTextBox.Text;
-                mySP.SPNationalID = NationalIDTextBox.Text;
-                mySP.SpPhoneNumber = PhoneNumberTextBox.Text;
-                mySP.SPDateOfBirth = Convert.ToDateTime(MonthList.SelectedValue + "/" + DateList.SelectedValue + "/" + YearList.SelectedValue);
-                mySP.SPEmail = EmailTextBox.Text;
-                mySP.SpPassword = EmployeePasswordTextBox.Text;
-                mySP.ServiceProviderAddress = AddressTextBox.Text;
-                mySP.ServiceProviderType = CategoryOfEmployee.Text;
-
-                myctx.ServiceProviders.InsertOnSubmit(mySP);
-                myctx.SubmitChanges();
-
-                var ser = from b in myctx.ServiceProviders
-                          orderby b.ServiceProviderID descending
-                          select b;
-
-                if (ser.Count() != 0)
-                {
-
-                    var ser1 = ser.First();
-                    if (ser1.ServiceProviderType == "Driver")
-                    {
-                        Driver mysp = new Driver();
-                        mysp.DriverID = ser1.ServiceProviderID;
-                        myctx.Drivers.InsertOnSubmit(mysp);
-                        myctx.SubmitChanges();
-                    }
-
-                    if (ser1.ServiceProviderType == "Butler")
-                    {
-                        Butler mysp = new Butler();
-                        mysp.ButlerID = ser1.ServiceProviderID;
-                        myctx.Butlers.InsertOnSubmit(mysp);
-                        myctx.SubmitChanges();
-                    }
-
-                    if (ser1.ServiceProviderType == "Governmental")
-                    {
-                        Govermental mysp = new Govermental();
-                        mysp.GovermentalID = ser1.ServiceProviderID;
-                        myctx.Govermentals.InsertOnSubmit(mysp);
-                        myctx.SubmitChanges();
-                    }
-
-
-
-                }
-                Response.Write("Employee has been Added Successfully");
             }
+
+            Response.Redirect("~\\General Manager\\AddEmployee.aspx");
+            //if (CategoryOfEmployee.Text == "Driver")
+            //{
+            //    ServiceProvider mySP = new ServiceProvider();
+            //    mySP.ServiceProviderCode = CodeTextBox.Text;
+            //    mySP.SPFirstName = FirstNameTextBox.Text;
+            //    mySP.SPLastName = LastNameTextBox.Text;
+            //    mySP.SPNationalID = NationalIDTextBox.Text;
+            //    mySP.SpPhoneNumber = PhoneNumberTextBox.Text;
+            //    mySP.SPDateOfBirth = Convert.ToDateTime(MonthList.SelectedValue + "/" + DateList.SelectedValue + "/" + YearList.SelectedValue);
+            //    mySP.SPEmail = EmailTextBox.Text;
+            //    mySP.SpPassword = EmployeePasswordTextBox.Text;
+            //    mySP.ServiceProviderAddress = AddressTextBox.Text;
+            //    mySP.ServiceProviderType = CategoryOfEmployee.Text;
+
+            //    myctx.ServiceProviders.InsertOnSubmit(mySP);
+            //    myctx.SubmitChanges();
+            //}
+            //    var ser = from b in myctx.ServiceProviders
+            //              orderby b.ServiceProviderID descending
+            //              select b;
+
+            //    if (ser.Count() != 0)
+            //    {
+
+            //        var ser1 = ser.First();
+            //        if (ser1.ServiceProviderType == "Driver")
+            //        {
+            //            Driver mysp = new Driver();
+            //            mysp.DriverID = ser1.ServiceProviderID;
+            //            myctx.Drivers.InsertOnSubmit(mysp);
+            //            myctx.SubmitChanges();
+            //        }
+
+            //        if (ser1.ServiceProviderType == "Butler")
+            //        {
+            //            Butler mysp = new Butler();
+            //            mysp.ButlerID = ser1.ServiceProviderID;
+            //            myctx.Butlers.InsertOnSubmit(mysp);
+            //            myctx.SubmitChanges();
+            //        }
+
+            //        if (ser1.ServiceProviderType == "Governmental")
+            //        {
+            //            Govermental mysp = new Govermental();
+            //            mysp.GovermentalID = ser1.ServiceProviderID;
+            //            myctx.Govermentals.InsertOnSubmit(mysp);
+            //            myctx.SubmitChanges();
+            //        }
+
+
+
         }
-    }
+
+
+              //  Response.Write("Employee has been Added Successfully");
+        }
 }

@@ -244,6 +244,18 @@
                         <td class="auto-style72">
                             &nbsp;</td>
                         <td class="auto-style62">
+                            &nbsp;</td>
+                        <td class="auto-style73">
+                            &nbsp;</td>
+                        <td class="auto-style83">
+                            &nbsp;</td>
+                        <td class="auto-style24">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">
+                            &nbsp;</td>
+                        <td class="auto-style62">
                             <asp:Label ID="Label3" runat="server" Text="Employee Type"></asp:Label>
                         </td>
                         <td class="auto-style73">
@@ -252,13 +264,10 @@
                             <asp:DropDownList ID="CategoryOfEmployee" runat="server" Width="190px">
                                 <asp:ListItem>Category</asp:ListItem>
                                 <asp:ListItem>Executive</asp:ListItem>
-                                <asp:ListItem>Executive Secratary</asp:ListItem>
+                                <asp:ListItem>Executive Secretary</asp:ListItem>
                                 <asp:ListItem>Drivers&#39; Supervisor</asp:ListItem>
                                 <asp:ListItem>Butlers&#39; Supervisor</asp:ListItem>
                                 <asp:ListItem>Government Services Supervisor</asp:ListItem>
-                                <asp:ListItem>Driver</asp:ListItem>
-                                <asp:ListItem>Butler</asp:ListItem>
-                                <asp:ListItem>Goverment Service </asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         <td class="auto-style24">

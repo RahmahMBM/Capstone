@@ -20,6 +20,15 @@ namespace Capstone.General_Manager
         protected void Button2_Click(object sender, EventArgs e)
         {
             ServiceB newservice = new ServiceB();
+            newservice.ServiceName = serviceTextBox.Text;
+            newservice.ServiceType = DropDownListService.Text;
+            myctx.ServiceBs.InsertOnSubmit(newservice);
+            myctx.SubmitChanges();
+
+
+            var service = from a in myctx.ServiceBs
+                      orderby a.SerciveID descending
+                      select a;
         }
     }
 }
