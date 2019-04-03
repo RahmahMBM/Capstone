@@ -1,10 +1,6 @@
-﻿m<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/SupervisorFolder/MasterSupervisor.Master.cs" Inherits="Capstone.SupervisorFolder.MasterSupervisor" %>
-
-<!DOCTYPE html>
-
-<html>
-<head runat="server">
-    <title></title>
+﻿    <title></title>
+    <html>
+    <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
