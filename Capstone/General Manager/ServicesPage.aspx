@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="GeneralManHomePage.aspx.cs" Inherits="Capstone.General_Manager.WebForm5" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="ServicesPage.aspx.cs" Inherits="Capstone.General_Manager.WebForm10" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title> Home</title>
+    <title>View_Services</title>
     <link href="../HomePage2.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+     <br />
 
     <div id="menu">
         <ul>
@@ -24,9 +24,9 @@
              <li>
                 <a>View</a>
                 <ul>
-                    <li><a href="AddEmployee.aspx">AddEmployee.aspx</a><a>Employees</a></li>
+                    <li><a href="AddEmployee.aspx">Employee</a></li>
                     <li><a href="SystemUsersPage.aspx">System Users</a></li>
-                    <li><a href="ServicesPage.aspx">Services</a></li>
+                    <li><a>Services</a></li>
                 </ul>
             </li>
             

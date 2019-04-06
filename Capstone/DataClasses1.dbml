@@ -2,7 +2,7 @@
   <Connection Mode="WebSettings" ConnectionString="Data Source=samsung;Initial Catalog=TEST;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TESTConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Booking" Member="Bookings">
     <Type Name="Booking">
-      <Column Name="BookingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BookingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="BookingCode" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
       <Column Name="ActualEndDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ExpectedEndDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
@@ -32,7 +32,7 @@
   </Table>
   <Table Name="dbo.Criteria" Member="Criterias">
     <Type Name="Criteria">
-      <Column Name="CriteriaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CriteriaID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="CriteriaName" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="CriteriaDescription" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="CriteriaType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
@@ -49,7 +49,7 @@
   </Table>
   <Table Name="dbo.Employee" Member="Employees">
     <Type Name="Employee">
-      <Column Name="EID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="EmployeeCode" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
       <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
@@ -120,7 +120,7 @@
   </Table>
   <Table Name="dbo.Leave" Member="Leaves">
     <Type Name="Leave">
-      <Column Name="LeaveID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LeaveID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TypeOfLeave" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
       <Column Name="StartDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="EndDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
@@ -134,7 +134,7 @@
   </Table>
   <Table Name="dbo.Report" Member="Reports">
     <Type Name="Report">
-      <Column Name="ReportID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ReportDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ReportDescription" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
       <Column Name="GeneralMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -143,7 +143,7 @@
   </Table>
   <Table Name="dbo.ServiceB" Member="ServiceBs">
     <Type Name="ServiceB">
-      <Column Name="SerciveID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SerciveID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ServiceName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="ServiceType" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
       <Column Name="ServiceProviderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -154,7 +154,7 @@
   </Table>
   <Table Name="dbo.ServiceProvider" Member="ServiceProviders">
     <Type Name="ServiceProvider">
-      <Column Name="ServiceProviderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceProviderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ServiceProviderCode" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
       <Column Name="SPFirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="SPLastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />

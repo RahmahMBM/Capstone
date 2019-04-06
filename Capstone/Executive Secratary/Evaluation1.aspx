@@ -1,51 +1,77 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Executive Secratary/Executive Secretary Master.Master" AutoEventWireup="true" CodeBehind="Evaluation1.aspx.cs" Inherits="Capstone.Executive_Secratary.WebForm4" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../HomePage2.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style19 {
             width: 100%;
         }
+
         .auto-style20 {
             width: 273px;
         }
+
         .auto-style21 {
             width: 14px;
         }
+
         .auto-style22 {
             width: 344px;
         }
+
         .auto-style23 {
             width: 273px;
             height: 87px;
         }
+
         .auto-style24 {
             width: 14px;
             height: 87px;
         }
+
         .auto-style25 {
             width: 344px;
             height: 87px;
         }
+
         .auto-style26 {
             height: 87px;
         }
+
         .auto-style27 {
             width: 273px;
             height: 68px;
         }
+
         .auto-style28 {
             width: 14px;
             height: 68px;
         }
+
         .auto-style29 {
             width: 344px;
             height: 68px;
         }
+
         .auto-style30 {
             height: 68px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+
+    <div id="menu">
+        <ul>
+            <li><a href="BookingForServiceProvider.aspx">Booking</a></li>
+            <li><a href="SchedualOfBookedService.aspx">My Schedule</a></li>
+            <li><a href="Evaluation1.aspx">Evaluation</a></li>
+
+        </ul>
+    </div>
+    <br />
+    <br />
+    <br />
     <table class="auto-style19">
         <tr>
             <td>
@@ -81,10 +107,10 @@
                         <td class="auto-style29">
                             <asp:DropDownList ID="DropDownList3" runat="server" Width="64px">
                             </asp:DropDownList>
-&nbsp;
+                            &nbsp;
                             <asp:DropDownList ID="DropDownList4" runat="server" Width="54px">
                             </asp:DropDownList>
-&nbsp;
+                            &nbsp;
                             <asp:DropDownList ID="DropDownList5" runat="server" Width="69px">
                             </asp:DropDownList>
                         </td>

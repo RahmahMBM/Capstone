@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="GenerateReport1.aspx.cs" Inherits="Capstone.General_Manager.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Generate_Report</title>
      <link href="../HomePage2.css" rel="stylesheet" />
     
      <style type="text/css">
@@ -99,9 +100,9 @@
              <li>
                 <a>View</a>
                 <ul>
-                    <li><a>Employees</a></li>
-                    <li><a>System Users</a></li>
-                    <li><a>Services</a></li>
+                    <li><a href="AddEmployee.aspx">Employee</a></li>
+                    <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="ServicesPage.aspx">Services</a></li>
                 </ul>
             </li>
             

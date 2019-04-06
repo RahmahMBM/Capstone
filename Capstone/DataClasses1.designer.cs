@@ -304,7 +304,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int BookingID
 		{
 			get
@@ -882,7 +882,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int CriteriaID
 		{
 			get
@@ -1236,7 +1236,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int EID
 		{
 			get
@@ -2794,7 +2794,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int LeaveID
 		{
 			get
@@ -3069,7 +3069,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int ReportID
 		{
 			get
@@ -3250,7 +3250,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerciveID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerciveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int SerciveID
 		{
 			get
@@ -3524,7 +3524,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int ServiceProviderID
 		{
 			get

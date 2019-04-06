@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General Manager/General Manager Master.Master" AutoEventWireup="true" CodeBehind="Add new service provider submenu.aspx.cs" Inherits="Capstone.General_Manager.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Add_New_Service</title>
     <link href="../HomePage2.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style19 {
@@ -59,9 +60,9 @@
              <li>
                 <a>View</a>
                 <ul>
-                    <li><a>Employees</a></li>
-                    <li><a>System Users</a></li>
-                    <li><a>Services</a></li>
+                    <li><a href="AddEmployee.aspx">Employee</a></li>
+                    <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="ServicesPage.aspx">Services Page</a></li>
                 </ul>
             </li>
             
