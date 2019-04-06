@@ -34,7 +34,7 @@
     <br />
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" Height="145px" Width="565px" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+    <asp:GridView ID="GridView1" runat="server" Height="145px" Width="565px" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
             <asp:BoundField HeaderText="Employee Code" />
             <asp:BoundField HeaderText="Employee First Name" />

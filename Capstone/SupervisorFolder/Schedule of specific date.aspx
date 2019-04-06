@@ -24,7 +24,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <asp:GridView ID="GridView1" runat="server" Height="455px" Width="753px">
+                            <asp:GridView ID="GridView1" runat="server" Height="455px" Width="753px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                             </asp:GridView>
                         </td>
                     </tr>

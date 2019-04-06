@@ -27,5 +27,10 @@ namespace Capstone.General_Manager
                 bf2.DataField = "LastName";
             }
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

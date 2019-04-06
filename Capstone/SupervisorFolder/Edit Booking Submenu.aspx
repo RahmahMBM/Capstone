@@ -49,7 +49,7 @@
             </tr>
             <tr>
                 <td class="auto-style21">
-                    <asp:GridView ID="GridView1" runat="server" Height="324px" Width="609px">
+                    <asp:GridView ID="GridView1" runat="server" Height="324px" Width="609px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     </asp:GridView>
                 </td>
                 <td class="auto-style20">&nbsp;</td>

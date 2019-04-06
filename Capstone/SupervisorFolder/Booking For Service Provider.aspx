@@ -171,7 +171,9 @@
             </td>
             <td class="auto-style42"></td>
             <td class="auto-style43">
-                <asp:DropDownList ID="DropDownList6" runat="server" Width="152px">
+                <asp:DropDownList ID="DropDownList6" runat="server" Width="152px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList6_SelectedIndexChanged">
+                    <asp:ListItem></asp:ListItem>
+                    <asp:ListItem>Other</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td class="auto-style43"></td>
@@ -180,7 +182,9 @@
             <td class="auto-style20">&nbsp;</td>
             <td class="auto-style21">&nbsp;</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" Height="61px" Width="266px"></asp:TextBox>
+                <asp:Panel ID="Panel1" runat="server">
+                    <asp:TextBox ID="TextBox3" runat="server" Height="133px" Width="322px" Visible="False"></asp:TextBox>
+                </asp:Panel>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -194,9 +198,8 @@
             <td class="auto-style20">&nbsp;</td>
             <td class="auto-style21">&nbsp;</td>
             <td>
-                <asp:Button ID="Button2" runat="server" CssClass="auto-style25" Height="44px" Text="Request" Width="84px" />
+                <asp:Button ID="Button2" runat="server" CssClass="auto-style25" Height="44px" Text="Request" Width="84px" OnClick="Button2_Click" />
             &nbsp;
-                <asp:Button ID="Button3" runat="server" Text="Button" />
             </td>
             <td>&nbsp;</td>
         </tr>

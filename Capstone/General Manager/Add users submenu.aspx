@@ -189,7 +189,7 @@
                         <td class="auto-style23">&nbsp;</td>
                         <td class="auto-style39">&nbsp;</td>
                         <td class="auto-style45">
-                            <asp:Button ID="Button2" runat="server" CssClass="auto-style46" Height="31px" Text="Add" Width="85px" />
+                            <asp:Button ID="Button2" runat="server" CssClass="auto-style46" Height="31px" Text="Add" Width="85px" OnClick="Button2_Click" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
