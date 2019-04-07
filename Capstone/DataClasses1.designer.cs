@@ -22,7 +22,6 @@ namespace Capstone
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="TEST")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,64 +29,7 @@ namespace Capstone
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertBooking(Booking instance);
-    partial void UpdateBooking(Booking instance);
-    partial void DeleteBooking(Booking instance);
-    partial void InsertButler(Butler instance);
-    partial void UpdateButler(Butler instance);
-    partial void DeleteButler(Butler instance);
-    partial void InsertCertificate(Certificate instance);
-    partial void UpdateCertificate(Certificate instance);
-    partial void DeleteCertificate(Certificate instance);
-    partial void InsertCriteria(Criteria instance);
-    partial void UpdateCriteria(Criteria instance);
-    partial void DeleteCriteria(Criteria instance);
-    partial void InsertDriver(Driver instance);
-    partial void UpdateDriver(Driver instance);
-    partial void DeleteDriver(Driver instance);
-    partial void InsertEmployee(Employee instance);
-    partial void UpdateEmployee(Employee instance);
-    partial void DeleteEmployee(Employee instance);
-    partial void InsertEvaluation(Evaluation instance);
-    partial void UpdateEvaluation(Evaluation instance);
-    partial void DeleteEvaluation(Evaluation instance);
-    partial void InsertExeSecratary(ExeSecratary instance);
-    partial void UpdateExeSecratary(ExeSecratary instance);
-    partial void DeleteExeSecratary(ExeSecratary instance);
-    partial void InsertExeSecrataryAssign(ExeSecrataryAssign instance);
-    partial void UpdateExeSecrataryAssign(ExeSecrataryAssign instance);
-    partial void DeleteExeSecrataryAssign(ExeSecrataryAssign instance);
-    partial void InsertGenmanager(Genmanager instance);
-    partial void UpdateGenmanager(Genmanager instance);
-    partial void DeleteGenmanager(Genmanager instance);
-    partial void InsertGovermental(Govermental instance);
-    partial void UpdateGovermental(Govermental instance);
-    partial void DeleteGovermental(Govermental instance);
-    partial void InsertLeave(Leave instance);
-    partial void UpdateLeave(Leave instance);
-    partial void DeleteLeave(Leave instance);
-    partial void InsertReport(Report instance);
-    partial void UpdateReport(Report instance);
-    partial void DeleteReport(Report instance);
-    partial void InsertServiceB(ServiceB instance);
-    partial void UpdateServiceB(ServiceB instance);
-    partial void DeleteServiceB(ServiceB instance);
-    partial void InsertServiceProvider(ServiceProvider instance);
-    partial void UpdateServiceProvider(ServiceProvider instance);
-    partial void DeleteServiceProvider(ServiceProvider instance);
-    partial void InsertSupervisor(Supervisor instance);
-    partial void UpdateSupervisor(Supervisor instance);
-    partial void DeleteSupervisor(Supervisor instance);
-    partial void InsertSupervisorAssign(SupervisorAssign instance);
-    partial void UpdateSupervisorAssign(SupervisorAssign instance);
-    partial void DeleteSupervisorAssign(SupervisorAssign instance);
     #endregion
-		
-		public DataClasses1DataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TESTConnectionString"].ConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
 		
 		public DataClasses1DataContext(string connection) : 
 				base(connection, mappingSource)
@@ -304,7 +246,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int BookingID
 		{
 			get
@@ -882,7 +824,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int CriteriaID
 		{
 			get
@@ -1236,7 +1178,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int EID
 		{
 			get
@@ -2794,7 +2736,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int LeaveID
 		{
 			get
@@ -3069,7 +3011,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ReportID
 		{
 			get
@@ -3250,7 +3192,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerciveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerciveID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int SerciveID
 		{
 			get
@@ -3524,7 +3466,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ServiceProviderID
 		{
 			get

@@ -168,7 +168,7 @@
             <tr>
                 <td class="auto-style20">&nbsp;</td>
                 <td class="auto-style23">&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="Button2" runat="server" Height="37px" Text="Submit" Width="86px" />
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="Button2" runat="server" Height="37px" Text="Submit" Width="86px" OnClick="Button2_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

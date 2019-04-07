@@ -178,7 +178,7 @@
               <td>&nbsp;</td>
           </tr>
       </table>
-      <asp:GridView ID="GridView1" runat="server" Height="425px" Width="1019px">
+      <asp:GridView ID="GridView1" runat="server" Height="425px" Width="1019px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
       </asp:GridView>
     <br />
     <br />

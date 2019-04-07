@@ -224,8 +224,10 @@
                         </td>
                         <td class="auto-style35"></td>
                         <td class="auto-style36">
-                            <asp:DropDownList ID="DropDownList6" runat="server" Width="159px">
-                            </asp:DropDownList>
+                            <asp:Panel ID="Panel1" runat="server">
+                                <asp:DropDownList ID="DropDownList6" runat="server">
+                                </asp:DropDownList>
+                            </asp:Panel>
                         </td>
                         <td class="auto-style36"></td>
                     </tr>
@@ -250,7 +252,7 @@
                         <td class="auto-style20">&nbsp;</td>
                         <td class="auto-style21">&nbsp;</td>
                         <td>
-                            <asp:Button ID="Button2" runat="server" CssClass="auto-style40" Height="60px" Text="Request" Width="144px" />
+                            <asp:Button ID="Button2" runat="server" CssClass="auto-style40" Height="60px" Text="Request" Width="144px" OnClick="Button2_Click" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
