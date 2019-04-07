@@ -83,6 +83,12 @@ namespace Capstone
     partial void DeleteSupervisorAssign(SupervisorAssign instance);
     #endregion
 		
+		public DataClasses1DataContext() : 
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TESTConnectionString"].ConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
+		
 		public DataClasses1DataContext(string connection) : 
 				base(connection, mappingSource)
 		{
