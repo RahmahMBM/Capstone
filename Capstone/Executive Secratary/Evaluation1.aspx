@@ -108,14 +108,9 @@
                         </td>
                         <td class="auto-style28"></td>
                         <td class="auto-style29">
-                            <asp:DropDownList ID="DropDownList3" runat="server" Width="64px">
-                            </asp:DropDownList>
 &nbsp;
-                            <asp:DropDownList ID="DropDownList4" runat="server" Width="54px">
-                            </asp:DropDownList>
-&nbsp;
-                            <asp:DropDownList ID="DropDownList5" runat="server" Width="69px">
-                            </asp:DropDownList>
+                            &nbsp;
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                         </td>
                         <td class="auto-style30"></td>
                     </tr>
