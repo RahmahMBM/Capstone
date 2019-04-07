@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SupervisorFolder/MasterSupervisor.Master" AutoEventWireup="true" CodeBehind="Booking For Service Provider.aspx.cs" Inherits="Capstone.SupervisorFolder.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../HomePage2.css" rel="stylesheet" />
     <style type="text/css">
     .auto-style19 {
         width: 100%;
@@ -90,24 +91,74 @@
     .auto-style46 {
         height: 48px;
     }
-</style>
+        .auto-style47 {
+            width: 214px;
+            height: 45px;
+            text-align: right;
+        }
+        .auto-style48 {
+            width: 214px;
+            height: 55px;
+            text-align: right;
+        }
+        .auto-style49 {
+            width: 214px;
+            height: 42px;
+            text-align: right;
+        }
+        .auto-style50 {
+            width: 214px;
+            height: 44px;
+            text-align: right;
+        }
+        .auto-style51 {
+            width: 214px;
+            height: 43px;
+            text-align: right;
+        }
+        .auto-style52 {
+            width: 214px;
+            height: 57px;
+            text-align: right;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
+    <br />
+     <div id="menu">
+        <ul>
+            <li><a href="Booking%20For%20Service%20Provider.aspx">Booking</a></li>
+            
+            <li>
+                <a>Schedule</a>
+                <ul>
+                    <li><a href="Service%20Provider%20Schedule.aspx">Service Provider Schedule</a></li>
+                    <li><a href="Schedule%20of%20specific%20date.aspx">Schedule of specific date</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a>Update</a>
+                <ul>
+                    <li><a href="Edit%20Booking%20Submenu.aspx">Edit Booking </a></li>
+                    <li><a href="Modify%20Service%20Provider%20Submenu.aspx">Modify Service Provider</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+ 
+
     <table class="auto-style19">
         <tr>
-            <td class="auto-style28" colspan="4">
-                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem Text="Booking" Value="Booking"></asp:MenuItem>
-                        <asp:MenuItem Text="Schedule" Value="Schedule"></asp:MenuItem>
-                        <asp:MenuItem Text="Updates" Value="Updates"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>
-            </td>
-        </tr>
-        <tr>
             <td class="auto-style26">
+                &nbsp;</td>
+            <td class="auto-style47">
                 <asp:Label ID="Label3" runat="server" Text="Choose Service Provider"></asp:Label>
             </td>
             <td class="auto-style27"></td>
@@ -119,6 +170,8 @@
         </tr>
         <tr>
             <td class="auto-style29">
+                &nbsp;</td>
+            <td class="auto-style48">
                 <asp:Label ID="Label4" runat="server" Text="Date"></asp:Label>
             </td>
             <td class="auto-style30"></td>
@@ -136,6 +189,8 @@
         </tr>
         <tr>
             <td class="auto-style32">
+                &nbsp;</td>
+            <td class="auto-style49">
                 <asp:Label ID="Label5" runat="server" Text="Booking For"></asp:Label>
             </td>
             <td class="auto-style33"></td>
@@ -147,6 +202,8 @@
         </tr>
         <tr>
             <td class="auto-style35">
+                &nbsp;</td>
+            <td class="auto-style50">
                 <asp:Label ID="Label6" runat="server" Text="Start Time"></asp:Label>
             </td>
             <td class="auto-style36"></td>
@@ -157,6 +214,8 @@
         </tr>
         <tr>
             <td class="auto-style38">
+                &nbsp;</td>
+            <td class="auto-style51">
                 <asp:Label ID="Label7" runat="server" Text="End Time"></asp:Label>
             </td>
             <td class="auto-style39"></td>
@@ -167,6 +226,8 @@
         </tr>
         <tr>
             <td class="auto-style41">
+                &nbsp;</td>
+            <td class="auto-style52">
                 <asp:Label ID="Label8" runat="server" Text="List of Services"></asp:Label>
             </td>
             <td class="auto-style42"></td>
@@ -180,6 +241,7 @@
         </tr>
         <tr>
             <td class="auto-style20">&nbsp;</td>
+            <td class="auto-style20">&nbsp;</td>
             <td class="auto-style21">&nbsp;</td>
             <td>
                 <asp:Panel ID="Panel1" runat="server">
@@ -189,12 +251,14 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style44">&nbsp;</td>
             <td class="auto-style44"></td>
             <td class="auto-style45"></td>
             <td class="auto-style46"></td>
             <td class="auto-style46"></td>
         </tr>
         <tr>
+            <td class="auto-style20">&nbsp;</td>
             <td class="auto-style20">&nbsp;</td>
             <td class="auto-style21">&nbsp;</td>
             <td>
@@ -205,7 +269,7 @@
         </tr>
     </table>
     <br />
-</p>
+
 <p>
 </p>
 <p>

@@ -22,6 +22,7 @@ namespace Capstone
 	using System;
 	
 	
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="TEST")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -29,7 +30,64 @@ namespace Capstone
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertBooking(Booking instance);
+    partial void UpdateBooking(Booking instance);
+    partial void DeleteBooking(Booking instance);
+    partial void InsertButler(Butler instance);
+    partial void UpdateButler(Butler instance);
+    partial void DeleteButler(Butler instance);
+    partial void InsertCertificate(Certificate instance);
+    partial void UpdateCertificate(Certificate instance);
+    partial void DeleteCertificate(Certificate instance);
+    partial void InsertCriteria(Criteria instance);
+    partial void UpdateCriteria(Criteria instance);
+    partial void DeleteCriteria(Criteria instance);
+    partial void InsertDriver(Driver instance);
+    partial void UpdateDriver(Driver instance);
+    partial void DeleteDriver(Driver instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
+    partial void InsertEvaluation(Evaluation instance);
+    partial void UpdateEvaluation(Evaluation instance);
+    partial void DeleteEvaluation(Evaluation instance);
+    partial void InsertExeSecratary(ExeSecratary instance);
+    partial void UpdateExeSecratary(ExeSecratary instance);
+    partial void DeleteExeSecratary(ExeSecratary instance);
+    partial void InsertExeSecrataryAssign(ExeSecrataryAssign instance);
+    partial void UpdateExeSecrataryAssign(ExeSecrataryAssign instance);
+    partial void DeleteExeSecrataryAssign(ExeSecrataryAssign instance);
+    partial void InsertGenmanager(Genmanager instance);
+    partial void UpdateGenmanager(Genmanager instance);
+    partial void DeleteGenmanager(Genmanager instance);
+    partial void InsertGovermental(Govermental instance);
+    partial void UpdateGovermental(Govermental instance);
+    partial void DeleteGovermental(Govermental instance);
+    partial void InsertLeave(Leave instance);
+    partial void UpdateLeave(Leave instance);
+    partial void DeleteLeave(Leave instance);
+    partial void InsertReport(Report instance);
+    partial void UpdateReport(Report instance);
+    partial void DeleteReport(Report instance);
+    partial void InsertServiceB(ServiceB instance);
+    partial void UpdateServiceB(ServiceB instance);
+    partial void DeleteServiceB(ServiceB instance);
+    partial void InsertServiceProvider(ServiceProvider instance);
+    partial void UpdateServiceProvider(ServiceProvider instance);
+    partial void DeleteServiceProvider(ServiceProvider instance);
+    partial void InsertSupervisor(Supervisor instance);
+    partial void UpdateSupervisor(Supervisor instance);
+    partial void DeleteSupervisor(Supervisor instance);
+    partial void InsertSupervisorAssign(SupervisorAssign instance);
+    partial void UpdateSupervisorAssign(SupervisorAssign instance);
+    partial void DeleteSupervisorAssign(SupervisorAssign instance);
     #endregion
+		
+		public DataClasses1DataContext() : 
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TESTConnectionString"].ConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
 		
 		public DataClasses1DataContext(string connection) : 
 				base(connection, mappingSource)
@@ -202,7 +260,7 @@ namespace Capstone
 		
 		private string _BookingCode;
 		
-		private System.DateTime _ActualEndDate;
+		private System.DateTime _ActualStartDate;
 		
 		private System.DateTime _ExpectedEndDate;
 		
@@ -211,6 +269,10 @@ namespace Capstone
 		private System.TimeSpan _Duration;
 		
 		private string _BookingStatus;
+		
+		private string _StartTime;
+		
+		private string _EndTime;
 		
 		private EntitySet<Evaluation> _Evaluations;
 		
@@ -226,8 +288,8 @@ namespace Capstone
     partial void OnBookingIDChanged();
     partial void OnBookingCodeChanging(string value);
     partial void OnBookingCodeChanged();
-    partial void OnActualEndDateChanging(System.DateTime value);
-    partial void OnActualEndDateChanged();
+    partial void OnActualStartDateChanging(System.DateTime value);
+    partial void OnActualStartDateChanged();
     partial void OnExpectedEndDateChanging(System.DateTime value);
     partial void OnExpectedEndDateChanged();
     partial void OnBookingDescriptionChanging(string value);
@@ -236,6 +298,10 @@ namespace Capstone
     partial void OnDurationChanged();
     partial void OnBookingStatusChanging(string value);
     partial void OnBookingStatusChanged();
+    partial void OnStartTimeChanging(string value);
+    partial void OnStartTimeChanged();
+    partial void OnEndTimeChanging(string value);
+    partial void OnEndTimeChanged();
     #endregion
 		
 		public Booking()
@@ -246,7 +312,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int BookingID
 		{
 			get
@@ -286,22 +352,22 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActualEndDate", DbType="Date NOT NULL")]
-		public System.DateTime ActualEndDate
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActualStartDate", DbType="Date NOT NULL")]
+		public System.DateTime ActualStartDate
 		{
 			get
 			{
-				return this._ActualEndDate;
+				return this._ActualStartDate;
 			}
 			set
 			{
-				if ((this._ActualEndDate != value))
+				if ((this._ActualStartDate != value))
 				{
-					this.OnActualEndDateChanging(value);
+					this.OnActualStartDateChanging(value);
 					this.SendPropertyChanging();
-					this._ActualEndDate = value;
-					this.SendPropertyChanged("ActualEndDate");
-					this.OnActualEndDateChanged();
+					this._ActualStartDate = value;
+					this.SendPropertyChanged("ActualStartDate");
+					this.OnActualStartDateChanged();
 				}
 			}
 		}
@@ -382,6 +448,46 @@ namespace Capstone
 					this._BookingStatus = value;
 					this.SendPropertyChanged("BookingStatus");
 					this.OnBookingStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
 				}
 			}
 		}
@@ -824,7 +930,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int CriteriaID
 		{
 			get
@@ -1178,7 +1284,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int EID
 		{
 			get
@@ -2736,7 +2842,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int LeaveID
 		{
 			get
@@ -3011,7 +3117,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int ReportID
 		{
 			get
@@ -3192,7 +3298,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerciveID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerciveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int SerciveID
 		{
 			get
@@ -3466,7 +3572,7 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int ServiceProviderID
 		{
 			get
