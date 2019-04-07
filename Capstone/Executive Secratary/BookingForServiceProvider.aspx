@@ -279,10 +279,10 @@
                         </td>
                         <td class="auto-style35"></td>
                         <td class="auto-style36">
-                            <asp:Panel ID="Panel1" runat="server">
-                                <asp:DropDownList ID="DropDownList6" runat="server">
-                                </asp:DropDownList>
-                            </asp:Panel>
+                            <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True">
+                                <asp:ListItem>Other</asp:ListItem>
+                                <asp:ListItem>Listitem</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                         <td class="auto-style36"></td>
                     </tr>

@@ -14,7 +14,7 @@ namespace Capstone.Executive_Secratary
         DataClasses1DataContext myctx = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Panel1.Visible = false;
+           // Panel1.Visible = false;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -28,10 +28,29 @@ namespace Capstone.Executive_Secratary
             myctx.ServiceProviders.InsertOnSubmit(myser);
             myctx.SubmitChanges();
 
+            Booking mybook = new Booking();
+            mybook.StartTime = TextBox1.Text;
+            mybook.EndTime = TextBox2.Text;
+
+            myctx.Bookings.InsertOnSubmit(mybook);
+            myctx.SubmitChanges();
+
             ServiceB myserb = new ServiceB();
             myserb.ServiceName = DropDownList6.Text;
             myctx.ServiceBs.InsertOnSubmit(myserb);
             myctx.SubmitChanges();
+        }
+            protected void DropDownList6_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                if (DropDownList6.Text == "Other")
+                {
+                    TextBox3.Visible = true;
+                }
+                else
+                {
+                    TextBox3.Visible = false;
+                }
+            }
 
             //var naeme= from a in myctx.driver
             //select a;
@@ -59,4 +78,4 @@ namespace Capstone.Executive_Secratary
             //        myctx.SubmitChanges();
         }
             }
-    }
+    

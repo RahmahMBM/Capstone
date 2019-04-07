@@ -56,6 +56,9 @@
         .auto-style30 {
             height: 68px;
         }
+        .auto-style31 {
+            margin-left: 40px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -107,10 +110,10 @@
                         <td class="auto-style29">
                             <asp:DropDownList ID="DropDownList3" runat="server" Width="64px">
                             </asp:DropDownList>
-                            &nbsp;
+&nbsp;
                             <asp:DropDownList ID="DropDownList4" runat="server" Width="54px">
                             </asp:DropDownList>
-                            &nbsp;
+&nbsp;
                             <asp:DropDownList ID="DropDownList5" runat="server" Width="69px">
                             </asp:DropDownList>
                         </td>
@@ -119,7 +122,9 @@
                     <tr>
                         <td class="auto-style20">&nbsp;</td>
                         <td class="auto-style21">&nbsp;</td>
-                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style22">
+                            <asp:Button ID="Button2" runat="server" CssClass="auto-style31" Height="45px" OnClick="Button2_Click" Text="Next to Evaluate" Width="136px" />
+                        </td>
                         <td>&nbsp;</td>
                     </tr>
                 </table>

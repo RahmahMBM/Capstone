@@ -22,10 +22,32 @@ namespace Capstone.SupervisorFolder
         protected void Button2_Click(object sender, EventArgs e)
         {
             ServiceProvider myser = new ServiceProvider();
-            myser.ServiceProviderType = DropDownList1.Text;
-            myser.SPFirstName = DropDownList2.Text;
-            myser.SPDateOfBirth = Convert.ToDateTime(DropDownList3.SelectedValue + "/" + DropDownList4.SelectedValue + "/" + DropDownList5.SelectedValue);
-            
+            //myser.ServiceProviderType = DropDownList1.Text;
+            myser.SPFirstName = DropDownList1.Text;
+            myser.SPDateOfBirth = Convert.ToDateTime(DropDownList2.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList4.SelectedValue);
+
+            myctx.ServiceProviders.InsertOnSubmit(myser);
+            myctx.SubmitChanges();
+
+            ExeSecratary myexesec = new ExeSecratary();
+            myexesec.ExeSID = Convert.ToInt32( DropDownList5.SelectedValue);
+
+            myctx.ExeSecrataries.InsertOnSubmit(myexesec);
+            myctx.SubmitChanges();
+
+            Booking mybook   = new Booking();
+            mybook.StartTime = TextBox1.Text;
+            mybook.EndTime   = TextBox2.Text;
+
+            myctx.Bookings.InsertOnSubmit(mybook);
+            myctx.SubmitChanges();
+
+
+            ServiceB myserb = new ServiceB();
+            myserb.ServiceName = DropDownList6.Text;
+            myctx.ServiceBs.InsertOnSubmit(myserb);
+            myctx.SubmitChanges();
+
         }
 
         protected void DropDownList6_SelectedIndexChanged(object sender, EventArgs e)
