@@ -10,6 +10,7 @@
          .auto-style21 {
              width: 258px;
              height: 71px;
+             text-align: right;
          }
          .auto-style22 {
              height: 71px;
@@ -33,6 +34,7 @@
          .auto-style33 {
              width: 258px;
              height: 88px;
+             text-align: right;
          }
          .auto-style34 {
              width: 5px;
@@ -85,7 +87,7 @@
     <div id="menu">
         <ul>
             <li>
-                <a href="GenerateReport1.aspx">Generate Report</a>
+                <a>Generate Report</a>
             </li>
             <li>
                 <a href="#">Update</a>
@@ -102,6 +104,7 @@
                 <ul>
                     <li><a href="AddEmployee.aspx">Employee</a></li>
                     <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="AddServiceProvider.aspx">Service Provider</a></li>
                     <li><a href="ServicesPage.aspx">Services</a></li>
                 </ul>
             </li>
@@ -117,6 +120,10 @@
               <td class="auto-style31"></td>
               <td class="auto-style27">
                   <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" Width="215px">
+                      <asp:ListItem>Type</asp:ListItem>
+                      <asp:ListItem>Driver</asp:ListItem>
+                      <asp:ListItem>Butler</asp:ListItem>
+                      <asp:ListItem>Government Services</asp:ListItem>
                   </asp:DropDownList>
               </td>
               <td class="auto-style22"></td>

@@ -22,11 +22,16 @@
     <br />
     <br />
     <br />
-    <table class="auto-style19">
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Calendar ID="Calendar1" runat="server" Height="555px" Width="1014px" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
+<%--    <table>
         <tr>
             <td>
                 <br />
-                <table class="auto-style19">
+                <table >
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -35,7 +40,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <asp:Calendar ID="Calendar1" runat="server" Height="555px" Width="1014px"></asp:Calendar>
+                           
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -43,9 +48,9 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                    </tr>
-                </table>
+                    </tr>--%>
+       <%--         </table>
             </td>
         </tr>
-    </table>
+    </table>--%>
 </asp:Content>

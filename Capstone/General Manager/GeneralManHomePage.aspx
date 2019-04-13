@@ -26,6 +26,7 @@
                 <ul>
                     <li><a href="AddEmployee.aspx">AddEmployee.aspx</a><a>Employees</a></li>
                     <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="AddServiceProvider.aspx">Service Provider</a></li>
                     <li><a href="ServicesPage.aspx">Services</a></li>
                 </ul>
             </li>

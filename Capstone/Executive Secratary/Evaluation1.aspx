@@ -3,9 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../HomePage2.css" rel="stylesheet" />
     <style type="text/css">
-        .auto-style19 {
-            width: 100%;
-        }
 
         .auto-style20 {
             width: 273px;
@@ -57,7 +54,10 @@
             height: 68px;
         }
         .auto-style31 {
-            margin-left: 40px;
+            margin-left: 228px;
+        }
+        .auto-style32 {
+            margin-left: 176px;
         }
     </style>
 </asp:Content>
@@ -75,55 +75,34 @@
     <br />
     <br />
     <br />
-    <table class="auto-style19">
-        <tr>
-            <td>
-                <br />
-                <table class="auto-style19">
-                    <tr>
-                        <td class="auto-style23">
-                            <asp:Label ID="Label3" runat="server" Text="Category of Service Provider"></asp:Label>
-                        </td>
-                        <td class="auto-style24"></td>
-                        <td class="auto-style25">
-                            <asp:DropDownList ID="DropDownList1" runat="server" Width="208px">
-                            </asp:DropDownList>
-                        </td>
-                        <td class="auto-style26"></td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style23">
-                            <asp:Label ID="Label4" runat="server" Text="Select a service provider"></asp:Label>
-                        </td>
-                        <td class="auto-style24"></td>
-                        <td class="auto-style25">
-                            <asp:DropDownList ID="DropDownList2" runat="server" Width="207px">
-                            </asp:DropDownList>
-                        </td>
-                        <td class="auto-style26"></td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style27">
-                            <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label>
-                        </td>
-                        <td class="auto-style28"></td>
-                        <td class="auto-style29">
-&nbsp;
-                            &nbsp;
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                        </td>
-                        <td class="auto-style30"></td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style20">&nbsp;</td>
-                        <td class="auto-style21">&nbsp;</td>
-                        <td class="auto-style22">
-                            <asp:Button ID="Button2" runat="server" CssClass="auto-style31" Height="45px" OnClick="Button2_Click" Text="Next to Evaluate" Width="136px" />
-                        </td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <fieldset>
+        <legend>Evaluation</legend>
+        <br />
+         <asp:Label ID="Label3" runat="server" Text="Category of Service Provider"></asp:Label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <asp:DropDownList ID="DropDownList3" runat="server" Width="208px"> 
+         </asp:DropDownList> &nbsp;
+        <br />
+        <br />
+         <asp:Label ID="Label4" runat="server" Text="Select a service provider"></asp:Label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        
+        <asp:DropDownList ID="DropDownList2" runat="server" Width="207px">
+         </asp:DropDownList>  &nbsp;
+        <br /> 
+        <br />
+        <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label> &nbsp;
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style32" Width="194px"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <br />
+    </fieldset>
+    <br />
+    <br />
+    <br />
+    <asp:Button ID="Button2" runat="server" CssClass="auto-style31" Height="45px" OnClick="Button2_Click" Text="Next to Evaluate" Width="136px" />
+   
+    <br />
+    <br />
+    <br />       
+ 
 </asp:Content>

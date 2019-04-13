@@ -26,6 +26,7 @@
                 <ul>
                     <li><a>Employees</a></li>
                     <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="AddServiceProvider.aspx">Service Provider</a></li>
                     <li><a href="ServicesPage.aspx">Services</a></li>
                 </ul>
             </li>
@@ -35,7 +36,8 @@
     <br />
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" Height="145px" Width="565px" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
+    <asp:GridView ID="GridView1" runat="server" Height="145px" Width="565px" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" GridLines="Vertical">
+        <AlternatingRowStyle BackColor="#CCCCCC" />
         <Columns>
             <asp:BoundField HeaderText="Employee Code" >
             <HeaderStyle Width="90px" />
@@ -52,22 +54,19 @@
             <asp:BoundField HeaderText="Phone Number">
             <HeaderStyle Width="110px" />
             </asp:BoundField>
-            <asp:BoundField HeaderText="Date of Birth">
+            <asp:BoundField HeaderText="Date of Birth" DataFormatString="{0:d}">
             <HeaderStyle Width="110px" />
             </asp:BoundField>
             <asp:BoundField HeaderText="Email">
             <HeaderStyle Width="160px" />
             </asp:BoundField>
-            <asp:BoundField HeaderText="Password" >
-            <HeaderStyle Width="110px" />
-            </asp:BoundField>
         </Columns>
         <FooterStyle BackColor="#CCCCCC" />
-        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" Height="70px" />
         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
         <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
         <SortedAscendingCellStyle BackColor="#F1F1F1" />
-        <SortedAscendingHeaderStyle BackColor="Gray" />
+        <SortedAscendingHeaderStyle BackColor="#808080" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>

@@ -18,7 +18,7 @@ namespace Capstone.General_Manager
             if(ele.Count()!=0)
             {
                 GridView1.DataSource = ele;
-                GridView1.DataBind();
+               
                 BoundField bf = (BoundField)GridView1.Columns[0];
                 bf.DataField = "EmployeeCode";
 
@@ -40,10 +40,10 @@ namespace Capstone.General_Manager
                 BoundField bf6 = (BoundField)GridView1.Columns[6];
                 bf6.DataField = "Email";
 
-                BoundField bf7 = (BoundField)GridView1.Columns[7];
-                bf7.DataField = "Password";
+                //BoundField bf7 = (BoundField)GridView1.Columns[7];
+                //bf7.DataField = "Password";
 
-
+                GridView1.DataBind();
             }
         }
 

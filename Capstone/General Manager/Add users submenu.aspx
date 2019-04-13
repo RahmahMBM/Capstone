@@ -6,92 +6,104 @@
         .auto-style19 {
             width: 100%;
         }
-        .auto-style23 {
-            width: 215px;
-        }
         .auto-style24 {
-            width: 215px;
+            width: 107px;
             height: 37px;
+            text-align: right;
         }
         .auto-style25 {
             height: 37px;
         }
-        .auto-style26 {
-            width: 215px;
-            height: 42px;
-        }
-        .auto-style27 {
-            height: 42px;
-        }
         .auto-style28 {
-            width: 215px;
+            width: 107px;
             height: 43px;
+            text-align: right;
         }
         .auto-style29 {
             height: 43px;
         }
         .auto-style30 {
-            width: 215px;
+            width: 107px;
             height: 38px;
+            text-align: right;
         }
         .auto-style31 {
             height: 38px;
         }
         .auto-style32 {
-            width: 215px;
+            width: 107px;
             height: 41px;
+            text-align: right;
         }
         .auto-style33 {
             height: 41px;
         }
         .auto-style34 {
             height: 37px;
-            width: 65px;
-        }
-        .auto-style35 {
-            height: 42px;
-            width: 65px;
+            width: 9px;
         }
         .auto-style36 {
             height: 43px;
-            width: 65px;
+            width: 9px;
         }
         .auto-style37 {
             height: 38px;
-            width: 65px;
+            width: 9px;
         }
         .auto-style38 {
             height: 41px;
-            width: 65px;
-        }
-        .auto-style39 {
-            width: 65px;
+            width: 9px;
         }
         .auto-style40 {
             height: 37px;
-            width: 180px;
-        }
-        .auto-style41 {
-            height: 42px;
-            width: 180px;
+            width: 187px;
         }
         .auto-style42 {
             height: 43px;
-            width: 180px;
+            width: 187px;
         }
         .auto-style43 {
             height: 38px;
-            width: 180px;
+            width: 187px;
         }
         .auto-style44 {
             height: 41px;
-            width: 180px;
+            width: 187px;
         }
         .auto-style45 {
-            width: 180px;
+            width: 187px;
         }
         .auto-style46 {
             margin-left: 31px;
+        }
+        .auto-style48 {
+            width: 211px;
+            height: 37px;
+            text-align: right;
+        }
+        .auto-style49 {
+            width: 211px;
+            height: 43px;
+            text-align: right;
+        }
+        .auto-style50 {
+            width: 211px;
+            height: 38px;
+            text-align: right;
+        }
+        .auto-style51 {
+            width: 211px;
+            height: 41px;
+            text-align: right;
+        }
+        .auto-style53 {
+            width: 107px;
+        }
+        .auto-style54 {
+            width: 211px;
+        }
+        .auto-style55 {
+            width: 9px;
         }
     </style>
 </asp:Content>
@@ -106,7 +118,7 @@
             <li>
                 <a href="#">Update</a>
                     <ul>
-                        <li><a href="Add%20users%20submenu.aspx">Add New User</a></li>
+                        <li><a>Add New User</a></li>
                         <li><a href="Add%20employee%20submenu.aspx">Add New Employee</a></li>
                         <li><a href="Add%20service%20provider%20submenu.aspx">Add New Service Provider</a></li>
                         <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add New Service</a></li>
@@ -118,6 +130,7 @@
                 <ul>
                     <li><a href="AddEmployee.aspx">Employee</a></li>
                     <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="AddServiceProvider.aspx">Service Provider</a></li>
                     <li><a href="ServicesPage.aspx">Services</a></li>
                 </ul>
             </li>
@@ -130,65 +143,69 @@
                 <table class="auto-style19">
                     <tr>
                         <td class="auto-style24">
-                            <asp:Label ID="Label3" runat="server" Text="Category of the employee"></asp:Label>
+                            &nbsp;</td>
+                        <td class="auto-style48">
+                            <asp:Label ID="Label3" runat="server" Text="Employee Type"></asp:Label>
                         </td>
                         <td class="auto-style34">&nbsp;</td>
                         <td class="auto-style40">
-                            <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="165px">
+                            <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="190px">
+                                <asp:ListItem>Type</asp:ListItem>
+                                <asp:ListItem>Executive Secretary</asp:ListItem>
+                                <asp:ListItem>Driver&#39;s Supervisor</asp:ListItem>
+                                <asp:ListItem>Butler&#39;s Supervisor</asp:ListItem>
+                                <asp:ListItem>Governmental Services Supervisor</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         <td class="auto-style25"></td>
                     </tr>
                     <tr>
-                        <td class="auto-style26">
-                            <asp:Label ID="Label4" runat="server" Text="Category of Service Provider"></asp:Label>
-                        </td>
-                        <td class="auto-style35">&nbsp;</td>
-                        <td class="auto-style41">
-                            <asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="165px">
-                            </asp:DropDownList>
-                        </td>
-                        <td class="auto-style27"></td>
-                    </tr>
-                    <tr>
                         <td class="auto-style28">
-                            <asp:Label ID="Label5" runat="server" Text="Full name of the user"></asp:Label>
+                            &nbsp;</td>
+                        <td class="auto-style49">
+                            <asp:Label ID="Label5" runat="server" Text="Full Name"></asp:Label>
                         </td>
                         <td class="auto-style36">&nbsp;</td>
                         <td class="auto-style42">
-                            <asp:TextBox ID="TextBox1" runat="server" Width="155px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style29"></td>
                     </tr>
                     <tr>
                         <td class="auto-style30">
+                            &nbsp;</td>
+                        <td class="auto-style50">
                             <asp:Label ID="Label6" runat="server" Text="Username"></asp:Label>
                         </td>
                         <td class="auto-style37">&nbsp;</td>
                         <td class="auto-style43">
-                            <asp:TextBox ID="TextBox2" runat="server" Width="155px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style31"></td>
                     </tr>
                     <tr>
                         <td class="auto-style32">
+                            &nbsp;</td>
+                        <td class="auto-style51">
                             <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label>
                         </td>
                         <td class="auto-style38">&nbsp;</td>
                         <td class="auto-style44">
-                            <asp:TextBox ID="TextBox3" runat="server" Width="154px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox3" runat="server" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style33"></td>
                     </tr>
                     <tr>
-                        <td class="auto-style23">&nbsp;</td>
-                        <td class="auto-style39">&nbsp;</td>
+                        <td class="auto-style53">&nbsp;</td>
+                        <td class="auto-style54">&nbsp;</td>
+                        <td class="auto-style55">&nbsp;</td>
                         <td class="auto-style45">&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="auto-style23">&nbsp;</td>
-                        <td class="auto-style39">&nbsp;</td>
+                        <td class="auto-style53">&nbsp;</td>
+                        <td class="auto-style54">&nbsp;</td>
+                        <td class="auto-style55">&nbsp;</td>
                         <td class="auto-style45">
                             <asp:Button ID="Button2" runat="server" CssClass="auto-style46" Height="31px" Text="Add" Width="85px" OnClick="Button2_Click" />
                         </td>

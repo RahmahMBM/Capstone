@@ -75,6 +75,10 @@ namespace Capstone.General_Manager
             }
 
             Response.Redirect("~\\General Manager\\AddEmployee.aspx");
+
+            
+
+
             //if (CategoryOfEmployee.Text == "Driver")
             //{
             //    ServiceProvider mySP = new ServiceProvider();

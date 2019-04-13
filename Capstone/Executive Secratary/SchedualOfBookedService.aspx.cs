@@ -11,6 +11,13 @@ namespace Capstone.Executive_Secratary
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Booking app = new Booking();
+            app.ActualStartDate = Convert.ToString(Calendar1.SelectedDate)
+
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
 
         }
     }

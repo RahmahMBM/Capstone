@@ -138,37 +138,9 @@
         .auto-style82 {
             width: 46px;
         }
-        .auto-style83 {
-            color: #FFFFFF;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-            font-weight: bold;
-            background-color: #000000;
-            margin-left: 4px;
-        }
-        .auto-style84 {
-            color: #FFFFFF;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-            font-weight: bold;
-            background-color: #000000;
-            margin-left: 0px;
-        }
-        .auto-style85 {
-            color: #FFFFFF;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-            font-weight: bold;
-            background-color: #000000;
-            margin-left: 1px;
-        }
-        .auto-style86 {
-            color: #FFFFFF;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-            font-weight: bold;
-            background-color: #000000;
-            margin-left: 70px;
+        .auto-style87 {
+            width: 51px;
+            margin-left: 68px;
         }
         </style>
 </asp:Content>
@@ -185,7 +157,7 @@
                     <ul>
                         <li><a href="Add%20users%20submenu.aspx">Add New User</a></li>
                         <li><a href="Add%20employee%20submenu.aspx">Add New Employee</a></li>
-                        <li><a href="Add%20service%20provider%20submenu.aspx">Add New Service Provider</a></li>
+                        <li><a>Add New Service Provider</a></li>
                         <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add New Service</a></li>
 
                     </ul>
@@ -195,6 +167,7 @@
                 <ul>
                     <li><a href="AddEmployee.aspx">Employee</a></li>
                     <li><a href="SystemUsersPage.aspx">System Users</a></li>
+                    <li><a href="AddServiceProvider.aspx">Service Provider</a></li>
                     <li><a href="ServicesPage.aspx">Services</a></li>
                 </ul>
             </li>
@@ -213,7 +186,7 @@
                         </td>
                         <td class="auto-style76"></td>
                         <td class="auto-style62">
-                            <asp:DropDownList ID="SPList" runat="server" Width="200px" CssClass="auto-style10">
+                            <asp:DropDownList ID="SPList" runat="server" Width="190px" CssClass="auto-style10" Height="30px">
                                 <asp:ListItem>Type</asp:ListItem>
                                 <asp:ListItem>Driver</asp:ListItem>
                                 <asp:ListItem>Butler</asp:ListItem>
@@ -230,7 +203,7 @@
                         </td>
                         <td class="auto-style77">&nbsp;</td>
                         <td class="auto-style63">
-                            <asp:TextBox ID="SPCodeBox" runat="server" MaxLength="4" Width="180px"></asp:TextBox>
+                            <asp:TextBox ID="SPCodeBox" runat="server" MaxLength="4" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style26">&nbsp;</td>
                     </tr>
@@ -242,7 +215,7 @@
                         </td>
                         <td class="auto-style77"></td>
                         <td class="auto-style63">
-                            <asp:TextBox ID="FNBox" runat="server" Width="180px"></asp:TextBox>
+                            <asp:TextBox ID="FNBox" runat="server" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style26"></td>
                     </tr>
@@ -254,7 +227,7 @@
                         </td>
                         <td class="auto-style78"></td>
                         <td class="auto-style64">
-                            <asp:TextBox ID="LNBox" runat="server" Width="180px"></asp:TextBox>
+                            <asp:TextBox ID="LNBox" runat="server" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style28"></td>
                     </tr>
@@ -266,7 +239,7 @@
                         </td>
                         <td class="auto-style76"></td>
                         <td class="auto-style62">
-                            <asp:TextBox ID="NationalBox" runat="server" Width="180px" MaxLength="10"></asp:TextBox>
+                            <asp:TextBox ID="NationalBox" runat="server" Width="190px" MaxLength="10" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style24"></td>
                     </tr>
@@ -278,7 +251,7 @@
                         </td>
                         <td class="auto-style79"></td>
                         <td class="auto-style65">
-                            <asp:TextBox ID="NumberBox" runat="server" Width="180px" MaxLength="10" TextMode="Phone"></asp:TextBox>
+                            <asp:TextBox ID="NumberBox" runat="server" Width="190px" MaxLength="10" TextMode="Phone" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style30"></td>
                     </tr>
@@ -290,7 +263,7 @@
                         </td>
                         <td class="auto-style80"></td>
                         <td class="auto-style67">
-                            <asp:DropDownList ID="DateList" runat="server" Height="16px" Width="59px" CssClass="auto-style10">
+                            <asp:DropDownList ID="DateList" runat="server" Height="30px" Width="59px" CssClass="auto-style10">
                                 <asp:ListItem>Date</asp:ListItem>
                                 <asp:ListItem>01</asp:ListItem>
                                 <asp:ListItem>02</asp:ListItem>
@@ -325,7 +298,7 @@
                                 <asp:ListItem>31</asp:ListItem>
                             </asp:DropDownList>
 &nbsp;
-                            <asp:DropDownList ID="MonthList" runat="server" Width="59px" Height="16px" CssClass="auto-style10">
+                            <asp:DropDownList ID="MonthList" runat="server" Width="59px" Height="30px" CssClass="auto-style10">
                                 <asp:ListItem>Month</asp:ListItem>
                                 <asp:ListItem>Jan</asp:ListItem>
                                 <asp:ListItem>Feb</asp:ListItem>
@@ -341,7 +314,7 @@
                                 <asp:ListItem>Dec</asp:ListItem>
                             </asp:DropDownList>
 &nbsp;
-                            <asp:DropDownList ID="YearList" runat="server" Width="59px" Height="16px" CssClass="auto-style10">
+                            <asp:DropDownList ID="YearList" runat="server" Width="59px" Height="30px" CssClass="auto-style10">
                                 <asp:ListItem>Year</asp:ListItem>
                                 <asp:ListItem>1950</asp:ListItem>
                                 <asp:ListItem>1960</asp:ListItem>
@@ -362,7 +335,7 @@
                         </td>
                         <td class="auto-style80">&nbsp;</td>
                         <td class="auto-style67">
-                            <asp:TextBox ID="EmailBox" runat="server" Width="180px" TextMode="Email"></asp:TextBox>
+                            <asp:TextBox ID="EmailBox" runat="server" Width="190px" TextMode="Email" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style34">&nbsp;</td>
                     </tr>
@@ -374,7 +347,7 @@
                         </td>
                         <td class="auto-style80"></td>
                         <td class="auto-style67">
-                            <asp:TextBox ID="PasswordBox" runat="server" Width="180px"></asp:TextBox>
+                            <asp:TextBox ID="PasswordBox" runat="server" Width="190px" Height="30px"></asp:TextBox>
                         </td>
                         <td class="auto-style34"></td>
                     </tr>
@@ -385,7 +358,7 @@
                         </td>
                         <td class="auto-style81"></td>
                         <td class="auto-style69">
-                            <asp:TextBox ID="AddressBox" runat="server" Height="30px" Width="180px" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="AddressBox" runat="server" Height="30px" Width="190px" MaxLength="50"></asp:TextBox>
                         </td>
                         <td class="auto-style38"></td>
                     </tr>
@@ -401,7 +374,7 @@
                         <td class="auto-style21">&nbsp;</td>
                         <td class="auto-style82">&nbsp;</td>
                         <td class="auto-style15">
-                            <asp:Button ID="Button2" runat="server" CssClass="auto-style86" OnClick="Button2_Click" Text="Add" Width="107px" />
+                            <asp:Button ID="Button2" runat="server" CssClass="auto-style87" OnClick="Button2_Click" Text="Add" Width="107px" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>

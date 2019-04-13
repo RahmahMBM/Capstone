@@ -16,7 +16,10 @@ namespace Capstone.Home_all
         DataClasses1DataContext mycontext = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+           if(!IsPostBack)
+            {
+
+            }
          
     
         }
@@ -33,8 +36,8 @@ namespace Capstone.Home_all
             if (myValue.Count() != 0)
             {
                 var myEmployee = myValue.First();
+                Session.Add("Employee",myEmployee);
 
-                Session.Add("Employee", myEmployee);
 
                 if (myEmployee.EmployeeType == "Manager")
                     Response.Redirect("~\\General Manager\\GeneralManHomePage.aspx");
@@ -43,7 +46,7 @@ namespace Capstone.Home_all
                     Response.Redirect("~\\Executive Secratary\\HomePage.aspx");
 
                 if (myEmployee.EmployeeType == "Supervisor")
-                    Response.Redirect("`\\SupervisorFolder\\SupervisorHomePage.aspx");
+                    Response.Redirect("~\\SupervisorFolder\\SupervisorHomePage.aspx");
 
             }
         }

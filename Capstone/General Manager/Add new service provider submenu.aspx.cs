@@ -29,6 +29,10 @@ namespace Capstone.General_Manager
             var service = from a in myctx.ServiceBs
                       orderby a.SerciveID descending
                       select a;
+
+            Response.Redirect("~\\General Manager\\ServicesPage.aspx");
         }
+
+
     }
 }

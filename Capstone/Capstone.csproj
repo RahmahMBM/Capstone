@@ -152,6 +152,8 @@
     <Content Include="General Manager\AddEmployee.aspx" />
     <Content Include="General Manager\SystemUsersPage.aspx" />
     <Content Include="General Manager\ServicesPage.aspx" />
+    <Content Include="General Manager\AddServiceProvider.aspx" />
+    <Content Include="General Manager\WebForm12.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -377,6 +379,20 @@
     </Compile>
     <Compile Include="General Manager\ServicesPage.aspx.designer.cs">
       <DependentUpon>ServicesPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\AddServiceProvider.aspx.cs">
+      <DependentUpon>AddServiceProvider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\AddServiceProvider.aspx.designer.cs">
+      <DependentUpon>AddServiceProvider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General Manager\WebForm12.aspx.cs">
+      <DependentUpon>WebForm12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General Manager\WebForm12.aspx.designer.cs">
+      <DependentUpon>WebForm12.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -11,7 +11,19 @@ namespace Capstone.General_Manager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session.Count != 0)
+            {
+                foreach (string name in Session.Keys)
+                {
+                    if (name == "Employee")
+                    {
+                        Employee myem = new Employee();
+                        myem = (Employee)Session[name];
+                        Label3.Text = " " + myem.FirstName + " " + myem.LastName;
+                    }
 
+                }
+            }
         }
     }
 }

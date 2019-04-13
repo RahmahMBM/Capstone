@@ -68,6 +68,8 @@ namespace Capstone.General_Manager
                 }
 
             }
+
+            Response.Redirect("~\\General Manager\\AddServiceProvider.aspx");
         }
     }
 }

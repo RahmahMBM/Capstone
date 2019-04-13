@@ -2,12 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../HomePage2.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style19 {
-            width: 100%;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
 
@@ -22,11 +17,4 @@
     <br />
     <br />
     <br />
-    <table class="auto-style19">
-        <tr>
-            <td>
-                <br />
-            </td>
-        </tr>
-    </table>
-</asp:Content>
+    </asp:Content>

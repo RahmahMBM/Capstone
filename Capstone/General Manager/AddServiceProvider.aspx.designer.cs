@@ -10,7 +10,7 @@
 namespace Capstone.General_Manager {
     
     
-    public partial class WebForm10 {
+    public partial class WebForm11 {
         
         /// <summary>
         /// GridView1 control.

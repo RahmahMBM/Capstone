@@ -20,7 +20,7 @@ namespace Capstone.Executive_Secratary
         protected void Button2_Click(object sender, EventArgs e)
         {
             ServiceProvider myser = new ServiceProvider();
-            myser.ServiceProviderType = DropDownList1.Text;
+            myser.ServiceProviderType = DropDownList3.Text;
             myser.SPFirstName = DropDownList2.Text;
             myctx.ServiceProviders.InsertOnSubmit(myser);
             myctx.SubmitChanges();
