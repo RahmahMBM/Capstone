@@ -13,5 +13,10 @@ namespace Capstone.General_Manager
         {
 
         }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,63 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Executive Secratary/Executive Secretary Master.Master" AutoEventWireup="true" CodeBehind="Evaluation1.aspx.cs" Inherits="Capstone.Executive_Secratary.WebForm4" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../HomePage2.css" rel="stylesheet" />
+    <link href="../Home3.css" rel="stylesheet" />
     <style type="text/css">
-
         .auto-style20 {
             width: 273px;
         }
 
-        .auto-style21 {
-            width: 14px;
-        }
-
         .auto-style22 {
-            width: 344px;
-        }
-
-        .auto-style23 {
-            width: 273px;
-            height: 87px;
+            font-size: xx-large;
+            color: #891034;
         }
 
         .auto-style24 {
-            width: 14px;
-            height: 87px;
+            width: 857px;
         }
 
         .auto-style25 {
-            width: 344px;
-            height: 87px;
+            width: 615px;
+            margin-left: 137px;
         }
 
         .auto-style26 {
-            height: 87px;
+            height: 70px;
         }
 
         .auto-style27 {
-            width: 273px;
-            height: 68px;
+            height: 21px;
         }
 
         .auto-style28 {
-            width: 14px;
-            height: 68px;
+            margin-left: 73px;
         }
 
         .auto-style29 {
-            width: 344px;
-            height: 68px;
+            font-size: x-large;
+            color: #891039;
         }
 
         .auto-style30 {
-            height: 68px;
-        }
-        .auto-style31 {
-            margin-left: 228px;
-        }
-        .auto-style32 {
-            margin-left: 176px;
+            font-size: xx-large;
+            color: #891039;
         }
     </style>
 </asp:Content>
@@ -66,6 +49,7 @@
 
     <div id="menu">
         <ul>
+            <li><a href="HomePage.aspx">Home</a></li>
             <li><a href="BookingForServiceProvider.aspx">Booking</a></li>
             <li><a href="SchedualOfBookedService.aspx">My Schedule</a></li>
             <li><a href="Evaluation1.aspx">Evaluation</a></li>
@@ -75,34 +59,151 @@
     <br />
     <br />
     <br />
-    <fieldset>
-        <legend>Evaluation</legend>
-        <br />
-         <asp:Label ID="Label3" runat="server" Text="Category of Service Provider"></asp:Label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <asp:DropDownList ID="DropDownList3" runat="server" Width="208px"> 
-         </asp:DropDownList> &nbsp;
-        <br />
-        <br />
-         <asp:Label ID="Label4" runat="server" Text="Select a service provider"></asp:Label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    <table class="auto-style24">
+        <tr>
+            <td class="auto-style27"></td>
+            <td class="auto-style27"></td>
+            <td class="auto-style27"></td>
+            <td class="auto-style27"></td>
+            <td class="auto-style27"></td>
+            <td class="auto-style27"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <asp:Label ID="Label4" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <fieldset class="auto-style25">
+                    <legend class="auto-style30"><strong>Evaluation</strong></legend>
+                    <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                     <strong>
+                         <asp:Label ID="Label5" runat="server" Text="My Own Booking" CssClass="auto-style29"></asp:Label>
+                     </strong>
+                    <br />
+                    <br />
+                    <br />
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView2_RowCommand" CssClass="auto-style28" Height="161px" Width="586px">
+                        <Columns>
+                            <asp:BoundField HeaderText="Booking Code" />
+                            <asp:BoundField HeaderText="Service Name" />
+                            <asp:BoundField HeaderText="Service Provider Name" />
+                            <asp:TemplateField HeaderText="Evaluation">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Evaluate">Click to Evaluate the Service</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <HeaderStyle BackColor="#891039" ForeColor="White" Height="30px" />
+                    </asp:GridView>
+                    <br />
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         
-        <asp:DropDownList ID="DropDownList2" runat="server" Width="207px">
-         </asp:DropDownList>  &nbsp;
-        <br /> 
+                     &nbsp;
         <br />
-        <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label> &nbsp;
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style32" Width="194px"></asp:TextBox>
-        <br />
-        <br />
-        <br />
-        <br />
-    </fieldset>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                     <strong>
+                         <asp:Label ID="Label6" runat="server" Text="Supervisor's Booking" CssClass="auto-style29"></asp:Label>
+                     </strong>
+                    <br />
+                    <br />
+                    <br />
+                    &nbsp;
+                     <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView3_RowCommand" CssClass="auto-style28" Width="585px">
+                         <Columns>
+                             <asp:BoundField HeaderText="Booking Code" />
+                             <asp:BoundField HeaderText="Service Name" />
+                             <asp:BoundField HeaderText="Service Provider Name" />
+                             <asp:TemplateField HeaderText="Evaluate">
+                                 <EditItemTemplate>
+                                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                 </EditItemTemplate>
+                                 <ItemTemplate>
+                                     <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Evaluate">Click to Evaluate the Service</asp:LinkButton>
+                                 </ItemTemplate>
+                             </asp:TemplateField>
+                         </Columns>
+                         <HeaderStyle BackColor="#891039" ForeColor="White" Height="30px" />
+                     </asp:GridView>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </fieldset>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style26"></td>
+            <td class="auto-style26">&nbsp;</td>
+            <td class="auto-style26"></td>
+            <td class="auto-style26"></td>
+            <td class="auto-style26"></td>
+            <td class="auto-style26"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td>&nbsp;</td>
+        </tr>
+
+    </table>
+
     <br />
     <br />
     <br />
-    <asp:Button ID="Button2" runat="server" CssClass="auto-style31" Height="45px" OnClick="Button2_Click" Text="Next to Evaluate" Width="136px" />
-   
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <fieldset class="auto-style25">
+                    <legend class="auto-style22"><strong>Evaluation</strong></legend>
+                    <br />
+                    <br />
+
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        
+                     &nbsp;
+        <br />
+                    <br />
+                    &nbsp;
+        <br />
+                    <br />
+                    <br />
+                    <br />
+                </fieldset>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
     <br />
     <br />
-    <br />       
- 
+    <br />
+
+    <br />
+    <br />
+    <br />
+
 </asp:Content>

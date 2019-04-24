@@ -65,7 +65,7 @@
 
                             <em>
                                 <strong>
-                                <asp:Label ID="Label1" runat="server" Text="Welcome: " CssClass="auto-style21" ForeColor="White"></asp:Label><asp:Label ID="Label3" runat="server" CssClass="auto-style21" ForeColor="White" Text="Label"></asp:Label>
+                                <asp:Label ID="Label1" runat="server" Text="Welcome: " CssClass="auto-style21" ForeColor="White" style="font-size: x-large"></asp:Label><asp:Label ID="Label3" runat="server" CssClass="auto-style21" ForeColor="White" Text="Label" style="font-size: x-large"></asp:Label>
 
                             </strong>
 
@@ -75,7 +75,7 @@
                     
                     </td>
                     <td class="auto-style15">
-                        <asp:Button ID="Button1" runat="server" Height="52px" Text="Logout" Width="125px" CssClass="auto-style9" />
+                        <asp:Button ID="Button1" runat="server" Height="52px" Text="Logout" Width="125px" CssClass="auto-style9" OnClick="Button1_Click1" Font-Bold="True" Font-Names="Georgia" Font-Size="Large" Font-Strikeout="False" />
                     </td>
                     <td class="auto-style10">
                         &nbsp;</td>

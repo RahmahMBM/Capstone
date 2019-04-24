@@ -27,10 +27,10 @@
             margin-left: 41px;
         }
         .auto-style10 {
-            width: 51px;
+            width: 124px;
         }
         .auto-style15 {
-            width: 223px;
+            width: 196px;
         }
         .auto-style17 {
             width: 1542px;
@@ -39,6 +39,9 @@
         .auto-style18 {
             width: 1580px;
             font-size: small;
+        }
+        .auto-style19 {
+            margin-left: 90px;
         }
     </style>
 </head>
@@ -57,8 +60,15 @@
                         <asp:Image ID="Image1" runat="server" Height="139px" ImageUrl="~/images/xenel logo.png" Width="320px" CssClass="auto-style5" />
                     </td>
                     <td class="auto-style15">
-                        &nbsp;</td>
+                        <%--<br />
+                        <br />
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/images/dah.png" Width="92px" />--%>
+                    </td>
                     <td class="auto-style10">
+                        <br />
+                        <br />
+                        <asp:Button ID="Login" runat="server" Font-Bold="True" Font-Italic="False" Font-Names="Georgia" Height="52px" OnClick="Login_Click" Text="Login" Width="125px" Font-Size="Large" CssClass="auto-style19" />
+                        <br />
                         &nbsp;</td>
                     <td>
                         &nbsp;</td>
@@ -75,8 +85,7 @@
                     &nbsp;</p>
             </asp:ContentPlaceHolder>
         </div>
-        <br />
-        <br />
+     <br />
         <table class="auto-style4">
             <tr>
                 <td class="auto-style18">&nbsp;</td>

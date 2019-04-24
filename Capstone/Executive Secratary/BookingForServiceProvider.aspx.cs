@@ -37,56 +37,7 @@ namespace Capstone.Executive_Secratary
 
             }
 
-            ArrayList yearlist = new ArrayList();
-
-            for (int yea = 2019; yea <= 2050; yea++)
-            {
-
-                yearlist.Add(yea);
-
-            }
-            DropDownList5.DataSource = yearlist;
-            DropDownList5.DataBind();
-
-            ArrayList monlist = new ArrayList();
-
-            for (int mon = 1; mon <= 12; mon++)
-            {
-
-                monlist.Add(mon);
-
-            }
-            DropDownList4.DataSource = monlist;
-            DropDownList4.DataBind();
-
-
-            // Panel1.Visible = false;
-
-            ArrayList year2list = new ArrayList();
-
-            for (int yea = 2019; yea <= 2050; yea++)
-            {
-
-                yearlist.Add(yea);
-
-            }
-            DropDownList9.DataSource = yearlist;
-            DropDownList9.DataBind();
-
-
-
-            ArrayList monlist1 = new ArrayList();
-
-            for (int mon = 1; mon <= 12; mon++)
-            {
-
-                monlist.Add(mon);
-
-            }
-
-            DropDownList8.DataSource = monlist;
-            DropDownList8.DataBind();
-
+           
             var elm = from BookCode in myctx.Bookings
                       orderby BookCode.BookingCode descending
                       select BookCode.BookingCode;
@@ -119,20 +70,19 @@ namespace Capstone.Executive_Secratary
                     Label13.Text = "BC" + i;
             }
 
+
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
 
-
-
-
             Booking mybook = new Booking();
             mybook.StartTime = TextBox1.Text;
             mybook.EndTime = TextBox2.Text;
             mybook.BookingCode = Label13.Text;
-            mybook.ActualStartDate = Convert.ToDateTime(DropDownList4.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList5.SelectedValue);
-            mybook.ExpectedEndDate = Convert.ToDateTime(DropDownList8.SelectedValue + "/" + DropDownList7.SelectedValue + "/" + DropDownList9.SelectedValue);
+            mybook.ActualStartDate = Convert.ToDateTime(TextBoxDate.Text);// Convert.ToDateTime(DropDownList4.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList5.SelectedValue);
+            mybook.ExpectedEndDate = Convert.ToDateTime(TextBox6.Text);// Convert.ToDateTime(DropDownList8.SelectedValue + "/" + DropDownList7.SelectedValue + "/" + DropDownList9.SelectedValue);
             mybook.BookingDescription = TextBox3.Text;
             TimeSpan dur = Convert.ToDateTime(TextBox2.Text) - Convert.ToDateTime(TextBox1.Text);
             mybook.Duration = dur;
@@ -142,18 +92,18 @@ namespace Capstone.Executive_Secratary
 
 
 
-            if (DropDownList6.Text == "Other")
-            {
-                TextBox5.Visible = false;
-                ServiceB myserb = new ServiceB();
-                myserb.ServiceName = DropDownList6.Text;
-                myctx.ServiceBs.InsertOnSubmit(myserb);
-                myctx.SubmitChanges();
-            }
-            else
-            {
-                TextBox5.Visible = false;
-            }
+            //if (DropDownList6.Text == "Other")
+            //{
+            //    TextBox5.Visible = true;
+            //    ServiceB myserb = new ServiceB();
+            //    myserb.ServiceName = DropDownList4.Text;
+            //    myctx.ServiceBs.InsertOnSubmit(myserb);
+            //    myctx.SubmitChanges();
+            //}
+            //else
+            //{
+            //    TextBox4.Visible = false;
+            //}
 
             ExeSecrataryAssign newassign = new ExeSecrataryAssign();
             var bookin = from a in myctx.Bookings
@@ -166,7 +116,7 @@ namespace Capstone.Executive_Secratary
                 newassign.bookID = boo.BookingID;
                 newassign.DateOfAssignment = DateTime.Now;
                 newassign.ExeSecrataryID = Convert.ToInt16(Label9.Text);
-                newassign.ServiceProviderID = Convert.ToInt16(DropDownList2.SelectedValue);
+                newassign.ServiceProviderID = Convert.ToInt16(DropDownList10.SelectedValue);
                 newassign.ServiceID = Convert.ToInt16(DropDownList6.SelectedValue);
                 myctx.ExeSecrataryAssigns.InsertOnSubmit(newassign);
                 myctx.SubmitChanges();
@@ -174,18 +124,19 @@ namespace Capstone.Executive_Secratary
 
 
             ServiceProviderAssignment spassign = new ServiceProviderAssignment();
-            spassign.ServiceProviderID = Convert.ToInt16(DropDownList2.SelectedValue);
-            spassign.sTARTTimeAssigned = TextBox1.Text;
-            spassign.EnTime = TextBox2.Text;
-            DateTime dt = Convert.ToDateTime(DropDownList4.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList5.SelectedValue);
-            DateTime ed = Convert.ToDateTime(TextBox5.Text);
+            spassign.ServiceProviderID = Convert.ToInt16(DropDownList10.SelectedValue);
+            spassign.StartDateAssigned = Convert.ToDateTime(TextBox1.Text);
+            spassign.ENDDATEASSIGNED = Convert.ToDateTime(TextBox2.Text);
+            DateTime dt = Convert.ToDateTime(TextBoxDate.Text);//Convert.ToDateTime(DropDownList4.SelectedValue + "/" + DropDownList3.SelectedValue + "/" + DropDownList5.SelectedValue);
+            DateTime ed = Convert.ToDateTime(TextBox6.Text);
             spassign.StartDateAssigned = dt;
             spassign.ENDDATEASSIGNED = ed;
             myctx.ServiceProviderAssignments.InsertOnSubmit(spassign);
             myctx.SubmitChanges();
 
+            
 
-
+            Response.Write("<script>alert('Your Booking has been done successfully');</script>");
             Response.Redirect("~\\Executive Secratary\\SchedualOfBookedService.aspx");
 
 
@@ -195,21 +146,63 @@ namespace Capstone.Executive_Secratary
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var sp = from a in myctx.ServiceProviders
-                     where a.ServiceProviderType == DropDownList1.SelectedValue
-                     select new { name = a.SPFirstName + "  " + a.SPLastName, a.ServiceProviderID };
+            //var sp = from a in myctx.ServiceProviders
+            //         where a.ServiceProviderType == DropDownList1.SelectedValue
+            //         select new { name = a.SPFirstName + "  " + a.SPLastName, a.ServiceProviderID };
 
-            if (sp.Count() != 0)
+            //if (sp.Count() != 0)
+            //{
+            //    DropDownList2.DataSource = sp;
+            //    DropDownList2.DataTextField = "name";
+            //    DropDownList2.DataValueField = "ServiceProviderID";
+            //    DropDownList2.DataBind();
+            //}
+
+
+        }
+
+        protected void CheckButton_Click(object sender, EventArgs e)
+        {
+           
+
+            var result = (from a in myctx.ServiceProviders
+                          where a.ServiceProviderType == DropDownList1.Text
+                          select a.ServiceProviderID).Except(from b in myctx.ServiceProviderAssignments
+                                                             where b.StartTime == TimeSpan.Parse(TextBox1.Text) && b.EndTime == TimeSpan.Parse(TextBox2.Text) && b.StartDateAssigned == Convert.ToDateTime(TextBoxDate.Text) && b.ENDDATEASSIGNED == Convert.ToDateTime(TextBox6.Text)
+                                                             select b.ServiceProviderID).ToList();
+            DropDownList10.DataSource = result;
+            DropDownList10.DataBind();
+          
+            for (int i=0; i<= DropDownList10.Items.Count-1; i++)
             {
-                DropDownList2.DataSource = sp;
-                DropDownList2.DataTextField = "name";
-                DropDownList2.DataValueField = "ServiceProviderID";
-                DropDownList2.DataBind();
+                var spname = from a in myctx.ServiceProviders
+                           where a.ServiceProviderType == DropDownList1.Text &&  a.ServiceProviderID == Convert.ToInt16(DropDownList10.Items[i].Text)
+                           select a.ServiceProviderFullName;
+
+                // mylist.Add(spname);
+                var ss = spname.First();
+                DropDownList2.Items.Add(ss);
             }
+           
+
+            //var resultname = from a in myctx.ServiceProviders
+            //                 where a.ServiceProviderID == Convert.ToInt16(GridView1.Rows[i].Cells[0].Text)
+            //                 select new { a.ServiceProviderID, name = a.SPFirstName + " " + a.SPLastName };
+
+            //if (resultname.Count() != 0)
+            //{
+            //    DropDownList2.DataSource = resultname;
+            //    DropDownList2.DataTextField = "name";
+            //    DropDownList2.DataValueField = "ServiceProviderID";
+            //    DropDownList2.DataBind();
+
+
+
+
 
             var ser = from b in myctx.ServiceBs
 
-                      where b.ServiceProviderID == Convert.ToInt16(DropDownList2.SelectedValue)
+                      where b.ServiceProviderID == Convert.ToInt16(DropDownList10.SelectedValue)
                       select new { b.ServiceName, b.SerciveID };
             if (ser.Count() != 0)
             {
@@ -218,34 +211,11 @@ namespace Capstone.Executive_Secratary
                 DropDownList6.DataValueField = "SerciveID";
                 DropDownList6.DataBind();
             }
+
         }
 
 
-        //var naeme= from a in myctx.driver
-        //select a;
-        //if naeme.count()!=0
-        //{
-        //var na= naeme.first(); dropdownlisy1.datasource= naeme; dropdownlist1.datatextfiel=na.firstname + " " + na.lastmane;
-        //dropdownlist1.datavaluefiled= na.emplid;
-        //dropdowlist1.databind();
-        //}
-
-
-        //var ser = from a in myctx.ServiceProviders
-        //          orderby a.ServiceProviderID descending
-        //          select a;
-
-        //if (ser.Count() != 0)
-        //{
-
-        //    var se = ser.First();
-        //    if (se.ServiceProviderType == " Service Provider")
-        //    {
-        //       ServiceProvider myser = new ServiceProvider();
-        //        myser.ServiceProviderID = ser.;
-        //        myctx.ServiceProviders.InsertOnSubmit(myser);
-        //        myctx.SubmitChanges();
-
+      
 
     }
 }

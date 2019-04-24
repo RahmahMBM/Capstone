@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="TEST1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TEST1ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.TEST1ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TEST1ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ServiceB.*, SupervisorAssign.*, ServiceProviderAssignment.*, ExeSecrataryAssign.DateOfAssignment AS Expr1, Evaluation.EvaluationDate
+FROM            Evaluation INNER JOIN
+                         ExeSecrataryAssign ON Evaluation.ServiceProviderID = ExeSecrataryAssign.ServiceProviderID INNER JOIN
+                         SupervisorAssign ON Evaluation.ServiceProviderID = SupervisorAssign.ServiceProviderID INNER JOIN
+                         ServiceProviderAssignment ON Evaluation.ServiceProviderID = ServiceProviderAssignment.ServiceProviderID INNER JOIN
+                         ServiceB ON ExeSecrataryAssign.ServiceID = ServiceB.SerciveID AND SupervisorAssign.ServiceID = ServiceB.SerciveID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SerciveID" DataSetColumn="SerciveID" />
+              <Mapping SourceColumn="ServiceName" DataSetColumn="ServiceName" />
+              <Mapping SourceColumn="ServiceType" DataSetColumn="ServiceType" />
+              <Mapping SourceColumn="ServiceProviderID" DataSetColumn="ServiceProviderID" />
+              <Mapping SourceColumn="DateOfAssignment" DataSetColumn="DateOfAssignment" />
+              <Mapping SourceColumn="supervisorID" DataSetColumn="supervisorID" />
+              <Mapping SourceColumn="ServiceProviderID1" DataSetColumn="ServiceProviderID1" />
+              <Mapping SourceColumn="ServiceID" DataSetColumn="ServiceID" />
+              <Mapping SourceColumn="bookID" DataSetColumn="bookID" />
+              <Mapping SourceColumn="ExecID" DataSetColumn="ExecID" />
+              <Mapping SourceColumn="ServiceProviderID2" DataSetColumn="ServiceProviderID2" />
+              <Mapping SourceColumn="StartTime" DataSetColumn="StartTime" />
+              <Mapping SourceColumn="StartDateAssigned" DataSetColumn="StartDateAssigned" />
+              <Mapping SourceColumn="ENDDATEASSIGNED" DataSetColumn="ENDDATEASSIGNED" />
+              <Mapping SourceColumn="EndTime" DataSetColumn="EndTime" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="EvaluationDate" DataSetColumn="EvaluationDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SerciveID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSerciveID" msprop:Generator_ColumnPropNameInRow="SerciveID" msprop:Generator_ColumnPropNameInTable="SerciveIDColumn" msprop:Generator_UserColumnName="SerciveID" type="xs:int" />
+              <xs:element name="ServiceName" msprop:Generator_ColumnVarNameInTable="columnServiceName" msprop:Generator_ColumnPropNameInRow="ServiceName" msprop:Generator_ColumnPropNameInTable="ServiceNameColumn" msprop:Generator_UserColumnName="ServiceName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceType" msprop:Generator_ColumnVarNameInTable="columnServiceType" msprop:Generator_ColumnPropNameInRow="ServiceType" msprop:Generator_ColumnPropNameInTable="ServiceTypeColumn" msprop:Generator_UserColumnName="ServiceType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceProviderID" msprop:Generator_ColumnVarNameInTable="columnServiceProviderID" msprop:Generator_ColumnPropNameInRow="ServiceProviderID" msprop:Generator_ColumnPropNameInTable="ServiceProviderIDColumn" msprop:Generator_UserColumnName="ServiceProviderID" type="xs:int" minOccurs="0" />
+              <xs:element name="DateOfAssignment" msprop:Generator_ColumnVarNameInTable="columnDateOfAssignment" msprop:Generator_ColumnPropNameInRow="DateOfAssignment" msprop:Generator_ColumnPropNameInTable="DateOfAssignmentColumn" msprop:Generator_UserColumnName="DateOfAssignment" type="xs:dateTime" />
+              <xs:element name="supervisorID" msprop:Generator_ColumnVarNameInTable="columnsupervisorID" msprop:Generator_ColumnPropNameInRow="supervisorID" msprop:Generator_ColumnPropNameInTable="supervisorIDColumn" msprop:Generator_UserColumnName="supervisorID" type="xs:int" />
+              <xs:element name="ServiceProviderID1" msprop:Generator_ColumnVarNameInTable="columnServiceProviderID1" msprop:Generator_ColumnPropNameInRow="ServiceProviderID1" msprop:Generator_ColumnPropNameInTable="ServiceProviderID1Column" msprop:Generator_UserColumnName="ServiceProviderID1" type="xs:int" />
+              <xs:element name="ServiceID" msprop:Generator_ColumnVarNameInTable="columnServiceID" msprop:Generator_ColumnPropNameInRow="ServiceID" msprop:Generator_ColumnPropNameInTable="ServiceIDColumn" msprop:Generator_UserColumnName="ServiceID" type="xs:int" />
+              <xs:element name="bookID" msprop:Generator_ColumnVarNameInTable="columnbookID" msprop:Generator_ColumnPropNameInRow="bookID" msprop:Generator_ColumnPropNameInTable="bookIDColumn" msprop:Generator_UserColumnName="bookID" type="xs:int" />
+              <xs:element name="ExecID" msprop:Generator_ColumnVarNameInTable="columnExecID" msprop:Generator_ColumnPropNameInRow="ExecID" msprop:Generator_ColumnPropNameInTable="ExecIDColumn" msprop:Generator_UserColumnName="ExecID" type="xs:int" />
+              <xs:element name="ServiceProviderID2" msprop:Generator_ColumnVarNameInTable="columnServiceProviderID2" msprop:Generator_ColumnPropNameInRow="ServiceProviderID2" msprop:Generator_ColumnPropNameInTable="ServiceProviderID2Column" msprop:Generator_UserColumnName="ServiceProviderID2" type="xs:int" />
+              <xs:element name="StartTime" msprop:Generator_ColumnVarNameInTable="columnStartTime" msprop:Generator_ColumnPropNameInRow="StartTime" msprop:Generator_ColumnPropNameInTable="StartTimeColumn" msprop:Generator_UserColumnName="StartTime" type="xs:duration" />
+              <xs:element name="StartDateAssigned" msprop:Generator_ColumnVarNameInTable="columnStartDateAssigned" msprop:Generator_ColumnPropNameInRow="StartDateAssigned" msprop:Generator_ColumnPropNameInTable="StartDateAssignedColumn" msprop:Generator_UserColumnName="StartDateAssigned" type="xs:dateTime" />
+              <xs:element name="ENDDATEASSIGNED" msprop:Generator_ColumnVarNameInTable="columnENDDATEASSIGNED" msprop:Generator_ColumnPropNameInRow="ENDDATEASSIGNED" msprop:Generator_ColumnPropNameInTable="ENDDATEASSIGNEDColumn" msprop:Generator_UserColumnName="ENDDATEASSIGNED" type="xs:dateTime" />
+              <xs:element name="EndTime" msprop:Generator_ColumnVarNameInTable="columnEndTime" msprop:Generator_ColumnPropNameInRow="EndTime" msprop:Generator_ColumnPropNameInTable="EndTimeColumn" msprop:Generator_UserColumnName="EndTime" type="xs:duration" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:dateTime" />
+              <xs:element name="EvaluationDate" msprop:Generator_ColumnVarNameInTable="columnEvaluationDate" msprop:Generator_ColumnPropNameInRow="EvaluationDate" msprop:Generator_ColumnPropNameInTable="EvaluationDateColumn" msprop:Generator_UserColumnName="EvaluationDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

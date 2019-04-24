@@ -1,25 +1,27 @@
 ﻿body {
 }
 
-* {
+/** {
     margin: 0px;
     padding: 0px;
-}
+}*/
 
 #menu ul {
     list-style: none;
 }
 
     #menu ul li {
-        background-color: ButtonHighlight;
+        background-color: #F2F3F4;
         border: solid 1px white;
-        width: 380px;
+        width: 250px;
         height: 35px;
         text-align: center;
         line-height: 35px;
         float: left;
         position: relative;
-        margin-left:50px;
+        font-family: Georgia;
+        font-size: large;
+        /*font-weight: bold;*/
     }
 
         #menu ul li a {

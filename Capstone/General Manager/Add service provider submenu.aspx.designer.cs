@@ -49,6 +49,42 @@ namespace Capstone.General_Manager {
         protected global::System.Web.UI.WebControls.TextBox SPCodeBox;
         
         /// <summary>
+        /// SPEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SPEmail;
+        
+        /// <summary>
+        /// EmailBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EmailBox;
+        
+        /// <summary>
+        /// SPpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SPpassword;
+        
+        /// <summary>
+        /// PasswordBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PasswordBox;
+        
+        /// <summary>
         /// SPFirstName control.
         /// </summary>
         /// <remarks>
@@ -103,24 +139,6 @@ namespace Capstone.General_Manager {
         protected global::System.Web.UI.WebControls.TextBox NationalBox;
         
         /// <summary>
-        /// SPNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SPNumber;
-        
-        /// <summary>
-        /// NumberBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NumberBox;
-        
-        /// <summary>
         /// DateOfBirth control.
         /// </summary>
         /// <remarks>
@@ -157,40 +175,22 @@ namespace Capstone.General_Manager {
         protected global::System.Web.UI.WebControls.DropDownList YearList;
         
         /// <summary>
-        /// SPEmail control.
+        /// SPNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SPEmail;
+        protected global::System.Web.UI.WebControls.Label SPNumber;
         
         /// <summary>
-        /// EmailBox control.
+        /// NumberBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailBox;
-        
-        /// <summary>
-        /// SPpassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SPpassword;
-        
-        /// <summary>
-        /// PasswordBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordBox;
+        protected global::System.Web.UI.WebControls.TextBox NumberBox;
         
         /// <summary>
         /// Address control.

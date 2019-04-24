@@ -1,4 +1,10 @@
-﻿    <title></title>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterSupervisor.Master.cs" Inherits="Capstone.SupervisorFolder.MasterSupervisor" %>
+
+
+
+<%--<script runat="server">
+</script>
+<title></title>--%>
     <html>
     <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -55,8 +61,17 @@
                     <td class="auto-style2">
                         <asp:Image ID="Image1" runat="server" Height="139px" ImageUrl="~/images/xenel logo.png" Width="320px" CssClass="auto-style5" />
                     </td>
+                    <td class="auto-style20">
+                        <p>
+
+                                <em><strong>
+
+                                <asp:Label ID="Label1" runat="server" Text="Welcome: " CssClass="auto-style23" ForeColor="White" style="font-size: large; background-color: #000000;"></asp:Label><asp:Label ID="Label3" runat="server" CssClass="auto-style23" ForeColor="White" Text="Label" style="font-size: large; background-color: #000000;"></asp:Label>
+                                </strong></em>
+                        </p>
+                    </td>
                     <td class="auto-style15">
-                        <asp:Button ID="Button1" runat="server" Height="52px" Text="Logout" Width="125px" CssClass="auto-style9" />
+                        <asp:Button ID="Button1" runat="server" Height="52px" Text="Logout" Width="125px" CssClass="auto-style9"  />
                     </td>
                     <td class="auto-style10">
                         &nbsp;</td>

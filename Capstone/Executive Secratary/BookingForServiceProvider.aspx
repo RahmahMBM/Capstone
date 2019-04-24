@@ -1,14 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Executive Secratary/Executive Secretary Master.Master" AutoEventWireup="true" CodeBehind="BookingForServiceProvider.aspx.cs" Inherits="Capstone.Executive_Secratary.WebForm2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../HomePage2.css" rel="stylesheet" />
+   <link href="../Home3.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style20 {
             width: 210px;
-        }
-
-        .auto-style21 {
-            width: 12px;
         }
 
         /*.auto-style46 {
@@ -29,27 +25,74 @@
             width: 12px;
             font-size: large;
         }*/
-        .auto-style46 {
-            width: 51px;
-            margin-left: 371px;
-        }
         .auto-style47 {
             width: 51px;
             margin-left: 0px;
         }
         .auto-style48 {
-            color: #800000;
-            background-color: #CCCCCC;
+            color: #990033;
+            background-color: #FFFFFF;
+            text-align: center;
+            font-size: x-large;
         }
         .auto-style49 {
             color: #800000;
         }
         .auto-style50 {
-            background-color: #CCCCCC;
+            background-color: #FFFFFF;
+            font-size: x-large;
         }
         .auto-style51 {
             color: #990000;
         }
+        .auto-style59 {
+            width: 1000px;
+        }
+        .auto-style73 {
+            width: 8px;
+        }
+        .auto-style76 {
+            width: 2px;
+            height: 325px;
+        }
+        .auto-style79 {
+            width: 13px;
+        }
+        .auto-style80 {
+            width: 5px;
+            height: 401px;
+        }
+        .auto-style81 {
+            width: 8px;
+            height: 325px;
+        }
+        .auto-style82 {
+            width: 1235px;
+            height: 325px;
+        }
+        .auto-style83 {
+            width: 13px;
+            height: 401px;
+        }
+        .auto-style84 {
+            width: 1000px;
+            height: 401px;
+        }
+        .auto-style85 {
+            width: 8px;
+            height: 401px;
+        }
+        .auto-style86 {
+            width: 2px;
+            height: 401px;
+        }
+        .auto-style87 {
+            width: 1235px;
+            height: 401px;
+        }
+    .auto-style88 {
+        font-size: medium;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -57,10 +100,11 @@
 
     <div id="menu">
         <ul>
-            <li><a href="BookingForServiceProvider.aspx">Booking</a></li>
-            <li><a href="SchedualOfBookedService.aspx">My Schedule</a></li>
+            <li><a href="HomePage.aspx">Home</a></li>
+            <li><a href="BookingForServiceProvider.aspx">Book Service</a></li>
+            <li><a href="SchedualOfBookedService.aspx">Bookings</a></li>
             <li><a href="Evaluation1.aspx">Evaluation</a></li>
-
+            
         </ul>
     </div>
     <br />
@@ -69,161 +113,104 @@
     <br />
     <br />
     <br />
-    <asp:Label ID="Label9" runat="server" Visible="False"></asp:Label>
+    <asp:Label ID="Label9" runat="server" Visible="False"></asp:Label><asp:DropDownList ID="DropDownList10" runat="server" Visible="False">
+         </asp:DropDownList>
     <br />
     <br />
     &nbsp;&nbsp;&nbsp;
-    <fieldset>
-       ;<legend><strong><span class="auto-style48">Booking Details:</span></strong></legend>
+    <table>
+        <tr>
+            <td class="auto-style80"></td>
+            <td class="auto-style85"></td>
+            <td class="auto-style86"></td>
+            <td class="auto-style87">
+    <fieldset class="auto-style59">
+        &nbsp;&nbsp;&nbsp;&nbsp;<legend><strong><span class="auto-style48">    Booking Details:</span></strong></legend>
         <br />
         <em>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label11" runat="server" Text="Booking Code : "></asp:Label></em>&nbsp;<strong><asp:Label ID="Label13" runat="server" ForeColor="Red" CssClass="auto-style51"></asp:Label>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label11" runat="server" Text="Booking Code : " CssClass="auto-style88"></asp:Label></strong></em>&nbsp;<strong><asp:Label ID="Label13" runat="server" ForeColor="Red" CssClass="auto-style51"></asp:Label>
         </strong>
         <br />
         <br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<em><strong><asp:Label ID="Label3" runat="server" Text="Choose Category : "></asp:Label>
+         </strong>
+        </em>&nbsp; 
+        
+        <asp:DropDownList ID="DropDownList1" runat="server" Width="190px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Height="30px">
+                                <asp:ListItem>Category</asp:ListItem>
+                                <asp:ListItem>Driver</asp:ListItem>
+                                <asp:ListItem>Butler</asp:ListItem>
+                                <asp:ListItem>Government Service Provider</asp:ListItem>
+                            </asp:DropDownList>
+        <br />
+        <br />
         <em>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label5" runat="server" Text="Start Date :  "></asp:Label></em>&nbsp; 
-        <asp:DropDownList ID="DropDownList3" runat="server" Width="60px" Height="30px">
-            <asp:ListItem>Date</asp:ListItem>
-            <asp:ListItem>01</asp:ListItem>
-            <asp:ListItem>02</asp:ListItem>
-            <asp:ListItem>03</asp:ListItem>
-            <asp:ListItem>04</asp:ListItem>
-            <asp:ListItem>05</asp:ListItem>
-            <asp:ListItem>06</asp:ListItem>
-            <asp:ListItem>07</asp:ListItem>
-            <asp:ListItem>08</asp:ListItem>
-            <asp:ListItem>09</asp:ListItem>
-            <asp:ListItem>10</asp:ListItem>
-            <asp:ListItem>11</asp:ListItem>
-            <asp:ListItem>12</asp:ListItem>
-            <asp:ListItem>13</asp:ListItem>
-            <asp:ListItem>14</asp:ListItem>
-            <asp:ListItem>15</asp:ListItem>
-            <asp:ListItem>16</asp:ListItem>
-            <asp:ListItem>17</asp:ListItem>
-            <asp:ListItem>18</asp:ListItem>
-            <asp:ListItem>19</asp:ListItem>
-            <asp:ListItem>20</asp:ListItem>
-            <asp:ListItem>21</asp:ListItem>
-            <asp:ListItem>22</asp:ListItem>
-            <asp:ListItem>23</asp:ListItem>
-            <asp:ListItem>24</asp:ListItem>
-            <asp:ListItem>25</asp:ListItem>
-            <asp:ListItem>26</asp:ListItem>
-            <asp:ListItem>28</asp:ListItem>
-            <asp:ListItem>29</asp:ListItem>
-            <asp:ListItem>30</asp:ListItem>
-            <asp:ListItem>31</asp:ListItem>
-        </asp:DropDownList>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label5" runat="server" Text="Start Date :  "></asp:Label></strong></em>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        <asp:TextBox ID="TextBoxDate" runat="server" TextMode="Date" Width="130px" Height="20px"></asp:TextBox>
         &nbsp;
-                            <asp:DropDownList ID="DropDownList4" runat="server" Width="60px" Height="30px">
-                                <asp:ListItem>Month</asp:ListItem>
-                                <asp:ListItem>Jan</asp:ListItem>
-                                <asp:ListItem>Feb</asp:ListItem>
-                                <asp:ListItem>Mar</asp:ListItem>
-                                <asp:ListItem>Apr</asp:ListItem>
-                                <asp:ListItem>May</asp:ListItem>
-                                <asp:ListItem>Jun</asp:ListItem>
-                                <asp:ListItem>Jul</asp:ListItem>
-                                <asp:ListItem>Aug</asp:ListItem>
-                                <asp:ListItem>Sep</asp:ListItem>
-                                <asp:ListItem>Oct</asp:ListItem>
-                                <asp:ListItem>Nov</asp:ListItem>
-                                <asp:ListItem>Dec</asp:ListItem>
-                            </asp:DropDownList>
-        &nbsp; 
-                             <asp:DropDownList ID="DropDownList5" runat="server" Width="60px" Height="30px">
-                             </asp:DropDownList>
+                            &nbsp; 
+                             <br />
+        <br />
+         <em>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label1" runat="server" Text="End Date :  "></asp:Label> </strong> </em>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp <asp:TextBox ID="TextBox6" runat="server" TextMode="Date" Height="20px" Width="130px"></asp:TextBox>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp  
+                            &nbsp;
+                            &nbsp;
         <br />
         <br />
          <em>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label1" runat="server" Text="End Date :  "></asp:Label> </em>&nbsp; &nbsp; <asp:DropDownList ID="DropDownList7" runat="server" Height="30px" Width="60px">
-                                <asp:ListItem>Date</asp:ListItem>
-                                <asp:ListItem>01</asp:ListItem>
-                                <asp:ListItem>02</asp:ListItem>
-                                <asp:ListItem>03</asp:ListItem>
-                                <asp:ListItem>04</asp:ListItem>
-                                <asp:ListItem>05</asp:ListItem>
-                                <asp:ListItem>06</asp:ListItem>
-                                <asp:ListItem>07</asp:ListItem>
-                                <asp:ListItem>08</asp:ListItem>
-                                <asp:ListItem>09</asp:ListItem>
-                                <asp:ListItem>10</asp:ListItem>
-                                <asp:ListItem>11</asp:ListItem>
-                                <asp:ListItem>12</asp:ListItem>
-                                <asp:ListItem>13</asp:ListItem>
-                                <asp:ListItem>14</asp:ListItem>
-                                <asp:ListItem>15</asp:ListItem>
-                                <asp:ListItem>16</asp:ListItem>
-                                <asp:ListItem>17</asp:ListItem>
-                                <asp:ListItem>18</asp:ListItem>
-                                <asp:ListItem>19</asp:ListItem>
-                                <asp:ListItem>20</asp:ListItem>
-                                <asp:ListItem>21</asp:ListItem>
-                                <asp:ListItem>22</asp:ListItem>
-                                <asp:ListItem>23</asp:ListItem>
-                                <asp:ListItem>24</asp:ListItem>
-                                <asp:ListItem>25</asp:ListItem>
-                                <asp:ListItem>26</asp:ListItem>
-                                <asp:ListItem>27</asp:ListItem>
-                                <asp:ListItem>28</asp:ListItem>
-                                <asp:ListItem>29</asp:ListItem>
-                                <asp:ListItem>30</asp:ListItem>
-                                <asp:ListItem>31</asp:ListItem>
-                            </asp:DropDownList>
-                            &nbsp;
-                            <asp:DropDownList ID="DropDownList8" runat="server" Height="30px" Width="60px">
-                                <asp:ListItem>Month</asp:ListItem>
-                                <asp:ListItem>Jan</asp:ListItem>
-                                <asp:ListItem>Feb</asp:ListItem>
-                                <asp:ListItem>Mar</asp:ListItem>
-                                <asp:ListItem>Apr</asp:ListItem>
-                                <asp:ListItem>May</asp:ListItem>
-                                <asp:ListItem>Jun</asp:ListItem>
-                                <asp:ListItem>Jul</asp:ListItem>
-                                <asp:ListItem>Aug</asp:ListItem>
-                                <asp:ListItem>Sep</asp:ListItem>
-                                <asp:ListItem>Oct</asp:ListItem>
-                                <asp:ListItem>Nov</asp:ListItem>
-                                <asp:ListItem>Dec</asp:ListItem>
-                            </asp:DropDownList>
-                            &nbsp;
-        <asp:DropDownList ID="DropDownList9" runat="server" Height="30px" Width="60px">
-                            </asp:DropDownList>
-        <br />
-        <br />
-         <em>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label6" runat="server" Text="Start Time : "></asp:Label> 
-        </em>&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server" Height="20px" TextMode="Time"></asp:TextBox>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label6" runat="server" Text="Start Time : "></asp:Label> 
+        </strong> 
+        </em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        <asp:TextBox ID="TextBox1" runat="server" Height="20px" TextMode="Time" Width="130px"></asp:TextBox>
         <br />
         <br />
         <em>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label7" runat="server" Text="End Time :  "></asp:Label>
-        </em>&nbsp; &nbsp;
-        <asp:TextBox ID="TextBox2" runat="server" Height="20px" TextMode="Time"></asp:TextBox>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label7" runat="server" Text="End Time :  "></asp:Label>
+        </strong>
+        </em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        <asp:TextBox ID="TextBox2" runat="server" Height="20px" TextMode="Time" Width="130px"></asp:TextBox>
         <br />
         <br />
-       <%-- <em>
+        <br />
+         
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label2" runat="server" Text="Check Availability : "></asp:Label>  
+        </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="CheckButton" runat="server" Text="Check" OnClick="CheckButton_Click" />
+        <%-- <em>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label12" runat="server" Text="Description : "></asp:Label> 
-        </em>&nbsp;--%>
-        <%--<asp:TextBox ID="TextBox3" runat="server" Height="70px" Width="273px" CssClass="auto-style47" TextMode="MultiLine"></asp:TextBox>--%>
+        </em>&nbsp;--%>        <%--<asp:TextBox ID="TextBox3" runat="server" Height="70px" Width="273px" CssClass="auto-style47" TextMode="MultiLine"></asp:TextBox>--%>
         <br />
         <br />
         <br />
 
-    </fieldset>
+    </fieldset></td>
+            <td class="auto-style85"></td>
+            <td class="auto-style85"></td>
+            <td class="auto-style83"></td>
+            </tr>
+        </table>
     <br />
     <br />
     <br />
     <br />
-    <fieldset>
-        <legend>
-            <span class="auto-style49"><strong><span class="auto-style50">Service</span></strong></span><span class="auto-style50"> </span> <span class="auto-style49"><strong><span class="auto-style50">Provider &Service Details: </span></strong></span>
-        </legend>
+     &nbsp;&nbsp;&nbsp;
+    <table>
+        <tr>
+            <td class="auto-style88"></td>
+            <td class="auto-style81"></td>
+            <td class="auto-style76"></td>
+            <td class="auto-style82">
+    <fieldset class="auto-style84">
+         &nbsp;&nbsp;&nbsp;&nbsp;<legend><span class="auto-style49"><strong><span class="auto-style50">Service</span></strong></span><span class="auto-style50"> </span> <span class="auto-style49"><strong><span class="auto-style50">Provider & Service Details: </span></strong></span></legend>
         <br />
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<em><asp:Label ID="Label3" runat="server" Text="Choose Category : "></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><em><asp:Label ID="Label4" runat="server" Text="Service Provider :"></asp:Label></em></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList2" runat="server" Height="20px" Width="120px"></asp:DropDownList>
+         
+        <br />
+        <br />
+
+        <%--<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<em><strong><asp:Label ID="Label3" runat="server" Text="Choose Category : "></asp:Label>
+         </strong>
         </em>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;
         <asp:DropDownList ID="DropDownList1" runat="server" Width="190px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Height="30px">
@@ -234,42 +221,48 @@
                             </asp:DropDownList>
         <br />
         <br />
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<em><asp:Label ID="Label4" runat="server" Text="Choose Service Provider : "></asp:Label>
-        </em>&nbsp; 
-         <asp:DropDownList ID="DropDownList2" runat="server" Width="190px" Height="30px">
-                            </asp:DropDownList>
-        <br />
-        <br />
+         --%>
 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<em><asp:Label ID="Label8" runat="server" Text="List of Services : "></asp:Label>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<em><strong><asp:Label ID="Label8" runat="server" Text="List of Services : "></asp:Label>
+         </strong>
         </em>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
-         <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True">
+         <asp:DropDownList ID="DropDownList6" runat="server" Height="20px" Width="120px">
                                 <asp:ListItem>Other</asp:ListItem>
                             </asp:DropDownList>
         <br />
         <br />
-         <em>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="Label12" runat="server" Text="Description : "></asp:Label> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        &nbsp;&nbsp
+        <em>
+             <br />
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp<strong><asp:Label ID="Label12" runat="server" Text="Description : "></asp:Label> 
+         </strong> 
         </em>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox3" runat="server" Height="70px" Width="273px" CssClass="auto-style47" TextMode="MultiLine"></asp:TextBox>
         <br />
         <br />
-         &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox5" runat="server" Height="20px" Width="190px" TextMode="Date"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
         <br />
         <br />
         <br />
 
-
+        
     </fieldset>
+                </td>
+            <td class="auto-style73">&nbsp;</td>
+            <td></td>
+            <td class="auto-style79"></td>
+            </tr>
+        </table>
    <br />
     <br />
     <br />
 
-     <asp:Button ID="Button2" runat="server" CssClass="auto-style46" Height="41px" Text="Request" Width="144px" OnClick="Button2_Click" />
+     <asp:Button ID="Button2" runat="server" CssClass="auto-style40" Height="46px" Text="Request" Width="115px" OnClick="Button2_Click" BackColor="#990033" BorderStyle="Solid" ForeColor="White" style="margin-left: 900px" />
     <br />
     <br />
     <br />

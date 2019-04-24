@@ -1,5 +1,10 @@
 ﻿body {
-    
+}
+
+* {
+
+    margin: 0px;
+    padding: 0px;
 }
 
 #menu ul {
@@ -14,16 +19,18 @@
         text-align: center;
         line-height: 35px;
         float: left;
+        position: relative;
         font-family: Georgia;
-        font-size:large;
-        font-weight:bold;
+        font-size: large;
+        margin-left: 10px;
+        margin-right:10px;
+        /*font-weight: bold;*/
     }
 
         #menu ul li a {
             text-decoration: none;
             color: black;
             display: block;
-           
         }
 
             #menu ul li a:hover {
@@ -31,3 +38,17 @@
                 color: white;
             }
 
+    #menu ul ul {
+        position: absolute;
+        display: none;
+    }
+
+    #menu ul li > ul li {
+        background-color: ButtonHighlight;
+        color: black;
+        border: solid 1px white;
+    }
+
+    #menu ul li:hover > ul {
+        display: block;
+    }

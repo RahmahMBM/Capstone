@@ -40,19 +40,20 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div id="menu">
         <ul>
             <li>
                 <a href="HomePage.aspx">Home</a>
             </li>
             <li>
-                <a href="LoginPage.aspx">Login</a>
+               <a href="AboutXenel.aspx">About Xenel</a>
             </li>
             <li>
-                <a href="AboutXenel.aspx">About Xenel</a>
+                 <a href="HelpPage.aspx">Help</a>
             </li>
             <li>
-                <a href="HelpPage.aspx">Help</a>
+                <a href="ContactUs.aspx">Contact Us</a>
             </li>
 
         </ul>
@@ -60,19 +61,18 @@
     <br />
     <br />
     <br />
-    <br />
+    
+    
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
 
             <asp:Timer ID="Timer1" runat="server" Interval="4000" OnTick="Timer1_Tick"></asp:Timer>
-            <asp:Image ID="Image1" Height="500px" Width="1000px" style="margin:0 auto; display:block;" runat="server" />
+            <asp:Image ID="Image1" Height="500px" Width="1290px" style="margin:0 auto; display:block; background-color: #EAEDED;" runat="server" />
 
         </ContentTemplate>
     </asp:UpdatePanel>
-
-
 </asp:Content>
 
 

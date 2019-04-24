@@ -7,30 +7,39 @@
      <br />
 
     <div id="menu">
-        <ul>
+ <ul>
+            <li>
+                <a href="GeneralManHomePage.aspx">Home</a>
+            </li>
+
             <li>
                 <a href="GenerateReport1.aspx">Generate Report</a>
             </li>
-            <li>
-                <a href="#">Update</a>
-                    <ul>
-                        <li><a href="Add%20users%20submenu.aspx">Add New User</a></li>
-                        <li><a href="Add%20employee%20submenu.aspx">Add New Employee</a></li>
-                        <li><a href="Add%20service%20provider%20submenu.aspx">Add New Service Provider</a></li>
-                        <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add New Service</a></li>
 
-                    </ul>
-            </li>
-             <li>
-                <a>View</a>
+            <li>
+                <a>Service</a>
                 <ul>
-                    <li><a href="AddEmployee.aspx">Employee</a></li>
-                    <li><a href="SystemUsersPage.aspx">System Users</a></li>
-                    <li><a href="AddServiceProvider.aspx">Service Provider</a></li>
-                    <li><a>Services</a></li>
+                    <li><a href="Add%20new%20service%20provider%20submenu.aspx">Add Service</a></li>
+                    <li><a href="ServicesPage.aspx">View Services</a></li>
                 </ul>
             </li>
-            
+            <li>
+                <a>Add User</a>
+                <ul>
+                    <li><a href="Add%20employee%20submenu.aspx">Add Employee</a></li>
+                    <li><a href="Add%20service%20provider%20submenu.aspx">Add Service Provider</a></li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a>Profile</a>
+                <ul>
+                    <li><a href="AddEmployee.aspx">Employee Profile</a></li>
+                    <li><a href="AddServiceProvider.aspx">Service Provider Profile</a></li>
+                </ul>
+            </li>
+
         </ul>
     </div>
     <br />

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections;
 
 
 
@@ -16,21 +17,54 @@ namespace Capstone.General_Manager
         DataClasses1DataContext myctx = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
+            //ArrayList year2list = new ArrayList();
+
+            //for (int yea = 2019; yea <= 2050; yea++)
+            //{
+
+            //    yearlist.Add(yea);
+
+            //}
+            //DropDownList9.DataSource = yearlist;
+            //DropDownList9.DataBind();
+
+            ArrayList year = new ArrayList();
+
+            for(int y = 1950; y<= 2019; y++)
+            {
+                year.Add(y);
+            }
+
+            YearList.DataSource = year;
+            YearList.DataBind();
 
         }
 
-        protected void TextBox6_TextChanged(object sender, EventArgs e)
-        {
-            
-         
 
-        }
 
         protected void Button2_Click(object sender, EventArgs e)
 
         {
+            var emplcheck = from a in myctx.Employees
+                            where a.EmployeeCode.StartsWith(FirstNameTextBox.Text.Substring(0, 1))
+                            orderby a.EmployeeCode.Substring(1, 3) descending
+                            select a;
+
+            if (emplcheck.Count() != 0)
+            {
+                var chec = emplcheck.First();
+                string code = chec.EmployeeCode.Substring(1, 3);
+                int cod = Convert.ToInt32(code) + 1;
+                Label16.Text = FirstNameTextBox.Text.Substring(0, 1) + cod.ToString();
+            }
+            if (emplcheck.Count() == 0)
+            {
+
+                Label16.Text = FirstNameTextBox.Text.Substring(0, 1) + "100";
+            }
+
             Employee myemp = new Employee();
-            myemp.EmployeeCode = CodeTextBox.Text;
+            myemp.EmployeeCode = Label16.Text;
             myemp.FirstName = FirstNameTextBox.Text;
             myemp.LastName = LastNameTextBox.Text;
             myemp.NationalID = NationalIDTextBox.Text;
@@ -74,65 +108,24 @@ namespace Capstone.General_Manager
 
             }
 
+            Response.Write("<script>alert('Employee has been Added Successfully');</script>");
+
             Response.Redirect("~\\General Manager\\AddEmployee.aspx");
 
             
 
 
-            //if (CategoryOfEmployee.Text == "Driver")
-            //{
-            //    ServiceProvider mySP = new ServiceProvider();
-            //    mySP.ServiceProviderCode = CodeTextBox.Text;
-            //    mySP.SPFirstName = FirstNameTextBox.Text;
-            //    mySP.SPLastName = LastNameTextBox.Text;
-            //    mySP.SPNationalID = NationalIDTextBox.Text;
-            //    mySP.SpPhoneNumber = PhoneNumberTextBox.Text;
-            //    mySP.SPDateOfBirth = Convert.ToDateTime(MonthList.SelectedValue + "/" + DateList.SelectedValue + "/" + YearList.SelectedValue);
-            //    mySP.SPEmail = EmailTextBox.Text;
-            //    mySP.SpPassword = EmployeePasswordTextBox.Text;
-            //    mySP.ServiceProviderAddress = AddressTextBox.Text;
-            //    mySP.ServiceProviderType = CategoryOfEmployee.Text;
-
-            //    myctx.ServiceProviders.InsertOnSubmit(mySP);
-            //    myctx.SubmitChanges();
-            //}
-            //    var ser = from b in myctx.ServiceProviders
-            //              orderby b.ServiceProviderID descending
-            //              select b;
-
-            //    if (ser.Count() != 0)
-            //    {
-
-            //        var ser1 = ser.First();
-            //        if (ser1.ServiceProviderType == "Driver")
-            //        {
-            //            Driver mysp = new Driver();
-            //            mysp.DriverID = ser1.ServiceProviderID;
-            //            myctx.Drivers.InsertOnSubmit(mysp);
-            //            myctx.SubmitChanges();
-            //        }
-
-            //        if (ser1.ServiceProviderType == "Butler")
-            //        {
-            //            Butler mysp = new Butler();
-            //            mysp.ButlerID = ser1.ServiceProviderID;
-            //            myctx.Butlers.InsertOnSubmit(mysp);
-            //            myctx.SubmitChanges();
-            //        }
-
-            //        if (ser1.ServiceProviderType == "Governmental")
-            //        {
-            //            Govermental mysp = new Govermental();
-            //            mysp.GovermentalID = ser1.ServiceProviderID;
-            //            myctx.Govermentals.InsertOnSubmit(mysp);
-            //            myctx.SubmitChanges();
-            //        }
-
+          
 
 
         }
 
+        //protected void Button3_Click(object sender, EventArgs e)
+        //{
 
-              //  Response.Write("Employee has been Added Successfully");
-        }
+        //}
+
+
+        
+    }
 }

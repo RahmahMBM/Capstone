@@ -42,10 +42,16 @@ namespace Capstone.Home_all
                 if (myEmployee.EmployeeType == "Manager")
                     Response.Redirect("~\\General Manager\\GeneralManHomePage.aspx");
 
-                if (myEmployee.EmployeeType == "Executive Secratary")
+                if (myEmployee.EmployeeType == "Executive Secretary")
                     Response.Redirect("~\\Executive Secratary\\HomePage.aspx");
 
                 if (myEmployee.EmployeeType == "Supervisor")
+                    Response.Redirect("~\\SupervisorFolder\\SupervisorHomePage.aspx");
+
+                if (myEmployee.EmployeeType == "BSupervisor")
+                    Response.Redirect("~\\SupervisorFolder\\SupervisorHomePage.aspx");
+
+                if (myEmployee.EmployeeType == "GSupervisor")
                     Response.Redirect("~\\SupervisorFolder\\SupervisorHomePage.aspx");
 
             }

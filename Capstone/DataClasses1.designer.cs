@@ -30,39 +30,27 @@ namespace Capstone
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertBooking(Booking instance);
-    partial void UpdateBooking(Booking instance);
-    partial void DeleteBooking(Booking instance);
     partial void InsertButler(Butler instance);
     partial void UpdateButler(Butler instance);
     partial void DeleteButler(Butler instance);
     partial void InsertCertificate(Certificate instance);
     partial void UpdateCertificate(Certificate instance);
     partial void DeleteCertificate(Certificate instance);
-    partial void InsertCriteria(Criteria instance);
-    partial void UpdateCriteria(Criteria instance);
-    partial void DeleteCriteria(Criteria instance);
     partial void InsertDriver(Driver instance);
     partial void UpdateDriver(Driver instance);
     partial void DeleteDriver(Driver instance);
-    partial void InsertEmployee(Employee instance);
-    partial void UpdateEmployee(Employee instance);
-    partial void DeleteEmployee(Employee instance);
     partial void InsertEvaluation(Evaluation instance);
     partial void UpdateEvaluation(Evaluation instance);
     partial void DeleteEvaluation(Evaluation instance);
     partial void InsertExecSecAssigning(ExecSecAssigning instance);
     partial void UpdateExecSecAssigning(ExecSecAssigning instance);
     partial void DeleteExecSecAssigning(ExecSecAssigning instance);
-    partial void InsertExeSecratary(ExeSecratary instance);
-    partial void UpdateExeSecratary(ExeSecratary instance);
-    partial void DeleteExeSecratary(ExeSecratary instance);
+    partial void InsertExecutive(Executive instance);
+    partial void UpdateExecutive(Executive instance);
+    partial void DeleteExecutive(Executive instance);
     partial void InsertExeSecrataryAssign(ExeSecrataryAssign instance);
     partial void UpdateExeSecrataryAssign(ExeSecrataryAssign instance);
     partial void DeleteExeSecrataryAssign(ExeSecrataryAssign instance);
-    partial void InsertGenmanager(Genmanager instance);
-    partial void UpdateGenmanager(Genmanager instance);
-    partial void DeleteGenmanager(Genmanager instance);
     partial void InsertGovermental(Govermental instance);
     partial void UpdateGovermental(Govermental instance);
     partial void DeleteGovermental(Govermental instance);
@@ -75,18 +63,33 @@ namespace Capstone
     partial void InsertServiceB(ServiceB instance);
     partial void UpdateServiceB(ServiceB instance);
     partial void DeleteServiceB(ServiceB instance);
-    partial void InsertServiceProvider(ServiceProvider instance);
-    partial void UpdateServiceProvider(ServiceProvider instance);
-    partial void DeleteServiceProvider(ServiceProvider instance);
+    partial void InsertCriteria(Criteria instance);
+    partial void UpdateCriteria(Criteria instance);
+    partial void DeleteCriteria(Criteria instance);
+    partial void InsertExeSecratary(ExeSecratary instance);
+    partial void UpdateExeSecratary(ExeSecratary instance);
+    partial void DeleteExeSecratary(ExeSecratary instance);
+    partial void InsertGenmanager(Genmanager instance);
+    partial void UpdateGenmanager(Genmanager instance);
+    partial void DeleteGenmanager(Genmanager instance);
     partial void InsertSupervisor(Supervisor instance);
     partial void UpdateSupervisor(Supervisor instance);
     partial void DeleteSupervisor(Supervisor instance);
-    partial void InsertSupervisorAssign(SupervisorAssign instance);
-    partial void UpdateSupervisorAssign(SupervisorAssign instance);
-    partial void DeleteSupervisorAssign(SupervisorAssign instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
     partial void InsertServiceProviderAssignment(ServiceProviderAssignment instance);
     partial void UpdateServiceProviderAssignment(ServiceProviderAssignment instance);
     partial void DeleteServiceProviderAssignment(ServiceProviderAssignment instance);
+    partial void InsertServiceProvider(ServiceProvider instance);
+    partial void UpdateServiceProvider(ServiceProvider instance);
+    partial void DeleteServiceProvider(ServiceProvider instance);
+    partial void InsertBooking(Booking instance);
+    partial void UpdateBooking(Booking instance);
+    partial void DeleteBooking(Booking instance);
+    partial void InsertSupervisorAssign(SupervisorAssign instance);
+    partial void UpdateSupervisorAssign(SupervisorAssign instance);
+    partial void DeleteSupervisorAssign(SupervisorAssign instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -119,14 +122,6 @@ namespace Capstone
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Booking> Bookings
-		{
-			get
-			{
-				return this.GetTable<Booking>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Butler> Butlers
 		{
 			get
@@ -143,27 +138,11 @@ namespace Capstone
 			}
 		}
 		
-		public System.Data.Linq.Table<Criteria> Criterias
-		{
-			get
-			{
-				return this.GetTable<Criteria>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Driver> Drivers
 		{
 			get
 			{
 				return this.GetTable<Driver>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Employee> Employees
-		{
-			get
-			{
-				return this.GetTable<Employee>();
 			}
 		}
 		
@@ -183,11 +162,11 @@ namespace Capstone
 			}
 		}
 		
-		public System.Data.Linq.Table<ExeSecratary> ExeSecrataries
+		public System.Data.Linq.Table<Executive> Executives
 		{
 			get
 			{
-				return this.GetTable<ExeSecratary>();
+				return this.GetTable<Executive>();
 			}
 		}
 		
@@ -196,14 +175,6 @@ namespace Capstone
 			get
 			{
 				return this.GetTable<ExeSecrataryAssign>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Genmanager> Genmanagers
-		{
-			get
-			{
-				return this.GetTable<Genmanager>();
 			}
 		}
 		
@@ -239,11 +210,27 @@ namespace Capstone
 			}
 		}
 		
-		public System.Data.Linq.Table<ServiceProvider> ServiceProviders
+		public System.Data.Linq.Table<Criteria> Criterias
 		{
 			get
 			{
-				return this.GetTable<ServiceProvider>();
+				return this.GetTable<Criteria>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ExeSecratary> ExeSecrataries
+		{
+			get
+			{
+				return this.GetTable<ExeSecratary>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Genmanager> Genmanagers
+		{
+			get
+			{
+				return this.GetTable<Genmanager>();
 			}
 		}
 		
@@ -255,11 +242,11 @@ namespace Capstone
 			}
 		}
 		
-		public System.Data.Linq.Table<SupervisorAssign> SupervisorAssigns
+		public System.Data.Linq.Table<Employee> Employees
 		{
 			get
 			{
-				return this.GetTable<SupervisorAssign>();
+				return this.GetTable<Employee>();
 			}
 		}
 		
@@ -270,371 +257,29 @@ namespace Capstone
 				return this.GetTable<ServiceProviderAssignment>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Booking")]
-	public partial class Booking : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _BookingID;
-		
-		private string _BookingCode;
-		
-		private System.DateTime _ActualStartDate;
-		
-		private System.DateTime _ExpectedEndDate;
-		
-		private string _BookingDescription;
-		
-		private System.TimeSpan _Duration;
-		
-		private string _BookingStatus;
-		
-		private string _StartTime;
-		
-		private string _EndTime;
-		
-		private EntitySet<Evaluation> _Evaluations;
-		
-		private EntitySet<ExecSecAssigning> _ExecSecAssignings;
-		
-		private EntitySet<ExeSecrataryAssign> _ExeSecrataryAssigns;
-		
-		private EntitySet<SupervisorAssign> _SupervisorAssigns;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnBookingIDChanging(int value);
-    partial void OnBookingIDChanged();
-    partial void OnBookingCodeChanging(string value);
-    partial void OnBookingCodeChanged();
-    partial void OnActualStartDateChanging(System.DateTime value);
-    partial void OnActualStartDateChanged();
-    partial void OnExpectedEndDateChanging(System.DateTime value);
-    partial void OnExpectedEndDateChanged();
-    partial void OnBookingDescriptionChanging(string value);
-    partial void OnBookingDescriptionChanged();
-    partial void OnDurationChanging(System.TimeSpan value);
-    partial void OnDurationChanged();
-    partial void OnBookingStatusChanging(string value);
-    partial void OnBookingStatusChanged();
-    partial void OnStartTimeChanging(string value);
-    partial void OnStartTimeChanged();
-    partial void OnEndTimeChanging(string value);
-    partial void OnEndTimeChanged();
-    #endregion
-		
-		public Booking()
-		{
-			this._Evaluations = new EntitySet<Evaluation>(new Action<Evaluation>(this.attach_Evaluations), new Action<Evaluation>(this.detach_Evaluations));
-			this._ExecSecAssignings = new EntitySet<ExecSecAssigning>(new Action<ExecSecAssigning>(this.attach_ExecSecAssignings), new Action<ExecSecAssigning>(this.detach_ExecSecAssignings));
-			this._ExeSecrataryAssigns = new EntitySet<ExeSecrataryAssign>(new Action<ExeSecrataryAssign>(this.attach_ExeSecrataryAssigns), new Action<ExeSecrataryAssign>(this.detach_ExeSecrataryAssigns));
-			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int BookingID
+		public System.Data.Linq.Table<ServiceProvider> ServiceProviders
 		{
 			get
 			{
-				return this._BookingID;
-			}
-			set
-			{
-				if ((this._BookingID != value))
-				{
-					this.OnBookingIDChanging(value);
-					this.SendPropertyChanging();
-					this._BookingID = value;
-					this.SendPropertyChanged("BookingID");
-					this.OnBookingIDChanged();
-				}
+				return this.GetTable<ServiceProvider>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingCode", DbType="Char(7) NOT NULL", CanBeNull=false)]
-		public string BookingCode
+		public System.Data.Linq.Table<Booking> Bookings
 		{
 			get
 			{
-				return this._BookingCode;
-			}
-			set
-			{
-				if ((this._BookingCode != value))
-				{
-					this.OnBookingCodeChanging(value);
-					this.SendPropertyChanging();
-					this._BookingCode = value;
-					this.SendPropertyChanged("BookingCode");
-					this.OnBookingCodeChanged();
-				}
+				return this.GetTable<Booking>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActualStartDate", DbType="Date NOT NULL")]
-		public System.DateTime ActualStartDate
+		public System.Data.Linq.Table<SupervisorAssign> SupervisorAssigns
 		{
 			get
 			{
-				return this._ActualStartDate;
+				return this.GetTable<SupervisorAssign>();
 			}
-			set
-			{
-				if ((this._ActualStartDate != value))
-				{
-					this.OnActualStartDateChanging(value);
-					this.SendPropertyChanging();
-					this._ActualStartDate = value;
-					this.SendPropertyChanged("ActualStartDate");
-					this.OnActualStartDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpectedEndDate", DbType="Date NOT NULL")]
-		public System.DateTime ExpectedEndDate
-		{
-			get
-			{
-				return this._ExpectedEndDate;
-			}
-			set
-			{
-				if ((this._ExpectedEndDate != value))
-				{
-					this.OnExpectedEndDateChanging(value);
-					this.SendPropertyChanging();
-					this._ExpectedEndDate = value;
-					this.SendPropertyChanged("ExpectedEndDate");
-					this.OnExpectedEndDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingDescription", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string BookingDescription
-		{
-			get
-			{
-				return this._BookingDescription;
-			}
-			set
-			{
-				if ((this._BookingDescription != value))
-				{
-					this.OnBookingDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._BookingDescription = value;
-					this.SendPropertyChanged("BookingDescription");
-					this.OnBookingDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Duration", DbType="Time NOT NULL")]
-		public System.TimeSpan Duration
-		{
-			get
-			{
-				return this._Duration;
-			}
-			set
-			{
-				if ((this._Duration != value))
-				{
-					this.OnDurationChanging(value);
-					this.SendPropertyChanging();
-					this._Duration = value;
-					this.SendPropertyChanged("Duration");
-					this.OnDurationChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingStatus", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
-		public string BookingStatus
-		{
-			get
-			{
-				return this._BookingStatus;
-			}
-			set
-			{
-				if ((this._BookingStatus != value))
-				{
-					this.OnBookingStatusChanging(value);
-					this.SendPropertyChanging();
-					this._BookingStatus = value;
-					this.SendPropertyChanged("BookingStatus");
-					this.OnBookingStatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string StartTime
-		{
-			get
-			{
-				return this._StartTime;
-			}
-			set
-			{
-				if ((this._StartTime != value))
-				{
-					this.OnStartTimeChanging(value);
-					this.SendPropertyChanging();
-					this._StartTime = value;
-					this.SendPropertyChanged("StartTime");
-					this.OnStartTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string EndTime
-		{
-			get
-			{
-				return this._EndTime;
-			}
-			set
-			{
-				if ((this._EndTime != value))
-				{
-					this.OnEndTimeChanging(value);
-					this.SendPropertyChanging();
-					this._EndTime = value;
-					this.SendPropertyChanged("EndTime");
-					this.OnEndTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_Evaluation", Storage="_Evaluations", ThisKey="BookingID", OtherKey="BOOKID")]
-		public EntitySet<Evaluation> Evaluations
-		{
-			get
-			{
-				return this._Evaluations;
-			}
-			set
-			{
-				this._Evaluations.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExecSecAssigning", Storage="_ExecSecAssignings", ThisKey="BookingID", OtherKey="bookID1")]
-		public EntitySet<ExecSecAssigning> ExecSecAssignings
-		{
-			get
-			{
-				return this._ExecSecAssignings;
-			}
-			set
-			{
-				this._ExecSecAssignings.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExeSecrataryAssign", Storage="_ExeSecrataryAssigns", ThisKey="BookingID", OtherKey="bookID")]
-		public EntitySet<ExeSecrataryAssign> ExeSecrataryAssigns
-		{
-			get
-			{
-				return this._ExeSecrataryAssigns;
-			}
-			set
-			{
-				this._ExeSecrataryAssigns.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="BookingID", OtherKey="bookID")]
-		public EntitySet<SupervisorAssign> SupervisorAssigns
-		{
-			get
-			{
-				return this._SupervisorAssigns;
-			}
-			set
-			{
-				this._SupervisorAssigns.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Evaluations(Evaluation entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = this;
-		}
-		
-		private void detach_Evaluations(Evaluation entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = null;
-		}
-		
-		private void attach_ExecSecAssignings(ExecSecAssigning entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = this;
-		}
-		
-		private void detach_ExecSecAssignings(ExecSecAssigning entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = null;
-		}
-		
-		private void attach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = this;
-		}
-		
-		private void detach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = null;
-		}
-		
-		private void attach_SupervisorAssigns(SupervisorAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = this;
-		}
-		
-		private void detach_SupervisorAssigns(SupervisorAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.Booking = null;
 		}
 	}
 	
@@ -940,192 +585,6 @@ namespace Capstone
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Criteria")]
-	public partial class Criteria : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _CriteriaID;
-		
-		private string _CriteriaName;
-		
-		private string _CriteriaDescription;
-		
-		private string _CriteriaType;
-		
-		private char _CriteriaWeight;
-		
-		private EntitySet<Evaluation> _Evaluations;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCriteriaIDChanging(int value);
-    partial void OnCriteriaIDChanged();
-    partial void OnCriteriaNameChanging(string value);
-    partial void OnCriteriaNameChanged();
-    partial void OnCriteriaDescriptionChanging(string value);
-    partial void OnCriteriaDescriptionChanged();
-    partial void OnCriteriaTypeChanging(string value);
-    partial void OnCriteriaTypeChanged();
-    partial void OnCriteriaWeightChanging(char value);
-    partial void OnCriteriaWeightChanged();
-    #endregion
-		
-		public Criteria()
-		{
-			this._Evaluations = new EntitySet<Evaluation>(new Action<Evaluation>(this.attach_Evaluations), new Action<Evaluation>(this.detach_Evaluations));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int CriteriaID
-		{
-			get
-			{
-				return this._CriteriaID;
-			}
-			set
-			{
-				if ((this._CriteriaID != value))
-				{
-					this.OnCriteriaIDChanging(value);
-					this.SendPropertyChanging();
-					this._CriteriaID = value;
-					this.SendPropertyChanged("CriteriaID");
-					this.OnCriteriaIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaName", DbType="NChar(10) NOT NULL", CanBeNull=false)]
-		public string CriteriaName
-		{
-			get
-			{
-				return this._CriteriaName;
-			}
-			set
-			{
-				if ((this._CriteriaName != value))
-				{
-					this.OnCriteriaNameChanging(value);
-					this.SendPropertyChanging();
-					this._CriteriaName = value;
-					this.SendPropertyChanged("CriteriaName");
-					this.OnCriteriaNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaDescription", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string CriteriaDescription
-		{
-			get
-			{
-				return this._CriteriaDescription;
-			}
-			set
-			{
-				if ((this._CriteriaDescription != value))
-				{
-					this.OnCriteriaDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._CriteriaDescription = value;
-					this.SendPropertyChanged("CriteriaDescription");
-					this.OnCriteriaDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaType", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
-		public string CriteriaType
-		{
-			get
-			{
-				return this._CriteriaType;
-			}
-			set
-			{
-				if ((this._CriteriaType != value))
-				{
-					this.OnCriteriaTypeChanging(value);
-					this.SendPropertyChanging();
-					this._CriteriaType = value;
-					this.SendPropertyChanged("CriteriaType");
-					this.OnCriteriaTypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaWeight", DbType="Char(1) NOT NULL")]
-		public char CriteriaWeight
-		{
-			get
-			{
-				return this._CriteriaWeight;
-			}
-			set
-			{
-				if ((this._CriteriaWeight != value))
-				{
-					this.OnCriteriaWeightChanging(value);
-					this.SendPropertyChanging();
-					this._CriteriaWeight = value;
-					this.SendPropertyChanged("CriteriaWeight");
-					this.OnCriteriaWeightChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Criteria_Evaluation", Storage="_Evaluations", ThisKey="CriteriaID", OtherKey="CriID")]
-		public EntitySet<Evaluation> Evaluations
-		{
-			get
-			{
-				return this._Evaluations;
-			}
-			set
-			{
-				this._Evaluations.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Evaluations(Evaluation entity)
-		{
-			this.SendPropertyChanging();
-			entity.Criteria = this;
-		}
-		
-		private void detach_Evaluations(Evaluation entity)
-		{
-			this.SendPropertyChanging();
-			entity.Criteria = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Driver")]
 	public partial class Driver : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1253,536 +712,6 @@ namespace Capstone
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
-	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _EID;
-		
-		private string _EmployeeCode;
-		
-		private string _FirstName;
-		
-		private string _LastName;
-		
-		private string _NationalID;
-		
-		private string _PhoneNumber;
-		
-		private System.DateTime _DateOfBirth;
-		
-		private string _Email;
-		
-		private string _EmployeePassword;
-		
-		private string _EmployeeAddress;
-		
-		private char _Gender;
-		
-		private string _EmployeeType;
-		
-		private string _JobDescription;
-		
-		private EntitySet<Certificate> _Certificates;
-		
-		private EntitySet<ExecSecAssigning> _ExecSecAssignings;
-		
-		private EntitySet<ExecSecAssigning> _ExecSecAssignings1;
-		
-		private EntityRef<ExeSecratary> _ExeSecratary;
-		
-		private EntityRef<Genmanager> _Genmanager;
-		
-		private EntityRef<Supervisor> _Supervisor;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEIDChanging(int value);
-    partial void OnEIDChanged();
-    partial void OnEmployeeCodeChanging(string value);
-    partial void OnEmployeeCodeChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    partial void OnNationalIDChanging(string value);
-    partial void OnNationalIDChanged();
-    partial void OnPhoneNumberChanging(string value);
-    partial void OnPhoneNumberChanged();
-    partial void OnDateOfBirthChanging(System.DateTime value);
-    partial void OnDateOfBirthChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnEmployeePasswordChanging(string value);
-    partial void OnEmployeePasswordChanged();
-    partial void OnEmployeeAddressChanging(string value);
-    partial void OnEmployeeAddressChanged();
-    partial void OnGenderChanging(char value);
-    partial void OnGenderChanged();
-    partial void OnEmployeeTypeChanging(string value);
-    partial void OnEmployeeTypeChanged();
-    partial void OnJobDescriptionChanging(string value);
-    partial void OnJobDescriptionChanged();
-    #endregion
-		
-		public Employee()
-		{
-			this._Certificates = new EntitySet<Certificate>(new Action<Certificate>(this.attach_Certificates), new Action<Certificate>(this.detach_Certificates));
-			this._ExecSecAssignings = new EntitySet<ExecSecAssigning>(new Action<ExecSecAssigning>(this.attach_ExecSecAssignings), new Action<ExecSecAssigning>(this.detach_ExecSecAssignings));
-			this._ExecSecAssignings1 = new EntitySet<ExecSecAssigning>(new Action<ExecSecAssigning>(this.attach_ExecSecAssignings1), new Action<ExecSecAssigning>(this.detach_ExecSecAssignings1));
-			this._ExeSecratary = default(EntityRef<ExeSecratary>);
-			this._Genmanager = default(EntityRef<Genmanager>);
-			this._Supervisor = default(EntityRef<Supervisor>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int EID
-		{
-			get
-			{
-				return this._EID;
-			}
-			set
-			{
-				if ((this._EID != value))
-				{
-					this.OnEIDChanging(value);
-					this.SendPropertyChanging();
-					this._EID = value;
-					this.SendPropertyChanged("EID");
-					this.OnEIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeCode", DbType="Char(4) NOT NULL", CanBeNull=false)]
-		public string EmployeeCode
-		{
-			get
-			{
-				return this._EmployeeCode;
-			}
-			set
-			{
-				if ((this._EmployeeCode != value))
-				{
-					this.OnEmployeeCodeChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeCode = value;
-					this.SendPropertyChanged("EmployeeCode");
-					this.OnEmployeeCodeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string FirstName
-		{
-			get
-			{
-				return this._FirstName;
-			}
-			set
-			{
-				if ((this._FirstName != value))
-				{
-					this.OnFirstNameChanging(value);
-					this.SendPropertyChanging();
-					this._FirstName = value;
-					this.SendPropertyChanged("FirstName");
-					this.OnFirstNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string LastName
-		{
-			get
-			{
-				return this._LastName;
-			}
-			set
-			{
-				if ((this._LastName != value))
-				{
-					this.OnLastNameChanging(value);
-					this.SendPropertyChanging();
-					this._LastName = value;
-					this.SendPropertyChanged("LastName");
-					this.OnLastNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NationalID", DbType="Char(10) NOT NULL", CanBeNull=false)]
-		public string NationalID
-		{
-			get
-			{
-				return this._NationalID;
-			}
-			set
-			{
-				if ((this._NationalID != value))
-				{
-					this.OnNationalIDChanging(value);
-					this.SendPropertyChanging();
-					this._NationalID = value;
-					this.SendPropertyChanged("NationalID");
-					this.OnNationalIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(10)")]
-		public string PhoneNumber
-		{
-			get
-			{
-				return this._PhoneNumber;
-			}
-			set
-			{
-				if ((this._PhoneNumber != value))
-				{
-					this.OnPhoneNumberChanging(value);
-					this.SendPropertyChanging();
-					this._PhoneNumber = value;
-					this.SendPropertyChanged("PhoneNumber");
-					this.OnPhoneNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOfBirth", DbType="Date NOT NULL")]
-		public System.DateTime DateOfBirth
-		{
-			get
-			{
-				return this._DateOfBirth;
-			}
-			set
-			{
-				if ((this._DateOfBirth != value))
-				{
-					this.OnDateOfBirthChanging(value);
-					this.SendPropertyChanging();
-					this._DateOfBirth = value;
-					this.SendPropertyChanged("DateOfBirth");
-					this.OnDateOfBirthChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeePassword", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string EmployeePassword
-		{
-			get
-			{
-				return this._EmployeePassword;
-			}
-			set
-			{
-				if ((this._EmployeePassword != value))
-				{
-					this.OnEmployeePasswordChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeePassword = value;
-					this.SendPropertyChanged("EmployeePassword");
-					this.OnEmployeePasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeAddress", DbType="NVarChar(50)")]
-		public string EmployeeAddress
-		{
-			get
-			{
-				return this._EmployeeAddress;
-			}
-			set
-			{
-				if ((this._EmployeeAddress != value))
-				{
-					this.OnEmployeeAddressChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeAddress = value;
-					this.SendPropertyChanged("EmployeeAddress");
-					this.OnEmployeeAddressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="Char(1) NOT NULL")]
-		public char Gender
-		{
-			get
-			{
-				return this._Gender;
-			}
-			set
-			{
-				if ((this._Gender != value))
-				{
-					this.OnGenderChanging(value);
-					this.SendPropertyChanging();
-					this._Gender = value;
-					this.SendPropertyChanged("Gender");
-					this.OnGenderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeType", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
-		public string EmployeeType
-		{
-			get
-			{
-				return this._EmployeeType;
-			}
-			set
-			{
-				if ((this._EmployeeType != value))
-				{
-					this.OnEmployeeTypeChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeType = value;
-					this.SendPropertyChanged("EmployeeType");
-					this.OnEmployeeTypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobDescription", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
-		public string JobDescription
-		{
-			get
-			{
-				return this._JobDescription;
-			}
-			set
-			{
-				if ((this._JobDescription != value))
-				{
-					this.OnJobDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._JobDescription = value;
-					this.SendPropertyChanged("JobDescription");
-					this.OnJobDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Certificate", Storage="_Certificates", ThisKey="EID", OtherKey="EmployeeID")]
-		public EntitySet<Certificate> Certificates
-		{
-			get
-			{
-				return this._Certificates;
-			}
-			set
-			{
-				this._Certificates.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExecSecAssigning", Storage="_ExecSecAssignings", ThisKey="EID", OtherKey="ExeSID1")]
-		public EntitySet<ExecSecAssigning> ExecSecAssignings
-		{
-			get
-			{
-				return this._ExecSecAssignings;
-			}
-			set
-			{
-				this._ExecSecAssignings.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExecSecAssigning1", Storage="_ExecSecAssignings1", ThisKey="EID", OtherKey="SupervisorID1")]
-		public EntitySet<ExecSecAssigning> ExecSecAssignings1
-		{
-			get
-			{
-				return this._ExecSecAssignings1;
-			}
-			set
-			{
-				this._ExecSecAssignings1.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExeSecratary", Storage="_ExeSecratary", ThisKey="EID", OtherKey="ExeSID", IsUnique=true, IsForeignKey=false)]
-		public ExeSecratary ExeSecratary
-		{
-			get
-			{
-				return this._ExeSecratary.Entity;
-			}
-			set
-			{
-				ExeSecratary previousValue = this._ExeSecratary.Entity;
-				if (((previousValue != value) 
-							|| (this._ExeSecratary.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ExeSecratary.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._ExeSecratary.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("ExeSecratary");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Genmanager", Storage="_Genmanager", ThisKey="EID", OtherKey="GeneralManagerID", IsUnique=true, IsForeignKey=false)]
-		public Genmanager Genmanager
-		{
-			get
-			{
-				return this._Genmanager.Entity;
-			}
-			set
-			{
-				Genmanager previousValue = this._Genmanager.Entity;
-				if (((previousValue != value) 
-							|| (this._Genmanager.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Genmanager.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._Genmanager.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("Genmanager");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Supervisor", Storage="_Supervisor", ThisKey="EID", OtherKey="SupervisorID", IsUnique=true, IsForeignKey=false)]
-		public Supervisor Supervisor
-		{
-			get
-			{
-				return this._Supervisor.Entity;
-			}
-			set
-			{
-				Supervisor previousValue = this._Supervisor.Entity;
-				if (((previousValue != value) 
-							|| (this._Supervisor.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Supervisor.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._Supervisor.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("Supervisor");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Certificates(Certificate entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = this;
-		}
-		
-		private void detach_Certificates(Certificate entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = null;
-		}
-		
-		private void attach_ExecSecAssignings(ExecSecAssigning entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = this;
-		}
-		
-		private void detach_ExecSecAssignings(ExecSecAssigning entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = null;
-		}
-		
-		private void attach_ExecSecAssignings1(ExecSecAssigning entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee1 = this;
-		}
-		
-		private void detach_ExecSecAssignings1(ExecSecAssigning entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee1 = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Evaluation")]
 	public partial class Evaluation : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1803,13 +732,13 @@ namespace Capstone
 		
 		private int _ServiceProviderID;
 		
-		private EntityRef<Booking> _Booking;
-		
 		private EntityRef<Criteria> _Criteria;
 		
 		private EntityRef<ExeSecratary> _ExeSecratary;
 		
 		private EntityRef<ServiceProvider> _ServiceProvider;
+		
+		private EntityRef<Booking> _Booking;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1833,10 +762,10 @@ namespace Capstone
 		
 		public Evaluation()
 		{
-			this._Booking = default(EntityRef<Booking>);
 			this._Criteria = default(EntityRef<Criteria>);
 			this._ExeSecratary = default(EntityRef<ExeSecratary>);
 			this._ServiceProvider = default(EntityRef<ServiceProvider>);
+			this._Booking = default(EntityRef<Booking>);
 			OnCreated();
 		}
 		
@@ -1996,40 +925,6 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_Evaluation", Storage="_Booking", ThisKey="BOOKID", OtherKey="BookingID", IsForeignKey=true)]
-		public Booking Booking
-		{
-			get
-			{
-				return this._Booking.Entity;
-			}
-			set
-			{
-				Booking previousValue = this._Booking.Entity;
-				if (((previousValue != value) 
-							|| (this._Booking.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Booking.Entity = null;
-						previousValue.Evaluations.Remove(this);
-					}
-					this._Booking.Entity = value;
-					if ((value != null))
-					{
-						value.Evaluations.Add(this);
-						this._BOOKID = value.BookingID;
-					}
-					else
-					{
-						this._BOOKID = default(int);
-					}
-					this.SendPropertyChanged("Booking");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Criteria_Evaluation", Storage="_Criteria", ThisKey="CriID", OtherKey="CriteriaID", IsForeignKey=true)]
 		public Criteria Criteria
 		{
@@ -2132,6 +1027,40 @@ namespace Capstone
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_Evaluation", Storage="_Booking", ThisKey="BOOKID", OtherKey="BookingID", IsForeignKey=true)]
+		public Booking Booking
+		{
+			get
+			{
+				return this._Booking.Entity;
+			}
+			set
+			{
+				Booking previousValue = this._Booking.Entity;
+				if (((previousValue != value) 
+							|| (this._Booking.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Booking.Entity = null;
+						previousValue.Evaluations.Remove(this);
+					}
+					this._Booking.Entity = value;
+					if ((value != null))
+					{
+						value.Evaluations.Add(this);
+						this._BOOKID = value.BookingID;
+					}
+					else
+					{
+						this._BOOKID = default(int);
+					}
+					this.SendPropertyChanged("Booking");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2165,11 +1094,11 @@ namespace Capstone
 		
 		private int _bookID1;
 		
-		private EntityRef<Booking> _Booking;
-		
 		private EntityRef<Employee> _Employee;
 		
 		private EntityRef<Employee> _Employee1;
+		
+		private EntityRef<Booking> _Booking;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2185,9 +1114,9 @@ namespace Capstone
 		
 		public ExecSecAssigning()
 		{
-			this._Booking = default(EntityRef<Booking>);
 			this._Employee = default(EntityRef<Employee>);
 			this._Employee1 = default(EntityRef<Employee>);
+			this._Booking = default(EntityRef<Booking>);
 			OnCreated();
 		}
 		
@@ -2263,40 +1192,6 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExecSecAssigning", Storage="_Booking", ThisKey="bookID1", OtherKey="BookingID", IsForeignKey=true)]
-		public Booking Booking
-		{
-			get
-			{
-				return this._Booking.Entity;
-			}
-			set
-			{
-				Booking previousValue = this._Booking.Entity;
-				if (((previousValue != value) 
-							|| (this._Booking.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Booking.Entity = null;
-						previousValue.ExecSecAssignings.Remove(this);
-					}
-					this._Booking.Entity = value;
-					if ((value != null))
-					{
-						value.ExecSecAssignings.Add(this);
-						this._bookID1 = value.BookingID;
-					}
-					else
-					{
-						this._bookID1 = default(int);
-					}
-					this.SendPropertyChanged("Booking");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExecSecAssigning", Storage="_Employee", ThisKey="ExeSID1", OtherKey="EID", IsForeignKey=true)]
 		public Employee Employee
 		{
@@ -2365,6 +1260,40 @@ namespace Capstone
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExecSecAssigning", Storage="_Booking", ThisKey="bookID1", OtherKey="BookingID", IsForeignKey=true)]
+		public Booking Booking
+		{
+			get
+			{
+				return this._Booking.Entity;
+			}
+			set
+			{
+				Booking previousValue = this._Booking.Entity;
+				if (((previousValue != value) 
+							|| (this._Booking.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Booking.Entity = null;
+						previousValue.ExecSecAssignings.Remove(this);
+					}
+					this._Booking.Entity = value;
+					if ((value != null))
+					{
+						value.ExecSecAssignings.Add(this);
+						this._bookID1 = value.BookingID;
+					}
+					else
+					{
+						this._bookID1 = default(int);
+					}
+					this.SendPropertyChanged("Booking");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2386,17 +1315,13 @@ namespace Capstone
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ExeSecratary")]
-	public partial class ExeSecratary : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Executive")]
+	public partial class Executive : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _ExeSID;
-		
-		private EntitySet<Evaluation> _Evaluations;
-		
-		private EntitySet<ExeSecrataryAssign> _ExeSecrataryAssigns;
+		private int _ExecutiveID;
 		
 		private EntityRef<Employee> _Employee;
 		
@@ -2404,69 +1329,41 @@ namespace Capstone
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnExeSIDChanging(int value);
-    partial void OnExeSIDChanged();
+    partial void OnExecutiveIDChanging(int value);
+    partial void OnExecutiveIDChanged();
     #endregion
 		
-		public ExeSecratary()
+		public Executive()
 		{
-			this._Evaluations = new EntitySet<Evaluation>(new Action<Evaluation>(this.attach_Evaluations), new Action<Evaluation>(this.detach_Evaluations));
-			this._ExeSecrataryAssigns = new EntitySet<ExeSecrataryAssign>(new Action<ExeSecrataryAssign>(this.attach_ExeSecrataryAssigns), new Action<ExeSecrataryAssign>(this.detach_ExeSecrataryAssigns));
 			this._Employee = default(EntityRef<Employee>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExeSID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int ExeSID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExecutiveID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ExecutiveID
 		{
 			get
 			{
-				return this._ExeSID;
+				return this._ExecutiveID;
 			}
 			set
 			{
-				if ((this._ExeSID != value))
+				if ((this._ExecutiveID != value))
 				{
 					if (this._Employee.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnExeSIDChanging(value);
+					this.OnExecutiveIDChanging(value);
 					this.SendPropertyChanging();
-					this._ExeSID = value;
-					this.SendPropertyChanged("ExeSID");
-					this.OnExeSIDChanged();
+					this._ExecutiveID = value;
+					this.SendPropertyChanged("ExecutiveID");
+					this.OnExecutiveIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ExeSecratary_Evaluation", Storage="_Evaluations", ThisKey="ExeSID", OtherKey="EXSECID")]
-		public EntitySet<Evaluation> Evaluations
-		{
-			get
-			{
-				return this._Evaluations;
-			}
-			set
-			{
-				this._Evaluations.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ExeSecratary_ExeSecrataryAssign", Storage="_ExeSecrataryAssigns", ThisKey="ExeSID", OtherKey="ExeSecrataryID")]
-		public EntitySet<ExeSecrataryAssign> ExeSecrataryAssigns
-		{
-			get
-			{
-				return this._ExeSecrataryAssigns;
-			}
-			set
-			{
-				this._ExeSecrataryAssigns.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExeSecratary", Storage="_Employee", ThisKey="ExeSID", OtherKey="EID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Executive", Storage="_Employee", ThisKey="ExecutiveID", OtherKey="EID", IsForeignKey=true)]
 		public Employee Employee
 		{
 			get
@@ -2483,17 +1380,17 @@ namespace Capstone
 					if ((previousValue != null))
 					{
 						this._Employee.Entity = null;
-						previousValue.ExeSecratary = null;
+						previousValue.Executive = null;
 					}
 					this._Employee.Entity = value;
 					if ((value != null))
 					{
-						value.ExeSecratary = this;
-						this._ExeSID = value.EID;
+						value.Executive = this;
+						this._ExecutiveID = value.EID;
 					}
 					else
 					{
-						this._ExeSID = default(int);
+						this._ExecutiveID = default(int);
 					}
 					this.SendPropertyChanged("Employee");
 				}
@@ -2519,30 +1416,6 @@ namespace Capstone
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_Evaluations(Evaluation entity)
-		{
-			this.SendPropertyChanging();
-			entity.ExeSecratary = this;
-		}
-		
-		private void detach_Evaluations(Evaluation entity)
-		{
-			this.SendPropertyChanging();
-			entity.ExeSecratary = null;
-		}
-		
-		private void attach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.ExeSecratary = this;
-		}
-		
-		private void detach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.ExeSecratary = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ExeSecrataryAssign")]
@@ -2561,13 +1434,13 @@ namespace Capstone
 		
 		private int _bookID;
 		
-		private EntityRef<Booking> _Booking;
+		private EntityRef<ServiceB> _ServiceB;
 		
 		private EntityRef<ExeSecratary> _ExeSecratary;
 		
-		private EntityRef<ServiceB> _ServiceB;
-		
 		private EntityRef<ServiceProvider> _ServiceProvider;
+		
+		private EntityRef<Booking> _Booking;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2587,10 +1460,10 @@ namespace Capstone
 		
 		public ExeSecrataryAssign()
 		{
-			this._Booking = default(EntityRef<Booking>);
-			this._ExeSecratary = default(EntityRef<ExeSecratary>);
 			this._ServiceB = default(EntityRef<ServiceB>);
+			this._ExeSecratary = default(EntityRef<ExeSecratary>);
 			this._ServiceProvider = default(EntityRef<ServiceProvider>);
+			this._Booking = default(EntityRef<Booking>);
 			OnCreated();
 		}
 		
@@ -2710,36 +1583,36 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExeSecrataryAssign", Storage="_Booking", ThisKey="bookID", OtherKey="BookingID", IsForeignKey=true)]
-		public Booking Booking
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceB_ExeSecrataryAssign", Storage="_ServiceB", ThisKey="ServiceID", OtherKey="SerciveID", IsForeignKey=true)]
+		public ServiceB ServiceB
 		{
 			get
 			{
-				return this._Booking.Entity;
+				return this._ServiceB.Entity;
 			}
 			set
 			{
-				Booking previousValue = this._Booking.Entity;
+				ServiceB previousValue = this._ServiceB.Entity;
 				if (((previousValue != value) 
-							|| (this._Booking.HasLoadedOrAssignedValue == false)))
+							|| (this._ServiceB.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Booking.Entity = null;
+						this._ServiceB.Entity = null;
 						previousValue.ExeSecrataryAssigns.Remove(this);
 					}
-					this._Booking.Entity = value;
+					this._ServiceB.Entity = value;
 					if ((value != null))
 					{
 						value.ExeSecrataryAssigns.Add(this);
-						this._bookID = value.BookingID;
+						this._ServiceID = value.SerciveID;
 					}
 					else
 					{
-						this._bookID = default(int);
+						this._ServiceID = default(int);
 					}
-					this.SendPropertyChanged("Booking");
+					this.SendPropertyChanged("ServiceB");
 				}
 			}
 		}
@@ -2778,40 +1651,6 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceB_ExeSecrataryAssign", Storage="_ServiceB", ThisKey="ServiceID", OtherKey="SerciveID", IsForeignKey=true)]
-		public ServiceB ServiceB
-		{
-			get
-			{
-				return this._ServiceB.Entity;
-			}
-			set
-			{
-				ServiceB previousValue = this._ServiceB.Entity;
-				if (((previousValue != value) 
-							|| (this._ServiceB.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ServiceB.Entity = null;
-						previousValue.ExeSecrataryAssigns.Remove(this);
-					}
-					this._ServiceB.Entity = value;
-					if ((value != null))
-					{
-						value.ExeSecrataryAssigns.Add(this);
-						this._ServiceID = value.SerciveID;
-					}
-					else
-					{
-						this._ServiceID = default(int);
-					}
-					this.SendPropertyChanged("ServiceB");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_ExeSecrataryAssign", Storage="_ServiceProvider", ThisKey="ServiceProviderID", OtherKey="ServiceProviderID", IsForeignKey=true)]
 		public ServiceProvider ServiceProvider
 		{
@@ -2846,121 +1685,36 @@ namespace Capstone
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Genmanager")]
-	public partial class Genmanager : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _GeneralManagerID;
-		
-		private EntitySet<Report> _Reports;
-		
-		private EntityRef<Employee> _Employee;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnGeneralManagerIDChanging(int value);
-    partial void OnGeneralManagerIDChanged();
-    #endregion
-		
-		public Genmanager()
-		{
-			this._Reports = new EntitySet<Report>(new Action<Report>(this.attach_Reports), new Action<Report>(this.detach_Reports));
-			this._Employee = default(EntityRef<Employee>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GeneralManagerID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int GeneralManagerID
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExeSecrataryAssign", Storage="_Booking", ThisKey="bookID", OtherKey="BookingID", IsForeignKey=true)]
+		public Booking Booking
 		{
 			get
 			{
-				return this._GeneralManagerID;
+				return this._Booking.Entity;
 			}
 			set
 			{
-				if ((this._GeneralManagerID != value))
-				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnGeneralManagerIDChanging(value);
-					this.SendPropertyChanging();
-					this._GeneralManagerID = value;
-					this.SendPropertyChanged("GeneralManagerID");
-					this.OnGeneralManagerIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genmanager_Report", Storage="_Reports", ThisKey="GeneralManagerID", OtherKey="GeneralMID")]
-		public EntitySet<Report> Reports
-		{
-			get
-			{
-				return this._Reports;
-			}
-			set
-			{
-				this._Reports.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Genmanager", Storage="_Employee", ThisKey="GeneralManagerID", OtherKey="EID", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
+				Booking previousValue = this._Booking.Entity;
 				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+							|| (this._Booking.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Employee.Entity = null;
-						previousValue.Genmanager = null;
+						this._Booking.Entity = null;
+						previousValue.ExeSecrataryAssigns.Remove(this);
 					}
-					this._Employee.Entity = value;
+					this._Booking.Entity = value;
 					if ((value != null))
 					{
-						value.Genmanager = this;
-						this._GeneralManagerID = value.EID;
+						value.ExeSecrataryAssigns.Add(this);
+						this._bookID = value.BookingID;
 					}
 					else
 					{
-						this._GeneralManagerID = default(int);
+						this._bookID = default(int);
 					}
-					this.SendPropertyChanged("Employee");
+					this.SendPropertyChanged("Booking");
 				}
 			}
 		}
@@ -2983,18 +1737,6 @@ namespace Capstone
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Reports(Report entity)
-		{
-			this.SendPropertyChanging();
-			entity.Genmanager = this;
-		}
-		
-		private void detach_Reports(Report entity)
-		{
-			this.SendPropertyChanging();
-			entity.Genmanager = null;
 		}
 	}
 	
@@ -3826,6 +2568,1326 @@ namespace Capstone
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Criteria")]
+	public partial class Criteria : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _CriteriaID;
+		
+		private string _CriteriaName;
+		
+		private System.Nullable<char> _CriteriaWeight;
+		
+		private EntitySet<Evaluation> _Evaluations;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCriteriaIDChanging(int value);
+    partial void OnCriteriaIDChanged();
+    partial void OnCriteriaNameChanging(string value);
+    partial void OnCriteriaNameChanged();
+    partial void OnCriteriaWeightChanging(System.Nullable<char> value);
+    partial void OnCriteriaWeightChanged();
+    #endregion
+		
+		public Criteria()
+		{
+			this._Evaluations = new EntitySet<Evaluation>(new Action<Evaluation>(this.attach_Evaluations), new Action<Evaluation>(this.detach_Evaluations));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int CriteriaID
+		{
+			get
+			{
+				return this._CriteriaID;
+			}
+			set
+			{
+				if ((this._CriteriaID != value))
+				{
+					this.OnCriteriaIDChanging(value);
+					this.SendPropertyChanging();
+					this._CriteriaID = value;
+					this.SendPropertyChanged("CriteriaID");
+					this.OnCriteriaIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaName", DbType="NChar(100)")]
+		public string CriteriaName
+		{
+			get
+			{
+				return this._CriteriaName;
+			}
+			set
+			{
+				if ((this._CriteriaName != value))
+				{
+					this.OnCriteriaNameChanging(value);
+					this.SendPropertyChanging();
+					this._CriteriaName = value;
+					this.SendPropertyChanged("CriteriaName");
+					this.OnCriteriaNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CriteriaWeight", DbType="Char(1)")]
+		public System.Nullable<char> CriteriaWeight
+		{
+			get
+			{
+				return this._CriteriaWeight;
+			}
+			set
+			{
+				if ((this._CriteriaWeight != value))
+				{
+					this.OnCriteriaWeightChanging(value);
+					this.SendPropertyChanging();
+					this._CriteriaWeight = value;
+					this.SendPropertyChanged("CriteriaWeight");
+					this.OnCriteriaWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Criteria_Evaluation", Storage="_Evaluations", ThisKey="CriteriaID", OtherKey="CriID")]
+		public EntitySet<Evaluation> Evaluations
+		{
+			get
+			{
+				return this._Evaluations;
+			}
+			set
+			{
+				this._Evaluations.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Evaluations(Evaluation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Criteria = this;
+		}
+		
+		private void detach_Evaluations(Evaluation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Criteria = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ExeSecratary")]
+	public partial class ExeSecratary : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ExeSID;
+		
+		private EntitySet<Evaluation> _Evaluations;
+		
+		private EntitySet<ExeSecrataryAssign> _ExeSecrataryAssigns;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnExeSIDChanging(int value);
+    partial void OnExeSIDChanged();
+    #endregion
+		
+		public ExeSecratary()
+		{
+			this._Evaluations = new EntitySet<Evaluation>(new Action<Evaluation>(this.attach_Evaluations), new Action<Evaluation>(this.detach_Evaluations));
+			this._ExeSecrataryAssigns = new EntitySet<ExeSecrataryAssign>(new Action<ExeSecrataryAssign>(this.attach_ExeSecrataryAssigns), new Action<ExeSecrataryAssign>(this.detach_ExeSecrataryAssigns));
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExeSID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ExeSID
+		{
+			get
+			{
+				return this._ExeSID;
+			}
+			set
+			{
+				if ((this._ExeSID != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnExeSIDChanging(value);
+					this.SendPropertyChanging();
+					this._ExeSID = value;
+					this.SendPropertyChanged("ExeSID");
+					this.OnExeSIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ExeSecratary_Evaluation", Storage="_Evaluations", ThisKey="ExeSID", OtherKey="EXSECID")]
+		public EntitySet<Evaluation> Evaluations
+		{
+			get
+			{
+				return this._Evaluations;
+			}
+			set
+			{
+				this._Evaluations.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ExeSecratary_ExeSecrataryAssign", Storage="_ExeSecrataryAssigns", ThisKey="ExeSID", OtherKey="ExeSecrataryID")]
+		public EntitySet<ExeSecrataryAssign> ExeSecrataryAssigns
+		{
+			get
+			{
+				return this._ExeSecrataryAssigns;
+			}
+			set
+			{
+				this._ExeSecrataryAssigns.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExeSecratary", Storage="_Employee", ThisKey="ExeSID", OtherKey="EID", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.ExeSecratary = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.ExeSecratary = this;
+						this._ExeSID = value.EID;
+					}
+					else
+					{
+						this._ExeSID = default(int);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Evaluations(Evaluation entity)
+		{
+			this.SendPropertyChanging();
+			entity.ExeSecratary = this;
+		}
+		
+		private void detach_Evaluations(Evaluation entity)
+		{
+			this.SendPropertyChanging();
+			entity.ExeSecratary = null;
+		}
+		
+		private void attach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.ExeSecratary = this;
+		}
+		
+		private void detach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.ExeSecratary = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Genmanager")]
+	public partial class Genmanager : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _GeneralManagerID;
+		
+		private EntitySet<Report> _Reports;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnGeneralManagerIDChanging(int value);
+    partial void OnGeneralManagerIDChanged();
+    #endregion
+		
+		public Genmanager()
+		{
+			this._Reports = new EntitySet<Report>(new Action<Report>(this.attach_Reports), new Action<Report>(this.detach_Reports));
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GeneralManagerID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int GeneralManagerID
+		{
+			get
+			{
+				return this._GeneralManagerID;
+			}
+			set
+			{
+				if ((this._GeneralManagerID != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnGeneralManagerIDChanging(value);
+					this.SendPropertyChanging();
+					this._GeneralManagerID = value;
+					this.SendPropertyChanged("GeneralManagerID");
+					this.OnGeneralManagerIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Genmanager_Report", Storage="_Reports", ThisKey="GeneralManagerID", OtherKey="GeneralMID")]
+		public EntitySet<Report> Reports
+		{
+			get
+			{
+				return this._Reports;
+			}
+			set
+			{
+				this._Reports.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Genmanager", Storage="_Employee", ThisKey="GeneralManagerID", OtherKey="EID", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.Genmanager = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.Genmanager = this;
+						this._GeneralManagerID = value.EID;
+					}
+					else
+					{
+						this._GeneralManagerID = default(int);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Reports(Report entity)
+		{
+			this.SendPropertyChanging();
+			entity.Genmanager = this;
+		}
+		
+		private void detach_Reports(Report entity)
+		{
+			this.SendPropertyChanging();
+			entity.Genmanager = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Supervisor")]
+	public partial class Supervisor : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SupervisorID;
+		
+		private EntitySet<SupervisorAssign> _SupervisorAssigns;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSupervisorIDChanging(int value);
+    partial void OnSupervisorIDChanged();
+    #endregion
+		
+		public Supervisor()
+		{
+			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupervisorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int SupervisorID
+		{
+			get
+			{
+				return this._SupervisorID;
+			}
+			set
+			{
+				if ((this._SupervisorID != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSupervisorIDChanging(value);
+					this.SendPropertyChanging();
+					this._SupervisorID = value;
+					this.SendPropertyChanged("SupervisorID");
+					this.OnSupervisorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Supervisor_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="SupervisorID", OtherKey="supervisorID")]
+		public EntitySet<SupervisorAssign> SupervisorAssigns
+		{
+			get
+			{
+				return this._SupervisorAssigns;
+			}
+			set
+			{
+				this._SupervisorAssigns.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Supervisor", Storage="_Employee", ThisKey="SupervisorID", OtherKey="EID", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.Supervisor = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.Supervisor = this;
+						this._SupervisorID = value.EID;
+					}
+					else
+					{
+						this._SupervisorID = default(int);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_SupervisorAssigns(SupervisorAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.Supervisor = this;
+		}
+		
+		private void detach_SupervisorAssigns(SupervisorAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.Supervisor = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
+	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _EID;
+		
+		private string _EmployeeCode;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private string _NationalID;
+		
+		private string _PhoneNumber;
+		
+		private System.DateTime _DateOfBirth;
+		
+		private string _Email;
+		
+		private string _EmployeePassword;
+		
+		private string _EmployeeAddress;
+		
+		private char _Gender;
+		
+		private string _EmployeeType;
+		
+		private string _JobDescription;
+		
+		private EntitySet<Certificate> _Certificates;
+		
+		private EntitySet<ExecSecAssigning> _ExecSecAssignings;
+		
+		private EntitySet<ExecSecAssigning> _ExecSecAssignings1;
+		
+		private EntityRef<Executive> _Executive;
+		
+		private EntityRef<ExeSecratary> _ExeSecratary;
+		
+		private EntityRef<Genmanager> _Genmanager;
+		
+		private EntityRef<Supervisor> _Supervisor;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEIDChanging(int value);
+    partial void OnEIDChanged();
+    partial void OnEmployeeCodeChanging(string value);
+    partial void OnEmployeeCodeChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnNationalIDChanging(string value);
+    partial void OnNationalIDChanged();
+    partial void OnPhoneNumberChanging(string value);
+    partial void OnPhoneNumberChanged();
+    partial void OnDateOfBirthChanging(System.DateTime value);
+    partial void OnDateOfBirthChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnEmployeePasswordChanging(string value);
+    partial void OnEmployeePasswordChanged();
+    partial void OnEmployeeAddressChanging(string value);
+    partial void OnEmployeeAddressChanged();
+    partial void OnGenderChanging(char value);
+    partial void OnGenderChanged();
+    partial void OnEmployeeTypeChanging(string value);
+    partial void OnEmployeeTypeChanged();
+    partial void OnJobDescriptionChanging(string value);
+    partial void OnJobDescriptionChanged();
+    #endregion
+		
+		public Employee()
+		{
+			this._Certificates = new EntitySet<Certificate>(new Action<Certificate>(this.attach_Certificates), new Action<Certificate>(this.detach_Certificates));
+			this._ExecSecAssignings = new EntitySet<ExecSecAssigning>(new Action<ExecSecAssigning>(this.attach_ExecSecAssignings), new Action<ExecSecAssigning>(this.detach_ExecSecAssignings));
+			this._ExecSecAssignings1 = new EntitySet<ExecSecAssigning>(new Action<ExecSecAssigning>(this.attach_ExecSecAssignings1), new Action<ExecSecAssigning>(this.detach_ExecSecAssignings1));
+			this._Executive = default(EntityRef<Executive>);
+			this._ExeSecratary = default(EntityRef<ExeSecratary>);
+			this._Genmanager = default(EntityRef<Genmanager>);
+			this._Supervisor = default(EntityRef<Supervisor>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int EID
+		{
+			get
+			{
+				return this._EID;
+			}
+			set
+			{
+				if ((this._EID != value))
+				{
+					this.OnEIDChanging(value);
+					this.SendPropertyChanging();
+					this._EID = value;
+					this.SendPropertyChanged("EID");
+					this.OnEIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeCode", DbType="Char(4) NOT NULL", CanBeNull=false)]
+		public string EmployeeCode
+		{
+			get
+			{
+				return this._EmployeeCode;
+			}
+			set
+			{
+				if ((this._EmployeeCode != value))
+				{
+					this.OnEmployeeCodeChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeCode = value;
+					this.SendPropertyChanged("EmployeeCode");
+					this.OnEmployeeCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this.OnFirstNameChanging(value);
+					this.SendPropertyChanging();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this.OnLastNameChanging(value);
+					this.SendPropertyChanging();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NationalID", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string NationalID
+		{
+			get
+			{
+				return this._NationalID;
+			}
+			set
+			{
+				if ((this._NationalID != value))
+				{
+					this.OnNationalIDChanging(value);
+					this.SendPropertyChanging();
+					this._NationalID = value;
+					this.SendPropertyChanged("NationalID");
+					this.OnNationalIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(10)")]
+		public string PhoneNumber
+		{
+			get
+			{
+				return this._PhoneNumber;
+			}
+			set
+			{
+				if ((this._PhoneNumber != value))
+				{
+					this.OnPhoneNumberChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneNumber = value;
+					this.SendPropertyChanged("PhoneNumber");
+					this.OnPhoneNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOfBirth", DbType="Date NOT NULL")]
+		public System.DateTime DateOfBirth
+		{
+			get
+			{
+				return this._DateOfBirth;
+			}
+			set
+			{
+				if ((this._DateOfBirth != value))
+				{
+					this.OnDateOfBirthChanging(value);
+					this.SendPropertyChanging();
+					this._DateOfBirth = value;
+					this.SendPropertyChanged("DateOfBirth");
+					this.OnDateOfBirthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeePassword", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string EmployeePassword
+		{
+			get
+			{
+				return this._EmployeePassword;
+			}
+			set
+			{
+				if ((this._EmployeePassword != value))
+				{
+					this.OnEmployeePasswordChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeePassword = value;
+					this.SendPropertyChanged("EmployeePassword");
+					this.OnEmployeePasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeAddress", DbType="NVarChar(50)")]
+		public string EmployeeAddress
+		{
+			get
+			{
+				return this._EmployeeAddress;
+			}
+			set
+			{
+				if ((this._EmployeeAddress != value))
+				{
+					this.OnEmployeeAddressChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeAddress = value;
+					this.SendPropertyChanged("EmployeeAddress");
+					this.OnEmployeeAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="Char(1) NOT NULL")]
+		public char Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this.OnGenderChanging(value);
+					this.SendPropertyChanging();
+					this._Gender = value;
+					this.SendPropertyChanged("Gender");
+					this.OnGenderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeType", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string EmployeeType
+		{
+			get
+			{
+				return this._EmployeeType;
+			}
+			set
+			{
+				if ((this._EmployeeType != value))
+				{
+					this.OnEmployeeTypeChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeType = value;
+					this.SendPropertyChanged("EmployeeType");
+					this.OnEmployeeTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobDescription", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string JobDescription
+		{
+			get
+			{
+				return this._JobDescription;
+			}
+			set
+			{
+				if ((this._JobDescription != value))
+				{
+					this.OnJobDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._JobDescription = value;
+					this.SendPropertyChanged("JobDescription");
+					this.OnJobDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Certificate", Storage="_Certificates", ThisKey="EID", OtherKey="EmployeeID")]
+		public EntitySet<Certificate> Certificates
+		{
+			get
+			{
+				return this._Certificates;
+			}
+			set
+			{
+				this._Certificates.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExecSecAssigning", Storage="_ExecSecAssignings", ThisKey="EID", OtherKey="ExeSID1")]
+		public EntitySet<ExecSecAssigning> ExecSecAssignings
+		{
+			get
+			{
+				return this._ExecSecAssignings;
+			}
+			set
+			{
+				this._ExecSecAssignings.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExecSecAssigning1", Storage="_ExecSecAssignings1", ThisKey="EID", OtherKey="SupervisorID1")]
+		public EntitySet<ExecSecAssigning> ExecSecAssignings1
+		{
+			get
+			{
+				return this._ExecSecAssignings1;
+			}
+			set
+			{
+				this._ExecSecAssignings1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Executive", Storage="_Executive", ThisKey="EID", OtherKey="ExecutiveID", IsUnique=true, IsForeignKey=false)]
+		public Executive Executive
+		{
+			get
+			{
+				return this._Executive.Entity;
+			}
+			set
+			{
+				Executive previousValue = this._Executive.Entity;
+				if (((previousValue != value) 
+							|| (this._Executive.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Executive.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._Executive.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("Executive");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_ExeSecratary", Storage="_ExeSecratary", ThisKey="EID", OtherKey="ExeSID", IsUnique=true, IsForeignKey=false)]
+		public ExeSecratary ExeSecratary
+		{
+			get
+			{
+				return this._ExeSecratary.Entity;
+			}
+			set
+			{
+				ExeSecratary previousValue = this._ExeSecratary.Entity;
+				if (((previousValue != value) 
+							|| (this._ExeSecratary.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ExeSecratary.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._ExeSecratary.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("ExeSecratary");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Genmanager", Storage="_Genmanager", ThisKey="EID", OtherKey="GeneralManagerID", IsUnique=true, IsForeignKey=false)]
+		public Genmanager Genmanager
+		{
+			get
+			{
+				return this._Genmanager.Entity;
+			}
+			set
+			{
+				Genmanager previousValue = this._Genmanager.Entity;
+				if (((previousValue != value) 
+							|| (this._Genmanager.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Genmanager.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._Genmanager.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("Genmanager");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Supervisor", Storage="_Supervisor", ThisKey="EID", OtherKey="SupervisorID", IsUnique=true, IsForeignKey=false)]
+		public Supervisor Supervisor
+		{
+			get
+			{
+				return this._Supervisor.Entity;
+			}
+			set
+			{
+				Supervisor previousValue = this._Supervisor.Entity;
+				if (((previousValue != value) 
+							|| (this._Supervisor.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Supervisor.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._Supervisor.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("Supervisor");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Certificates(Certificate entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_Certificates(Certificate entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
+		}
+		
+		private void attach_ExecSecAssignings(ExecSecAssigning entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_ExecSecAssignings(ExecSecAssigning entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
+		}
+		
+		private void attach_ExecSecAssignings1(ExecSecAssigning entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee1 = this;
+		}
+		
+		private void detach_ExecSecAssignings1(ExecSecAssigning entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee1 = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ServiceProviderAssignment")]
+	public partial class ServiceProviderAssignment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ServiceProviderID;
+		
+		private System.TimeSpan _StartTime;
+		
+		private System.DateTime _StartDateAssigned;
+		
+		private System.DateTime _ENDDATEASSIGNED;
+		
+		private System.TimeSpan _EndTime;
+		
+		private EntityRef<ServiceProvider> _ServiceProvider;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnServiceProviderIDChanging(int value);
+    partial void OnServiceProviderIDChanged();
+    partial void OnStartTimeChanging(System.TimeSpan value);
+    partial void OnStartTimeChanged();
+    partial void OnStartDateAssignedChanging(System.DateTime value);
+    partial void OnStartDateAssignedChanged();
+    partial void OnENDDATEASSIGNEDChanging(System.DateTime value);
+    partial void OnENDDATEASSIGNEDChanged();
+    partial void OnEndTimeChanging(System.TimeSpan value);
+    partial void OnEndTimeChanged();
+    #endregion
+		
+		public ServiceProviderAssignment()
+		{
+			this._ServiceProvider = default(EntityRef<ServiceProvider>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ServiceProviderID
+		{
+			get
+			{
+				return this._ServiceProviderID;
+			}
+			set
+			{
+				if ((this._ServiceProviderID != value))
+				{
+					if (this._ServiceProvider.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnServiceProviderIDChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceProviderID = value;
+					this.SendPropertyChanged("ServiceProviderID");
+					this.OnServiceProviderIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Time NOT NULL", IsPrimaryKey=true)]
+		public System.TimeSpan StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDateAssigned", DbType="DateTime NOT NULL", IsPrimaryKey=true)]
+		public System.DateTime StartDateAssigned
+		{
+			get
+			{
+				return this._StartDateAssigned;
+			}
+			set
+			{
+				if ((this._StartDateAssigned != value))
+				{
+					this.OnStartDateAssignedChanging(value);
+					this.SendPropertyChanging();
+					this._StartDateAssigned = value;
+					this.SendPropertyChanged("StartDateAssigned");
+					this.OnStartDateAssignedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ENDDATEASSIGNED", DbType="DateTime NOT NULL", IsPrimaryKey=true)]
+		public System.DateTime ENDDATEASSIGNED
+		{
+			get
+			{
+				return this._ENDDATEASSIGNED;
+			}
+			set
+			{
+				if ((this._ENDDATEASSIGNED != value))
+				{
+					this.OnENDDATEASSIGNEDChanging(value);
+					this.SendPropertyChanging();
+					this._ENDDATEASSIGNED = value;
+					this.SendPropertyChanged("ENDDATEASSIGNED");
+					this.OnENDDATEASSIGNEDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="Time NOT NULL", IsPrimaryKey=true)]
+		public System.TimeSpan EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_ServiceProviderAssignment", Storage="_ServiceProvider", ThisKey="ServiceProviderID", OtherKey="ServiceProviderID", IsForeignKey=true)]
+		public ServiceProvider ServiceProvider
+		{
+			get
+			{
+				return this._ServiceProvider.Entity;
+			}
+			set
+			{
+				ServiceProvider previousValue = this._ServiceProvider.Entity;
+				if (((previousValue != value) 
+							|| (this._ServiceProvider.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ServiceProvider.Entity = null;
+						previousValue.ServiceProviderAssignments.Remove(this);
+					}
+					this._ServiceProvider.Entity = value;
+					if ((value != null))
+					{
+						value.ServiceProviderAssignments.Add(this);
+						this._ServiceProviderID = value.ServiceProviderID;
+					}
+					else
+					{
+						this._ServiceProviderID = default(int);
+					}
+					this.SendPropertyChanged("ServiceProvider");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ServiceProvider")]
 	public partial class ServiceProvider : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3854,6 +3916,10 @@ namespace Capstone
 		
 		private string _ServiceProviderType;
 		
+		private System.Nullable<int> _SupervisorID;
+		
+		private string _ServiceProviderFullName;
+		
 		private EntityRef<Butler> _Butler;
 		
 		private EntityRef<Driver> _Driver;
@@ -3868,9 +3934,9 @@ namespace Capstone
 		
 		private EntitySet<ServiceB> _ServiceBs;
 		
-		private EntitySet<SupervisorAssign> _SupervisorAssigns;
-		
 		private EntitySet<ServiceProviderAssignment> _ServiceProviderAssignments;
+		
+		private EntitySet<SupervisorAssign> _SupervisorAssigns;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3898,6 +3964,10 @@ namespace Capstone
     partial void OnServiceProviderAddressChanged();
     partial void OnServiceProviderTypeChanging(string value);
     partial void OnServiceProviderTypeChanged();
+    partial void OnSupervisorIDChanging(System.Nullable<int> value);
+    partial void OnSupervisorIDChanged();
+    partial void OnServiceProviderFullNameChanging(string value);
+    partial void OnServiceProviderFullNameChanged();
     #endregion
 		
 		public ServiceProvider()
@@ -3909,8 +3979,8 @@ namespace Capstone
 			this._Govermental = default(EntityRef<Govermental>);
 			this._Leaves = new EntitySet<Leave>(new Action<Leave>(this.attach_Leaves), new Action<Leave>(this.detach_Leaves));
 			this._ServiceBs = new EntitySet<ServiceB>(new Action<ServiceB>(this.attach_ServiceBs), new Action<ServiceB>(this.detach_ServiceBs));
-			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
 			this._ServiceProviderAssignments = new EntitySet<ServiceProviderAssignment>(new Action<ServiceProviderAssignment>(this.attach_ServiceProviderAssignments), new Action<ServiceProviderAssignment>(this.detach_ServiceProviderAssignments));
+			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
 			OnCreated();
 		}
 		
@@ -4134,6 +4204,46 @@ namespace Capstone
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupervisorID", DbType="Int")]
+		public System.Nullable<int> SupervisorID
+		{
+			get
+			{
+				return this._SupervisorID;
+			}
+			set
+			{
+				if ((this._SupervisorID != value))
+				{
+					this.OnSupervisorIDChanging(value);
+					this.SendPropertyChanging();
+					this._SupervisorID = value;
+					this.SendPropertyChanged("SupervisorID");
+					this.OnSupervisorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderFullName", DbType="VarChar(50)")]
+		public string ServiceProviderFullName
+		{
+			get
+			{
+				return this._ServiceProviderFullName;
+			}
+			set
+			{
+				if ((this._ServiceProviderFullName != value))
+				{
+					this.OnServiceProviderFullNameChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceProviderFullName = value;
+					this.SendPropertyChanged("ServiceProviderFullName");
+					this.OnServiceProviderFullNameChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_Butler", Storage="_Butler", ThisKey="ServiceProviderID", OtherKey="ButlerID", IsUnique=true, IsForeignKey=false)]
 		public Butler Butler
 		{
@@ -4273,19 +4383,6 @@ namespace Capstone
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="ServiceProviderID", OtherKey="ServiceProviderID")]
-		public EntitySet<SupervisorAssign> SupervisorAssigns
-		{
-			get
-			{
-				return this._SupervisorAssigns;
-			}
-			set
-			{
-				this._SupervisorAssigns.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_ServiceProviderAssignment", Storage="_ServiceProviderAssignments", ThisKey="ServiceProviderID", OtherKey="ServiceProviderID")]
 		public EntitySet<ServiceProviderAssignment> ServiceProviderAssignments
 		{
@@ -4296,6 +4393,19 @@ namespace Capstone
 			set
 			{
 				this._ServiceProviderAssignments.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="ServiceProviderID", OtherKey="ServiceProviderID")]
+		public EntitySet<SupervisorAssign> SupervisorAssigns
+		{
+			get
+			{
+				return this._SupervisorAssigns;
+			}
+			set
+			{
+				this._SupervisorAssigns.Assign(value);
 			}
 		}
 		
@@ -4367,18 +4477,6 @@ namespace Capstone
 			entity.ServiceProvider = null;
 		}
 		
-		private void attach_SupervisorAssigns(SupervisorAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.ServiceProvider = this;
-		}
-		
-		private void detach_SupervisorAssigns(SupervisorAssign entity)
-		{
-			this.SendPropertyChanging();
-			entity.ServiceProvider = null;
-		}
-		
 		private void attach_ServiceProviderAssignments(ServiceProviderAssignment entity)
 		{
 			this.SendPropertyChanging();
@@ -4390,60 +4488,305 @@ namespace Capstone
 			this.SendPropertyChanging();
 			entity.ServiceProvider = null;
 		}
+		
+		private void attach_SupervisorAssigns(SupervisorAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.ServiceProvider = this;
+		}
+		
+		private void detach_SupervisorAssigns(SupervisorAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.ServiceProvider = null;
+		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Supervisor")]
-	public partial class Supervisor : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Booking")]
+	public partial class Booking : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _SupervisorID;
+		private int _BookingID;
+		
+		private string _BookingCode;
+		
+		private System.DateTime _ActualStartDate;
+		
+		private System.DateTime _ExpectedEndDate;
+		
+		private string _BookingDescription;
+		
+		private System.TimeSpan _Duration;
+		
+		private string _BookingStatus;
+		
+		private string _StartTime;
+		
+		private string _EndTime;
+		
+		private EntitySet<Evaluation> _Evaluations;
+		
+		private EntitySet<ExecSecAssigning> _ExecSecAssignings;
+		
+		private EntitySet<ExeSecrataryAssign> _ExeSecrataryAssigns;
 		
 		private EntitySet<SupervisorAssign> _SupervisorAssigns;
-		
-		private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnSupervisorIDChanging(int value);
-    partial void OnSupervisorIDChanged();
+    partial void OnBookingIDChanging(int value);
+    partial void OnBookingIDChanged();
+    partial void OnBookingCodeChanging(string value);
+    partial void OnBookingCodeChanged();
+    partial void OnActualStartDateChanging(System.DateTime value);
+    partial void OnActualStartDateChanged();
+    partial void OnExpectedEndDateChanging(System.DateTime value);
+    partial void OnExpectedEndDateChanged();
+    partial void OnBookingDescriptionChanging(string value);
+    partial void OnBookingDescriptionChanged();
+    partial void OnDurationChanging(System.TimeSpan value);
+    partial void OnDurationChanged();
+    partial void OnBookingStatusChanging(string value);
+    partial void OnBookingStatusChanged();
+    partial void OnStartTimeChanging(string value);
+    partial void OnStartTimeChanged();
+    partial void OnEndTimeChanging(string value);
+    partial void OnEndTimeChanged();
     #endregion
 		
-		public Supervisor()
+		public Booking()
 		{
+			this._Evaluations = new EntitySet<Evaluation>(new Action<Evaluation>(this.attach_Evaluations), new Action<Evaluation>(this.detach_Evaluations));
+			this._ExecSecAssignings = new EntitySet<ExecSecAssigning>(new Action<ExecSecAssigning>(this.attach_ExecSecAssignings), new Action<ExecSecAssigning>(this.detach_ExecSecAssignings));
+			this._ExeSecrataryAssigns = new EntitySet<ExeSecrataryAssign>(new Action<ExeSecrataryAssign>(this.attach_ExeSecrataryAssigns), new Action<ExeSecrataryAssign>(this.detach_ExeSecrataryAssigns));
 			this._SupervisorAssigns = new EntitySet<SupervisorAssign>(new Action<SupervisorAssign>(this.attach_SupervisorAssigns), new Action<SupervisorAssign>(this.detach_SupervisorAssigns));
-			this._Employee = default(EntityRef<Employee>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupervisorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int SupervisorID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int BookingID
 		{
 			get
 			{
-				return this._SupervisorID;
+				return this._BookingID;
 			}
 			set
 			{
-				if ((this._SupervisorID != value))
+				if ((this._BookingID != value))
 				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnSupervisorIDChanging(value);
+					this.OnBookingIDChanging(value);
 					this.SendPropertyChanging();
-					this._SupervisorID = value;
-					this.SendPropertyChanged("SupervisorID");
-					this.OnSupervisorIDChanged();
+					this._BookingID = value;
+					this.SendPropertyChanged("BookingID");
+					this.OnBookingIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Supervisor_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="SupervisorID", OtherKey="supervisorID")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingCode", DbType="Char(7) NOT NULL", CanBeNull=false)]
+		public string BookingCode
+		{
+			get
+			{
+				return this._BookingCode;
+			}
+			set
+			{
+				if ((this._BookingCode != value))
+				{
+					this.OnBookingCodeChanging(value);
+					this.SendPropertyChanging();
+					this._BookingCode = value;
+					this.SendPropertyChanged("BookingCode");
+					this.OnBookingCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActualStartDate", DbType="Date NOT NULL")]
+		public System.DateTime ActualStartDate
+		{
+			get
+			{
+				return this._ActualStartDate;
+			}
+			set
+			{
+				if ((this._ActualStartDate != value))
+				{
+					this.OnActualStartDateChanging(value);
+					this.SendPropertyChanging();
+					this._ActualStartDate = value;
+					this.SendPropertyChanged("ActualStartDate");
+					this.OnActualStartDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpectedEndDate", DbType="Date NOT NULL")]
+		public System.DateTime ExpectedEndDate
+		{
+			get
+			{
+				return this._ExpectedEndDate;
+			}
+			set
+			{
+				if ((this._ExpectedEndDate != value))
+				{
+					this.OnExpectedEndDateChanging(value);
+					this.SendPropertyChanging();
+					this._ExpectedEndDate = value;
+					this.SendPropertyChanged("ExpectedEndDate");
+					this.OnExpectedEndDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingDescription", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string BookingDescription
+		{
+			get
+			{
+				return this._BookingDescription;
+			}
+			set
+			{
+				if ((this._BookingDescription != value))
+				{
+					this.OnBookingDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._BookingDescription = value;
+					this.SendPropertyChanged("BookingDescription");
+					this.OnBookingDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Duration", DbType="Time NOT NULL")]
+		public System.TimeSpan Duration
+		{
+			get
+			{
+				return this._Duration;
+			}
+			set
+			{
+				if ((this._Duration != value))
+				{
+					this.OnDurationChanging(value);
+					this.SendPropertyChanging();
+					this._Duration = value;
+					this.SendPropertyChanged("Duration");
+					this.OnDurationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingStatus", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
+		public string BookingStatus
+		{
+			get
+			{
+				return this._BookingStatus;
+			}
+			set
+			{
+				if ((this._BookingStatus != value))
+				{
+					this.OnBookingStatusChanging(value);
+					this.SendPropertyChanging();
+					this._BookingStatus = value;
+					this.SendPropertyChanged("BookingStatus");
+					this.OnBookingStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_Evaluation", Storage="_Evaluations", ThisKey="BookingID", OtherKey="BOOKID")]
+		public EntitySet<Evaluation> Evaluations
+		{
+			get
+			{
+				return this._Evaluations;
+			}
+			set
+			{
+				this._Evaluations.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExecSecAssigning", Storage="_ExecSecAssignings", ThisKey="BookingID", OtherKey="bookID1")]
+		public EntitySet<ExecSecAssigning> ExecSecAssignings
+		{
+			get
+			{
+				return this._ExecSecAssignings;
+			}
+			set
+			{
+				this._ExecSecAssignings.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_ExeSecrataryAssign", Storage="_ExeSecrataryAssigns", ThisKey="BookingID", OtherKey="bookID")]
+		public EntitySet<ExeSecrataryAssign> ExeSecrataryAssigns
+		{
+			get
+			{
+				return this._ExeSecrataryAssigns;
+			}
+			set
+			{
+				this._ExeSecrataryAssigns.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Booking_SupervisorAssign", Storage="_SupervisorAssigns", ThisKey="BookingID", OtherKey="bookID")]
 		public EntitySet<SupervisorAssign> SupervisorAssigns
 		{
 			get
@@ -4453,40 +4796,6 @@ namespace Capstone
 			set
 			{
 				this._SupervisorAssigns.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Supervisor", Storage="_Employee", ThisKey="SupervisorID", OtherKey="EID", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
-				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Employee.Entity = null;
-						previousValue.Supervisor = null;
-					}
-					this._Employee.Entity = value;
-					if ((value != null))
-					{
-						value.Supervisor = this;
-						this._SupervisorID = value.EID;
-					}
-					else
-					{
-						this._SupervisorID = default(int);
-					}
-					this.SendPropertyChanged("Employee");
-				}
 			}
 		}
 		
@@ -4510,16 +4819,52 @@ namespace Capstone
 			}
 		}
 		
+		private void attach_Evaluations(Evaluation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Booking = this;
+		}
+		
+		private void detach_Evaluations(Evaluation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Booking = null;
+		}
+		
+		private void attach_ExecSecAssignings(ExecSecAssigning entity)
+		{
+			this.SendPropertyChanging();
+			entity.Booking = this;
+		}
+		
+		private void detach_ExecSecAssignings(ExecSecAssigning entity)
+		{
+			this.SendPropertyChanging();
+			entity.Booking = null;
+		}
+		
+		private void attach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.Booking = this;
+		}
+		
+		private void detach_ExeSecrataryAssigns(ExeSecrataryAssign entity)
+		{
+			this.SendPropertyChanging();
+			entity.Booking = null;
+		}
+		
 		private void attach_SupervisorAssigns(SupervisorAssign entity)
 		{
 			this.SendPropertyChanging();
-			entity.Supervisor = this;
+			entity.Booking = this;
 		}
 		
 		private void detach_SupervisorAssigns(SupervisorAssign entity)
 		{
 			this.SendPropertyChanging();
-			entity.Supervisor = null;
+			entity.Booking = null;
 		}
 	}
 	
@@ -4538,6 +4883,8 @@ namespace Capstone
 		private int _ServiceID;
 		
 		private int _bookID;
+		
+		private int _ExecID;
 		
 		private EntityRef<Booking> _Booking;
 		
@@ -4561,6 +4908,8 @@ namespace Capstone
     partial void OnServiceIDChanged();
     partial void OnbookIDChanging(int value);
     partial void OnbookIDChanged();
+    partial void OnExecIDChanging(int value);
+    partial void OnExecIDChanged();
     #endregion
 		
 		public SupervisorAssign()
@@ -4684,6 +5033,26 @@ namespace Capstone
 					this._bookID = value;
 					this.SendPropertyChanged("bookID");
 					this.OnbookIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExecID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ExecID
+		{
+			get
+			{
+				return this._ExecID;
+			}
+			set
+			{
+				if ((this._ExecID != value))
+				{
+					this.OnExecIDChanging(value);
+					this.SendPropertyChanging();
+					this._ExecID = value;
+					this.SendPropertyChanged("ExecID");
+					this.OnExecIDChanged();
 				}
 			}
 		}
@@ -4820,229 +5189,6 @@ namespace Capstone
 						this._supervisorID = default(int);
 					}
 					this.SendPropertyChanged("Supervisor");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ServiceProviderAssignment")]
-	public partial class ServiceProviderAssignment : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ServiceProviderID;
-		
-		private string _TimeAssigned;
-		
-		private System.DateTime _StartDateAssigned;
-		
-		private System.DateTime _ENDDATEASSIGNED;
-		
-		private string _sTARTTimeAssigned;
-		
-		private string _EnTime;
-		
-		private EntityRef<ServiceProvider> _ServiceProvider;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnServiceProviderIDChanging(int value);
-    partial void OnServiceProviderIDChanged();
-    partial void OnTimeAssignedChanging(string value);
-    partial void OnTimeAssignedChanged();
-    partial void OnStartDateAssignedChanging(System.DateTime value);
-    partial void OnStartDateAssignedChanged();
-    partial void OnENDDATEASSIGNEDChanging(System.DateTime value);
-    partial void OnENDDATEASSIGNEDChanged();
-    partial void OnsTARTTimeAssignedChanging(string value);
-    partial void OnsTARTTimeAssignedChanged();
-    partial void OnEnTimeChanging(string value);
-    partial void OnEnTimeChanged();
-    #endregion
-		
-		public ServiceProviderAssignment()
-		{
-			this._ServiceProvider = default(EntityRef<ServiceProvider>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceProviderID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int ServiceProviderID
-		{
-			get
-			{
-				return this._ServiceProviderID;
-			}
-			set
-			{
-				if ((this._ServiceProviderID != value))
-				{
-					if (this._ServiceProvider.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnServiceProviderIDChanging(value);
-					this.SendPropertyChanging();
-					this._ServiceProviderID = value;
-					this.SendPropertyChanged("ServiceProviderID");
-					this.OnServiceProviderIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeAssigned", DbType="VarChar(20)")]
-		public string TimeAssigned
-		{
-			get
-			{
-				return this._TimeAssigned;
-			}
-			set
-			{
-				if ((this._TimeAssigned != value))
-				{
-					this.OnTimeAssignedChanging(value);
-					this.SendPropertyChanging();
-					this._TimeAssigned = value;
-					this.SendPropertyChanged("TimeAssigned");
-					this.OnTimeAssignedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDateAssigned", DbType="DateTime NOT NULL", IsPrimaryKey=true)]
-		public System.DateTime StartDateAssigned
-		{
-			get
-			{
-				return this._StartDateAssigned;
-			}
-			set
-			{
-				if ((this._StartDateAssigned != value))
-				{
-					this.OnStartDateAssignedChanging(value);
-					this.SendPropertyChanging();
-					this._StartDateAssigned = value;
-					this.SendPropertyChanged("StartDateAssigned");
-					this.OnStartDateAssignedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ENDDATEASSIGNED", DbType="DateTime NOT NULL", IsPrimaryKey=true)]
-		public System.DateTime ENDDATEASSIGNED
-		{
-			get
-			{
-				return this._ENDDATEASSIGNED;
-			}
-			set
-			{
-				if ((this._ENDDATEASSIGNED != value))
-				{
-					this.OnENDDATEASSIGNEDChanging(value);
-					this.SendPropertyChanging();
-					this._ENDDATEASSIGNED = value;
-					this.SendPropertyChanged("ENDDATEASSIGNED");
-					this.OnENDDATEASSIGNEDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sTARTTimeAssigned", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string sTARTTimeAssigned
-		{
-			get
-			{
-				return this._sTARTTimeAssigned;
-			}
-			set
-			{
-				if ((this._sTARTTimeAssigned != value))
-				{
-					this.OnsTARTTimeAssignedChanging(value);
-					this.SendPropertyChanging();
-					this._sTARTTimeAssigned = value;
-					this.SendPropertyChanged("sTARTTimeAssigned");
-					this.OnsTARTTimeAssignedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EnTime", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EnTime
-		{
-			get
-			{
-				return this._EnTime;
-			}
-			set
-			{
-				if ((this._EnTime != value))
-				{
-					this.OnEnTimeChanging(value);
-					this.SendPropertyChanging();
-					this._EnTime = value;
-					this.SendPropertyChanged("EnTime");
-					this.OnEnTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceProvider_ServiceProviderAssignment", Storage="_ServiceProvider", ThisKey="ServiceProviderID", OtherKey="ServiceProviderID", IsForeignKey=true)]
-		public ServiceProvider ServiceProvider
-		{
-			get
-			{
-				return this._ServiceProvider.Entity;
-			}
-			set
-			{
-				ServiceProvider previousValue = this._ServiceProvider.Entity;
-				if (((previousValue != value) 
-							|| (this._ServiceProvider.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ServiceProvider.Entity = null;
-						previousValue.ServiceProviderAssignments.Remove(this);
-					}
-					this._ServiceProvider.Entity = value;
-					if ((value != null))
-					{
-						value.ServiceProviderAssignments.Add(this);
-						this._ServiceProviderID = value.ServiceProviderID;
-					}
-					else
-					{
-						this._ServiceProviderID = default(int);
-					}
-					this.SendPropertyChanged("ServiceProvider");
 				}
 			}
 		}
